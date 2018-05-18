@@ -1,18 +1,10 @@
 package com.ultimatex.nsbm;
 
 
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXDecorator;
-import com.jfoenix.controls.JFXTabPane;
 import com.ultimatex.nsbm.ui.login.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
-import javafx.scene.layout.Border;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
