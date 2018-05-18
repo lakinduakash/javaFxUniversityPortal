@@ -20,7 +20,6 @@ public class NsbmMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        //Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         FXMLLoader loader =new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
         loader.load();
 
