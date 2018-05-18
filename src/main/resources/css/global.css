@@ -23,3 +23,25 @@
     -fx-font-family:"Comic Sans MS";
 }
 
+.login-forgot-password-text {
+
+    -fx-font-size: 10pt;
+
+}
+
+.login-forgot-password-text:hover {
+
+    -fx-font-size: 11pt;
+    -fx-text-fill: -fx-blue;
+
+}
+
+.login-signup-text {
+    -fx-font-size: 10pt;
+}
+
+.login-signup-text:hover {
+    -fx-font-size: 11pt;
+    -fx-text-fill: -fx-blue;
+}
+
