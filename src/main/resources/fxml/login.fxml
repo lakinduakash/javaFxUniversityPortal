@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="rootPane" fx:id="loginPane" onMouseClicked="#onPaneClicked" onMouseDragged="#onDragged" onMousePressed="#onPanePressed" prefHeight="519.0" prefWidth="626.0" styleClass="root" stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ultimatex.nsbm.ui.login.LoginController">
+   <children>
+      <JFXTextField id="userName" fx:id="userName" labelFloat="true" layoutX="111.0" layoutY="159.0" prefHeight="38.0" prefWidth="380.0" promptText="Username/Email">
+         <font>
+            <Font size="19.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="passwordField" labelFloat="true" layoutX="111.0" layoutY="222.0" prefHeight="38.0" prefWidth="380.0" promptText="Password">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="cancelButton" layoutX="110.0" layoutY="297.0" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="38.0" prefWidth="121.0" styleClass="login-cancel" text="Cancel">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="loginButton" layoutX="415.0" layoutY="297.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="38.0" prefWidth="82.0" styleClass="login-button" text="Login" textFill="#b91717">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="117.0" layoutY="14.0" prefHeight="38.0" prefWidth="393.0" text="Welcome to NSBM Portal" textAlignment="CENTER" textFill="#7416db">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
