@@ -5,9 +5,11 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane id="rootPane" fx:id="loginPane" onMouseClicked="#onPaneClicked" onMouseDragged="#onDragged" onMousePressed="#onPanePressed" prefHeight="519.0" prefWidth="626.0" styleClass="root" stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ultimatex.nsbm.ui.login.LoginController">
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="rootPane" fx:id="loginPane" onMouseClicked="#onPaneClicked"
+            onMouseDragged="#onDragged" onMousePressed="#onPanePressed" prefHeight="519.0" prefWidth="626.0"
+            styleClass="root" stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/8.0.121"
+            fx:controller="com.ultimatex.nsbm.ui.login.LoginController">
    <children>
       <JFXTextField id="userName" fx:id="userName" labelFloat="true" layoutX="111.0" layoutY="159.0" prefHeight="38.0" prefWidth="380.0" promptText="Username/Email">
          <font>
@@ -33,5 +35,9 @@
             <Font name="Arial" size="30.0" />
          </font>
       </Label>
+       <Label fx:id="signupLable" layoutX="110.0" layoutY="379.0" onMouseClicked="#onSignupLabelClicked"
+              prefHeight="29.0" prefWidth="151.0" styleClass="login-signup-text" text="New user? Signup"/>
+       <Label fx:id="forgotPasswordLable" layoutX="387.0" layoutY="379.0" prefHeight="29.0" prefWidth="151.0"
+              styleClass="login-forgot-password-text" text="Forgot password?"/>
    </children>
 </AnchorPane>
