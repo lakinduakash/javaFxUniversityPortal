@@ -28,3 +28,8 @@ task MyRun(type: JavaExec) {
 task wrapper(type: Wrapper) {
     gradleVersion = '4.6'
 }
+
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
+}
