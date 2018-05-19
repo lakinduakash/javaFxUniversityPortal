@@ -1,7 +1,7 @@
 package com.ultimatex.nsbm;
 
 
-import com.ultimatex.nsbm.ui.login.LoginController;
+import com.ultimatex.nsbm.ui.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -31,6 +31,10 @@ public class NsbmMain extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public int add(int a, int b) {
+        return a + b;
     }
 }
 
