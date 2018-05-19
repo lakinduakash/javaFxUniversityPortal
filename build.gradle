@@ -25,3 +25,6 @@ task MyRun(type: JavaExec) {
     main = 'com.ultimatex.nsbm.NsbmMain'
     classpath = sourceSets.main.runtimeClasspath
 }
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+}
