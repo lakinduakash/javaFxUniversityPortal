@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.scene.layout.*?>
-
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.ultimatex.nsbm.ui.MainController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" minHeight="100.0" minWidth="100.0" prefHeight="720.0" prefWidth="1080.0"
+           xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.MainController">
+    <children>
+        <JFXDrawer fx:id="drawer"/>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane fx:id="mainContainer" prefHeight="720.0" prefWidth="1080.0"/>
+                <JFXHamburger fx:id="hamburger" layoutX="1036.0" layoutY="14.0" onMouseClicked="#onHamburgerClick"
+                              AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
