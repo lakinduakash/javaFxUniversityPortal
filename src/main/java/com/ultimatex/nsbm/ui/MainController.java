@@ -4,10 +4,12 @@ import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 import com.ultimatex.nsbm.util.MainContainerState;
+import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -18,7 +20,16 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MainController implements Initializable, SideNavController.OnMainItemClickListener {
+public class MainController implements Initializable, SideNavController.OnSideNavItemClickListener {
+
+    private static final String PROFILE_CONTAINER = "/fxml/profile.fxml";
+    private static final String SUBJECTS_CONTAINER = "/fxml/subjects.fxml";
+    private static final String SCHEDULE_CONTAINER = "/fxml/schedule.fxml";
+    private static final String RESULTS_CONTAINER = "/fxml/results.fxml";
+    private static final String PAYMENTS_CONTAINER = "/fxml/payments.fxml";
+    private static final String SETTINGS_CONTAINER = "/fxml/settings.fxml";
+
+
 
     @FXML
     private JFXHamburger hamburger;
@@ -28,10 +39,14 @@ public class MainController implements Initializable, SideNavController.OnMainIt
     @FXML
     private AnchorPane mainContainer;
 
+    private int currentState;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         initDrawer();
+        changeContainer(MainContainerState.PROFILE);
     }
 
     public AnchorPane getMainContainer() {
@@ -47,18 +62,17 @@ public class MainController implements Initializable, SideNavController.OnMainIt
     private void initDrawer() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/sidenav.fxml"));
-            VBox toolbar = loader.load();
-            drawer.setSidePane(toolbar);
+            VBox sideNav = loader.load();
+            drawer.setSidePane(sideNav);
             SideNavController controller = loader.getController();
             controller.setListener(this);
         } catch (IOException ex) {
             Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
         }
+
         HamburgerSlideCloseTransition task = new HamburgerSlideCloseTransition(hamburger);
         task.setRate(-1);
-        hamburger.addEventHandler(MouseEvent.MOUSE_CLICKED, (Event event) -> {
-            drawer.toggle();
-        });
+        hamburger.addEventHandler(MouseEvent.MOUSE_CLICKED, (Event event) -> drawer.toggle());
         drawer.setOnDrawerOpening((event) -> {
             task.setRate(task.getRate() * -1);
             task.getRate();
@@ -72,20 +86,79 @@ public class MainController implements Initializable, SideNavController.OnMainIt
         });
     }
 
-    public void changeContainer(int stateId) {
-        if (stateId == MainContainerState.PAYMENT) {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/payments.fxml"));
-            AnchorPane anchorPane = null;
+    private void changeContainer(int stateId) {
 
-            try {
-                anchorPane = fxmlLoader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
+        ObservableList<Node> child = mainContainer.getChildren();
+        currentState = stateId;
+
+        if (stateId == MainContainerState.PROFILE) {
+            if (canStateAdded("profilePane")) {
+                if (child.size() > 0)
+                    child.remove(0);
+                loadContainer(PROFILE_CONTAINER);
             }
+        } else if (stateId == MainContainerState.SUBJECT) {
+            if (canStateAdded("subjectPane")) {
+                if (child.size() > 0)
+                    child.remove(0);
+                loadContainer(SUBJECTS_CONTAINER);
+            }
+        } else if (stateId == MainContainerState.SCHEDULE) {
+            if (canStateAdded("schedulePane")) {
+                if (child.size() > 0)
+                    child.remove(0);
+                loadContainer(SCHEDULE_CONTAINER);
+            }
+        } else if (stateId == MainContainerState.RESULT) {
+            if (canStateAdded("resultPane")) {
+                if (child.size() > 0)
+                    child.remove(0);
+                loadContainer(RESULTS_CONTAINER);
+            }
+        } else if (stateId == MainContainerState.PAYMENT) {
 
-
-            mainContainer.getChildren().addAll(anchorPane);
+            if (canStateAdded("paymentPane")) {
+                if (child.size() > 0)
+                    child.remove(0);
+                loadContainer(PAYMENTS_CONTAINER);
+            }
+        } else if (stateId == MainContainerState.SETTINGS) {
+            if (canStateAdded("settingPane")) {
+                if (child.size() > 0)
+                    child.remove(0);
+                loadContainer(SETTINGS_CONTAINER);
+            }
         }
+    }
+
+
+    private void loadContainer(String fxmlLocation) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlLocation));
+        Node pane = null;
+
+        try {
+            pane = fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        mainContainer.getChildren().addAll(pane);
+        AnchorPane.setBottomAnchor(pane, (double) 0);
+        AnchorPane.setRightAnchor(pane, (double) 0);
+        AnchorPane.setLeftAnchor(pane, (double) 0);
+        AnchorPane.setTopAnchor(pane, (double) 0);
+    }
+
+    private boolean canStateAdded(String paneId) {
+        ObservableList<Node> children = mainContainer.getChildren();
+
+        if ((children.size() > 0 && children.get(0).getId().equals(paneId))) {
+            return false;
+        } else if (children.size() == 0) {
+            return true;
+        }
+        return true;
     }
 
 
@@ -93,4 +166,8 @@ public class MainController implements Initializable, SideNavController.OnMainIt
     public void onStateChanged(int state) {
         changeContainer(state);
     }
+
 }
+
+
+
