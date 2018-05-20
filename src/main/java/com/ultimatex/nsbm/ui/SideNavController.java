@@ -13,8 +13,9 @@ public class SideNavController implements Initializable {
 
 
     @FXML
-    VBox sideNav;
-    private OnMainItemClickListener listener;
+    private VBox sideNav;
+
+    private OnSideNavItemClickListener listener;
     private MainController mainController;
     private int State = MainContainerState.PROFILE;
 
@@ -24,51 +25,53 @@ public class SideNavController implements Initializable {
     }
 
     @FXML
-    private void loadAddMember(ActionEvent event) {
-        //LibraryAssistantUtil.loadWindow(getClass().getResource("/library/assistant/ui/addmember/member_add.fxml"), "Add New Member", null);
+    private void onProfileClick(ActionEvent event) {
+        listener.onStateChanged(MainContainerState.PROFILE);
     }
 
     @FXML
-    private void loadAddBook(ActionEvent event) {
-        //LibraryAssistantUtil.loadWindow(getClass().getResource("/library/assistant/ui/addbook/add_book.fxml"), "Add New Book", null);
+    private void onPaymentClick(ActionEvent event) {
         listener.onStateChanged(MainContainerState.PAYMENT);
     }
 
     @FXML
-    private void loadMemberTable(ActionEvent event) {
-        //LibraryAssistantUtil.loadWindow(getClass().getResource("/library/assistant/ui/listmember/member_list.fxml"), "Member List", null);
+    private void onScheduleClick(ActionEvent event) {
+        listener.onStateChanged(MainContainerState.SCHEDULE);
     }
 
     @FXML
-    private void loadBookTable(ActionEvent event) {
-        //LibraryAssistantUtil.loadWindow(getClass().getResource("/library/assistant/ui/listbook/book_list.fxml"), "Book List", null);
+    private void onSubjectsClick(ActionEvent event) {
+        listener.onStateChanged(MainContainerState.SUBJECT);
     }
 
     @FXML
-    private void loadSettings(ActionEvent event) {
-        //LibraryAssistantUtil.loadWindow(getClass().getResource("/library/assistant/settings/settings.fxml"), "Settings", null);
+    private void onSettingsClick(ActionEvent event) {
+        listener.onStateChanged(MainContainerState.SETTINGS);
     }
 
     @FXML
-    private void loadIssuedBookList(ActionEvent event) {
-
+    private void onResultsClick(ActionEvent event) {
+        listener.onStateChanged(MainContainerState.RESULT);
     }
 
     public MainController getMainController() {
         return mainController;
     }
 
+
     public void setMainController(MainController mainController) {
         this.mainController = mainController;
     }
 
-    public void setListener(OnMainItemClickListener listener) {
+    public void setListener(OnSideNavItemClickListener listener) {
         this.listener = listener;
     }
 
 
-    public interface OnMainItemClickListener {
+    public interface OnSideNavItemClickListener {
         void onStateChanged(int state);
+
+        //void onNaveItemClickListener();
     }
 
 
