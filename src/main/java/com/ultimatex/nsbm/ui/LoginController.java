@@ -29,8 +29,8 @@ public class LoginController {
     @FXML
     public JFXButton cancelButton;
 
-    double windowX;
-    double windowY;
+    private double windowX;
+    private double windowY;
 
     @FXML
     public void onLoginButtonClick(Event event)
