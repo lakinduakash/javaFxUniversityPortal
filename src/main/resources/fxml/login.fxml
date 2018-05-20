@@ -35,9 +35,9 @@
             <Font name="Arial" size="30.0" />
          </font>
       </Label>
-       <Label fx:id="signupLable" layoutX="110.0" layoutY="379.0" onMouseClicked="#onSignupLabelClicked"
-              prefHeight="29.0" prefWidth="151.0" styleClass="login-signup-text" text="New user? Signup"/>
-       <Label fx:id="forgotPasswordLable" layoutX="387.0" layoutY="379.0" prefHeight="29.0" prefWidth="151.0"
-              styleClass="login-forgot-password-text" text="Forgot password?"/>
+      <Label fx:id="signupLable" layoutX="110.0" layoutY="379.0" onMouseClicked="#onSignupLabelClicked"
+             prefHeight="29.0" prefWidth="151.0" styleClass="login-signup-text" text="New user? Signup"/>
+      <Label fx:id="forgotPasswordLable" layoutX="387.0" layoutY="379.0" prefHeight="29.0" prefWidth="151.0"
+             styleClass="login-forgot-password-text" text="Forgot password?"/>
    </children>
 </AnchorPane>
