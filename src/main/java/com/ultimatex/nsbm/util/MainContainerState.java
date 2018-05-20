@@ -6,6 +6,7 @@ public interface MainContainerState {
     int PROFILE = 2;
     int PAYMENT = 3;
     int SCHEDULE = 4;
-    int RSULT = 5;
+    int RESULT = 5;
+    int SUBJECT = 6;
 
 }
