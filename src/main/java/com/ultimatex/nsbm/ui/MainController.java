@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 import com.ultimatex.nsbm.util.MainContainerState;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -133,21 +134,36 @@ public class MainController implements Initializable, SideNavController.OnSideNa
 
 
     private void loadContainer(String fxmlLocation) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlLocation));
-        Node pane = null;
 
-        try {
-            pane = fxmlLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Task<Node> task = new Task<Node>() {
+            @Override
+            protected Node call() throws Exception {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlLocation));
+                Node pane = null;
+
+                try {
+                    pane = fxmlLoader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return pane;
+            }
+        };
+
+        task.setOnSucceeded((e) -> {
+            Node pane = task.getValue();
+            mainContainer.getChildren().addAll(pane);
+            AnchorPane.setBottomAnchor(pane, (double) 0);
+            AnchorPane.setRightAnchor(pane, (double) 0);
+            AnchorPane.setLeftAnchor(pane, (double) 0);
+            AnchorPane.setTopAnchor(pane, (double) 0);
+        });
 
 
-        mainContainer.getChildren().addAll(pane);
-        AnchorPane.setBottomAnchor(pane, (double) 0);
-        AnchorPane.setRightAnchor(pane, (double) 0);
-        AnchorPane.setLeftAnchor(pane, (double) 0);
-        AnchorPane.setTopAnchor(pane, (double) 0);
+        Thread thread = new Thread(task);
+        thread.start();
+
+
     }
 
     private boolean canStateAdded(String paneId) {
@@ -167,7 +183,5 @@ public class MainController implements Initializable, SideNavController.OnSideNa
         changeContainer(state);
     }
 
+
 }
-
-
-
