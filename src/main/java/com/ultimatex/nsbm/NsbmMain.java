@@ -33,8 +33,6 @@ public class NsbmMain extends Application {
         launch(args);
     }
 
-    public int add(int a, int b) {
-        return a + b;
-    }
 }
+
 
