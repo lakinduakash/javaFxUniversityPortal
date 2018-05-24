@@ -4,7 +4,7 @@
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.layout.VBox?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="sideNav" prefHeight="445.0" prefWidth="154.0" styleClass="root"
-      stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/10.0.1"
+      stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/8.0"
       fx:controller="com.ultimatex.nsbm.ui.SideNavController">
     <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#onProfileClick" prefHeight="400.0"
                prefWidth="160.0" styleClass="side-nave-button" text="Profile" textAlignment="CENTER">

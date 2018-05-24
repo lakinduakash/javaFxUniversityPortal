@@ -4,27 +4,17 @@
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.layout.AnchorPane?>
-<JFXTabPane xmlns:fx="http://javafx.com/fxml/1" fx:id="paymentPane" xmlns="http://javafx.com/javafx/10.0.1">
-    <tabs>
-        <Tab text="1st Year">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-            </content>
-        </Tab>
-        <Tab text="2nd Year">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-            </content>
-        </Tab>
-        <Tab text="3rd Year">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-            </content>
-        </Tab>
-        <Tab text="1st Year">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-            </content>
-        </Tab>
-    </tabs>
+<JFXTabPane xmlns:fx="http://javafx.com/fxml/1" fx:id="paymentPane" xmlns="http://javafx.com/javafx/8.0">
+    <Tab text="1st Year">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+    </Tab>
+    <Tab text="2nd Year">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+    </Tab>
+    <Tab text="3rd Year">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+    </Tab>
+    <Tab text="1st Year">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+    </Tab>
 </JFXTabPane>
