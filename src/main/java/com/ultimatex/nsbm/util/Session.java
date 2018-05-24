@@ -4,12 +4,13 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.sun.istack.internal.NotNull;
-import com.ultimatex.nsbm.Admin;
 import com.ultimatex.nsbm.User;
 import org.bson.Document;
 
 public class Session {
     private static Session sessionInstance;
+
+    private static String _email;
 
     private boolean valid;
     private User user;
@@ -30,6 +31,7 @@ public class Session {
         Document user = findIterable.first();
 
         if (user == null) {
+            sessionInstance = null;
             throw new UserNotFoundException();
         }
 
@@ -45,16 +47,18 @@ public class Session {
     }
 
     public static Session getInstance(@NotNull String email, @NotNull String password) {
-        if (sessionInstance == null) {
+        if (sessionInstance == null || !email.equals(_email)) {
             new Session(email, password);
+            _email = email;
             return sessionInstance;
         } else
             return sessionInstance;
     }
 
     public static void createInstance(String email, String password) {
-        if (sessionInstance == null) {
+        if (sessionInstance == null || !email.equals(_email)) {
             new Session(email, password);
+            _email = email;
         }
     }
 
@@ -74,8 +78,12 @@ public class Session {
         Document document = collection.find(new Document("email", Session.getSession().email)).first();
         String type = (String) document.get("type");
 
+        if (type == null) {
+            type = "";
+        }
+
         if (User.TYPE_ADMIN.equals(type))
-            return new Admin(session.email, database);
+            return new AdminHelper(session.email, database);
         else
             return new StudentHelper(session.email, database);
     }
