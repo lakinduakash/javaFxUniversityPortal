@@ -1,9 +1,6 @@
 package com.ultimatex.nsbm;
 
-import com.ultimatex.nsbm.util.DatabaseHelper;
-import com.ultimatex.nsbm.util.InvalidSessionException;
-import com.ultimatex.nsbm.util.Session;
-import com.ultimatex.nsbm.util.StudentHelper;
+import com.ultimatex.nsbm.util.*;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -31,11 +28,19 @@ public class SessionTest {
     }
 
     @Test
-    public void getUser() {
+    public void getUserOfStudentHelperWithValidAccount() {
         Session.createInstance("email@email.com", "password");
 
         User user = Session.getUser(Session.getSession(), DatabaseHelper.getInstance().getDatabase());
 
         assertThat(user, is(instanceOf(StudentHelper.class)));
+    }
+
+    @Test(expected = UserNotFoundException.class)
+    public void userNotFount() {
+        Session.createInstance("emai@email.com", "password");
+
+        User user = Session.getUser(Session.getSession(), DatabaseHelper.getInstance().getDatabase());
+
     }
 }
