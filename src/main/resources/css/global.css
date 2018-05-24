@@ -12,6 +12,10 @@
     -fx-background-color: -fx-primary;
 }
 
+.test {
+    -fx-background-color: -fx-pink;
+}
+
 .login-cancel, .login-button{
     -fx-text-fill: -fx-blue;
     -fx-background-color: -fx-primary;
@@ -45,3 +49,5 @@
     -fx-text-fill: -fx-blue;
 }
 
+.side-nave-button {
+}
