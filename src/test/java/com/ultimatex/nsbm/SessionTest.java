@@ -43,4 +43,5 @@ public class SessionTest {
         User user = Session.getUser(Session.getSession(), DatabaseHelper.getInstance().getDatabase());
 
     }
+
 }
