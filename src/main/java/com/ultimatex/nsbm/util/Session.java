@@ -3,7 +3,6 @@ package com.ultimatex.nsbm.util;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.sun.istack.internal.NotNull;
 import com.ultimatex.nsbm.User;
 import org.bson.Document;
 
@@ -20,7 +19,7 @@ public class Session {
 
     private Session session;
 
-    private Session(@NotNull String email, @NotNull String password) {
+    private Session(String email, String password) {
 
         DatabaseHelper dh = DatabaseHelper.getInstance();
         db = dh.getDatabase();
@@ -46,7 +45,7 @@ public class Session {
 
     }
 
-    public static Session getInstance(@NotNull String email, @NotNull String password) {
+    public static Session getInstance(String email, String password) {
         if (sessionInstance == null || !email.equals(_email)) {
             new Session(email, password);
             _email = email;
