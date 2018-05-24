@@ -7,6 +7,7 @@ public class StudentHelper extends User {
 
     private String dob;
     private int age;
+    private String email;
 
     private String admissionDate;
     private String nic;
@@ -15,5 +16,7 @@ public class StudentHelper extends User {
 
     public StudentHelper(String email, MongoDatabase database) {
         super(email, database);
+
+        this.email = email;
     }
 }
