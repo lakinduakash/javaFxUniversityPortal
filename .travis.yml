@@ -15,3 +15,11 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+
+services:
+  - mongodb
+
+before_script:
+  - sleep 15
+  - mongo nsbm --eval 'db.student.insertOne({name:{first:"Lakindu"}});'
+  - mongo nsbm --eval 'db.user.insertOne({email:"email@email.com",password:"password"});'
