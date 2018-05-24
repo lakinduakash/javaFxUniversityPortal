@@ -1,9 +1,9 @@
 package com.ultimatex.nsbm;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.ultimatex.nsbm.util.DatabaseHelper;
@@ -15,13 +15,14 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.mongodb.client.model.Updates.rename;
+import static com.mongodb.client.model.Updates.set;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertThat;
 
 public class NsbmTest {
 
-    private NsbmMain nsbmMain = new NsbmMain();
 
     private DatabaseHelper mongoCon = DatabaseHelper.getInstance();
     private MongoClient mongoClient = mongoCon.getMongoClient();
@@ -29,7 +30,6 @@ public class NsbmTest {
 
     @Test
     public void testDbCon() {
-        DB db = mongoCon.getDatabase();
         MongoClient mongoClient = mongoCon.getMongoClient();
         Assert.assertThat(mongoClient, is(notNullValue()));
     }
@@ -72,7 +72,7 @@ public class NsbmTest {
         mongoClient.close();
 
         // Then
-        mongoClient.getDB("SomeDatabase").getCollection("coll").insert(new BasicDBObject("field", "value"));
+        mongoClient.getDatabase("SomeDatabase").getCollection("coll").insertOne(new Document("field", "value"));
     }
 
     @Test
@@ -102,7 +102,7 @@ public class NsbmTest {
         // Given
         MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
         MongoDatabase database = mongoClient.getDatabase("Examples");
-        MongoCollection collection = database.getCollection("people");
+        MongoCollection<Document> collection = database.getCollection("people");
 
         Person charlie = new Person("charlie222", "Charles", new Address("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
         Person akash = new Person("akash222", "Akash", new Address("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
@@ -132,6 +132,26 @@ public class NsbmTest {
 
         assertThat(count, is(1L));
 
+    }
+
+    @Test
+    public void updateStudent() {
+        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
+        MongoDatabase database = mongoClient.getDatabase("nsbm");
+        MongoCollection<Document> collection = database.getCollection("student");
+
+        Document filter = new Document("name.first", "Lakindu");
+
+        collection.updateOne(filter, set("age", 28));
+
+        System.out.println(rename("age", "aa").toString());
+
+        FindIterable<Document> findIterable = collection.find(filter);
+
+        Document re = findIterable.first();
+
+        int a = (int) re.get("age");
+        assertThat(a, is(28));
     }
 
 }
