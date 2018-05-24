@@ -13,6 +13,7 @@ import org.junit.Test;
 
 import java.net.UnknownHostException;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import static com.mongodb.client.model.Updates.rename;
@@ -78,7 +79,7 @@ public class NsbmTest {
     @Test
     public void shouldTurnAPersonIntoADBObject() {
         // Given
-        Person bob = new Person("bob", "Bob The Amazing", new Address("123 Fake St", "LondonTown", 1234567890), Arrays.asList(27464, 747854));
+        Person bob = new Person("bob", "Bob The Amazing", new AddressTest("123 Fake St", "LondonTown", 1234567890), Arrays.asList(27464, 747854));
 
         // When
         Document bobAsDBObject = PersonAdaptor.toDocument(bob);
@@ -104,8 +105,8 @@ public class NsbmTest {
         MongoDatabase database = mongoClient.getDatabase("Examples");
         MongoCollection<Document> collection = database.getCollection("people");
 
-        Person charlie = new Person("charlie222", "Charles", new Address("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
-        Person akash = new Person("akash222", "Akash", new Address("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
+        Person charlie = new Person("charlie222", "Charles", new AddressTest("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
+        Person akash = new Person("akash222", "Akash", new AddressTest("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
 
         // When
         // TODO: insert Charlie into the collection
@@ -154,16 +155,27 @@ public class NsbmTest {
         assertThat(a, is(28));
     }
 
+    @Test
+    public void insertDate() {
+        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
+        MongoDatabase database = mongoClient.getDatabase("nsbm");
+        MongoCollection<Document> collection = database.getCollection("student");
+
+        Document filter = new Document("name.first", "Lakindu");
+
+        collection.updateOne(filter, set("date", new Date()));
+    }
+
 }
 
 
 class Person {
     private final String id;
     private final String name;
-    private final Address address;
+    private final AddressTest address;
     private final List<Integer> bookIds;
 
-    public Person(final String id, final String name, final Address address, final List<Integer> bookIds) {
+    public Person(final String id, final String name, final AddressTest address, final List<Integer> bookIds) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -179,7 +191,7 @@ class Person {
         return name;
     }
 
-    public Address getAddress() {
+    public AddressTest getAddress() {
         return address;
     }
 
@@ -238,12 +250,12 @@ class Person {
 }
 
 
-class Address {
+class AddressTest {
     private final String street;
     private final String town;
     private final int phone;
 
-    public Address(final String street, final String town, final int phone) {
+    public AddressTest(final String street, final String town, final int phone) {
         this.street = street;
         this.town = town;
         this.phone = phone;
