@@ -20,6 +20,7 @@ services:
   - mongodb
 
 before_script:
-  - sleep 15
+  - sleep 8
   - mongo nsbm --eval 'db.student.insertOne({name:{first:"Lakindu"}});'
   - mongo nsbm --eval 'db.user.insertOne({email:"email@email.com",password:"password"});'
+  - mongo nsbm --eval 'db.user.insertOne({email:"admin",password:"admin"});'
