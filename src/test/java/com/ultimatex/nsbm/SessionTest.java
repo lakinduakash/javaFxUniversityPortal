@@ -24,7 +24,7 @@ public class SessionTest {
 
     @Test
     public void sessionClose() {
-        Session.createInstance("email@email.com", "password");
+        Session.createInstance("admin", "admin");
         Session.close();
 
         Session session = Session.getSession();
