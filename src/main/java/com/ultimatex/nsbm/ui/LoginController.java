@@ -4,6 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDecorator;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.ultimatex.nsbm.util.Session;
+import com.ultimatex.nsbm.util.UserNotFoundException;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,13 +31,33 @@ public class LoginController {
     @FXML
     public JFXButton cancelButton;
 
+    @FXML
+    Label incorrectLoginText;
+
     private double windowX;
     private double windowY;
 
     @FXML
     public void onLoginButtonClick(Event event)
     {
-        loadMain(event);
+        String email = userName.getText();
+        String password = passwordField.getText();
+
+        if (!"".equals(email) || !"".equals(password)) {
+            try {
+                Session.getInstance(email, password);
+
+                if (Session.getSession() != null)
+                    loadMain(event);
+            } catch (UserNotFoundException e) {
+                incorrectLoginText.setVisible(true);
+            } finally {
+                incorrectLoginText.setVisible(true);
+            }
+
+        } else {
+            incorrectLoginText.setVisible(true);
+        }
 
     }
 
