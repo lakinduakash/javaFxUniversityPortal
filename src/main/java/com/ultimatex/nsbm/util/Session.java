@@ -66,9 +66,6 @@ public class Session {
     }
 
     public static Session getSession() {
-        if (sessionInstance == null) {
-            throw new InvalidSessionException();
-        }
         return sessionInstance;
     }
 
