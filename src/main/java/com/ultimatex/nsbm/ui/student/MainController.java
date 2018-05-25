@@ -1,4 +1,4 @@
-package com.ultimatex.nsbm.ui;
+package com.ultimatex.nsbm.ui.student;
 
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
@@ -23,12 +23,12 @@ import java.util.logging.Logger;
 
 public class MainController implements Initializable, SideNavController.OnSideNavItemClickListener {
 
-    private static final String PROFILE_CONTAINER = "/fxml/profile.fxml";
-    private static final String SUBJECTS_CONTAINER = "/fxml/subjects.fxml";
-    private static final String SCHEDULE_CONTAINER = "/fxml/schedule.fxml";
-    private static final String RESULTS_CONTAINER = "/fxml/results.fxml";
-    private static final String PAYMENTS_CONTAINER = "/fxml/payments.fxml";
-    private static final String SETTINGS_CONTAINER = "/fxml/settings.fxml";
+    private static final String PROFILE_CONTAINER = "/fxml/student/profile.fxml";
+    private static final String SUBJECTS_CONTAINER = "/fxml/student/subjects.fxml";
+    private static final String SCHEDULE_CONTAINER = "/fxml/student/schedule.fxml";
+    private static final String RESULTS_CONTAINER = "/fxml/student/results.fxml";
+    private static final String PAYMENTS_CONTAINER = "/fxml/student/payments.fxml";
+    private static final String SETTINGS_CONTAINER = "/fxml/student/settings.fxml";
 
 
 
@@ -62,7 +62,7 @@ public class MainController implements Initializable, SideNavController.OnSideNa
 
     private void initDrawer() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/sidenav.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/student/sidenav.fxml"));
             VBox sideNav = loader.load();
             drawer.setSidePane(sideNav);
             SideNavController controller = loader.getController();

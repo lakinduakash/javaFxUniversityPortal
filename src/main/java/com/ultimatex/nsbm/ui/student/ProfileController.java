@@ -1,4 +1,4 @@
-package com.ultimatex.nsbm.ui;
+package com.ultimatex.nsbm.ui.student;
 
 import javafx.fxml.Initializable;
 

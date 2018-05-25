@@ -1,4 +1,4 @@
-package com.ultimatex.nsbm.ui;
+package com.ultimatex.nsbm.ui.student;
 
 import com.ultimatex.nsbm.util.MainContainerState;
 import javafx.event.ActionEvent;
