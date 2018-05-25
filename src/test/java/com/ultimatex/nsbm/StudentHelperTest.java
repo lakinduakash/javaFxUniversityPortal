@@ -1,6 +1,7 @@
 package com.ultimatex.nsbm;
 
 import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.ultimatex.nsbm.util.DatabaseHelper;
 import com.ultimatex.nsbm.util.StudentHelper;
@@ -70,7 +71,17 @@ public class StudentHelperTest {
 
         assertThat(o, is(true));
 
-        clean();
+
+    }
+
+    @Test
+    public void testNativeOp() {
+        MongoCollection<Document> collection = mongoDatabase.getCollection("user");
+
+        collection.updateMany(new Document(), Document.parse("{\n" +
+                "     $set: { \"size.uom\": \"cm\", status: \"P\" },\n" +
+                "     $currentDate: { lastModified: true }\n" +
+                "   }"));
     }
 
 
