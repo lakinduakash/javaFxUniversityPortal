@@ -1,15 +1,18 @@
 package com.ultimatex.nsbm;
 
+import com.google.gson.Gson;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.ultimatex.nsbm.util.DatabaseHelper;
 import com.ultimatex.nsbm.util.StudentHelper;
 import org.bson.Document;
+import org.bson.types.ObjectId;
 import org.junit.Test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import static org.hamcrest.core.Is.is;
@@ -82,6 +85,34 @@ public class StudentHelperTest {
                 "     $set: { \"size.uom\": \"cm\", status: \"P\" },\n" +
                 "     $currentDate: { lastModified: true }\n" +
                 "   }"));
+    }
+
+    @Test
+    public void setSubject() {
+        Subject subject = new Subject("A", 3200);
+        Course course = new Course();
+        course.setMaxYears(4);
+        course.setYear1sem1(new Subject[]{subject, subject});
+        course.setYear1sem2(new Subject[]{subject});
+
+        Gson gson = new Gson();
+        //String s=gson.toJson(subject);
+        String s1 = gson.toJson(course);
+
+        MongoCollection<Document> collection = mongoDatabase.getCollection("courses");
+        ArrayList objectId = collection.find(new Document("name", "cs")).first().get("year1sem1", ArrayList.class);
+
+        MongoCollection<Document> collection1 = mongoDatabase.getCollection("subject");
+
+        String I = (String) collection1.find(new Document("_id", objectId.get(0))).first().get("name");
+
+        String s2 = gson.toJson(objectId.get(0));
+
+        ObjectId ii = gson.fromJson(s2, ObjectId.class);
+
+        System.out.print(I + s2 + ii.toHexString());
+
+
     }
 
 
