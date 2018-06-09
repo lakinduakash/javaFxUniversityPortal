@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.ultimatex.nsbm.util.Session;
 import com.ultimatex.nsbm.util.UserNotFoundException;
+import javafx.concurrent.Task;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -43,15 +44,32 @@ public class LoginController {
         String email = userName.getText();
         String password = passwordField.getText();
 
+        Task<Void> task;
+
         if (!"".equals(email) || !"".equals(password)) {
             try {
-                Session.getInstance(email, password);
+                task = new Task<Void>() {
+                    @Override
+                    protected Void call() {
+                        Session.getInstance(email, password);
+                        return null;
+                    }
+                };
 
-                if (Session.getSession() != null)
-                    loadMain(event);
+                new Thread(task).start();
+                task.setOnSucceeded(event1 -> {
+                    if (Session.getSession() != null)
+                        loadMain(event);
+                    else
+                        incorrectLoginText.setVisible(true);
+                });
+
+                task.setOnFailed(event1 -> {
+                    incorrectLoginText.setVisible(true);
+                });
+
+
             } catch (UserNotFoundException e) {
-                incorrectLoginText.setVisible(true);
-            } finally {
                 incorrectLoginText.setVisible(true);
             }
 
