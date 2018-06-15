@@ -150,6 +150,7 @@ public class MainController implements Initializable, SideNavController.OnSideNa
             }
         };
 
+
         task.setOnSucceeded((e) -> {
             Node pane = task.getValue();
             mainContainer.getChildren().addAll(pane);
