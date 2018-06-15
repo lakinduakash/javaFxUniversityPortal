@@ -139,7 +139,7 @@ public class LoginController {
 
     private void loadMain(Event event) {
         ((Stage) ((JFXButton) (event.getSource())).getScene().getWindow()).close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/student/main.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admin/main.fxml"));
         try {
             fxmlLoader.load();
         } catch (IOException e) {
