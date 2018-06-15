@@ -6,6 +6,7 @@ import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 @Entity("student")
 public class Student {
@@ -15,6 +16,12 @@ public class Student {
 
     private String name;
     private int age;
+
+
+    private Map<Integer, String> mTest;
+
+
+    private ArrayList<Map<String, AddressTest>> list;
 
     @Reference
     private ArrayList<AddressTest> ad;
@@ -69,5 +76,21 @@ public class Student {
 
     public void setAd(ArrayList<AddressTest> ad) {
         this.ad = ad;
+    }
+
+    public Map<Integer, String> getmTest() {
+        return mTest;
+    }
+
+    public void setmTest(Map<Integer, String> mTest) {
+        this.mTest = mTest;
+    }
+
+    public ArrayList<Map<String, AddressTest>> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<Map<String, AddressTest>> list) {
+        this.list = list;
     }
 }
