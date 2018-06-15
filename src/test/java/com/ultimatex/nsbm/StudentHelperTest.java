@@ -57,25 +57,7 @@ public class StudentHelperTest {
 
     }
 
-    @Test
-    public void setAddress() {
-        StudentHelper studentHelper = new StudentHelper(email, mongoDatabase);
 
-        Address exp = new Address("new sreww", "jjsj", "hhhha", "Sri Lanka");
-
-        studentHelper.setAddress(exp);
-
-        Address actual = studentHelper.getAddress();
-
-        boolean o = false;
-
-        if (exp.getCity().equals(actual.getCity()) && exp.getCountry().equals(actual.getCountry()) && exp.getStreet().equals(actual.getStreet()) && exp.getZipCode().equals(actual.getZipCode()))
-            o = true;
-
-        assertThat(o, is(true));
-
-
-    }
 
     @Test
     public void testNativeOp() {

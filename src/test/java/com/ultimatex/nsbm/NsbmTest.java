@@ -79,7 +79,7 @@ public class NsbmTest {
     @Test
     public void shouldTurnAPersonIntoADBObject() {
         // Given
-        Person bob = new Person("bob", "Bob The Amazing", new AddressTest("123 Fake St", "LondonTown", 1234567890), Arrays.asList(27464, 747854));
+        Person bob = new Person("bob", "Bob The Amazing", new AddressTest1("123 Fake St", "LondonTown", 1234567890), Arrays.asList(27464, 747854));
 
         // When
         Document bobAsDBObject = PersonAdaptor.toDocument(bob);
@@ -105,8 +105,8 @@ public class NsbmTest {
         MongoDatabase database = mongoClient.getDatabase("Examples");
         MongoCollection<Document> collection = database.getCollection("people");
 
-        Person charlie = new Person("charlie222", "Charles", new AddressTest("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
-        Person akash = new Person("akash222", "Akash", new AddressTest("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
+        Person charlie = new Person("charlie222", "Charles", new AddressTest1("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
+        Person akash = new Person("akash222", "Akash", new AddressTest1("74 That Place", "LondonTown", 1234567890), Arrays.asList(1, 74));
 
         // When
         // TODO: insert Charlie into the collection
@@ -172,10 +172,10 @@ public class NsbmTest {
 class Person {
     private final String id;
     private final String name;
-    private final AddressTest address;
+    private final AddressTest1 address;
     private final List<Integer> bookIds;
 
-    public Person(final String id, final String name, final AddressTest address, final List<Integer> bookIds) {
+    public Person(final String id, final String name, final AddressTest1 address, final List<Integer> bookIds) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -191,7 +191,7 @@ class Person {
         return name;
     }
 
-    public AddressTest getAddress() {
+    public AddressTest1 getAddress() {
         return address;
     }
 
@@ -250,12 +250,12 @@ class Person {
 }
 
 
-class AddressTest {
+class AddressTest1 {
     private final String street;
     private final String town;
     private final int phone;
 
-    public AddressTest(final String street, final String town, final int phone) {
+    public AddressTest1(final String street, final String town, final int phone) {
         this.street = street;
         this.town = town;
         this.phone = phone;
