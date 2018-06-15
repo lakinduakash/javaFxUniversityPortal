@@ -5,9 +5,10 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.UpdateResult;
-import com.ultimatex.nsbm.Address;
 import com.ultimatex.nsbm.Course;
+import com.ultimatex.nsbm.Result;
 import com.ultimatex.nsbm.User;
+import com.ultimatex.nsbm.model.Address;
 import org.bson.BsonDocument;
 import org.bson.Document;
 import org.bson.conversions.Bson;
@@ -22,7 +23,7 @@ public class StudentHelper extends User {
     private String firstName;
     private String lastName;
     private String surName;
-    private String fullName;
+    transient private String fullName;
 
     private Date dob;
     private int age;
@@ -40,6 +41,7 @@ public class StudentHelper extends User {
 
 
     private Course course;
+    private Result results;
 
     private String school;
     private int ALYear;
@@ -208,58 +210,64 @@ public class StudentHelper extends User {
     }
 
     public String getIndexNumber() {
+        this.indexNumber = getObject().getString("indexNumber");
         return indexNumber;
     }
 
-    public void setIndexNumber(String indexNumber) {
-        this.indexNumber = indexNumber;
-    }
 
     public String getStudentNumber() {
+        studentNumber = getObject().getString("studentNumber");
         return studentNumber;
     }
 
-    public void setStudentNumber(String studentNumber) {
-        this.studentNumber = studentNumber;
-    }
 
     public String getSchool() {
+        school = getObject().getString("school");
         return school;
     }
 
     public void setSchool(String school) {
+        updateOne(set("school", school));
         this.school = school;
     }
 
     public int getALYear() {
+        ALYear = getObject().getInteger("ALyear");
         return ALYear;
     }
 
     public void setALYear(int ALYear) {
+        updateOne(set("ALyear", ALYear));
         this.ALYear = ALYear;
     }
 
     public String getALStream() {
+        ALStream = getObject().getString("ALStream");
         return ALStream;
     }
 
     public void setALStream(String ALStream) {
+        updateOne(set("ALStream", ALStream));
         this.ALStream = ALStream;
     }
 
     public String getALResults() {
+        ALResults = getObject().getString("ALResults");
         return ALResults;
     }
 
     public void setALResults(String ALResults) {
+        updateOne(set("ALResults", ALResults));
         this.ALResults = ALResults;
     }
 
     public double getzScore() {
+        zScore = getObject().getDouble("zScore");
         return zScore;
     }
 
     public void setzScore(double zScore) {
+        updateOne(set("zScore", zScore));
         this.zScore = zScore;
     }
 
