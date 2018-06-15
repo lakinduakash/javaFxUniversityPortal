@@ -14,14 +14,14 @@
                 <HBox alignment="CENTER_LEFT" prefHeight="118.0" spacing="10.0">
                     <children>
                         <FontAwesomeIconView glyphName="USER" size="30" textAlignment="CENTER" wrappingWidth="171.0"/>
-                        <JFXTextField editable="false" labelFloat="true" prefHeight="36.0" prefWidth="594.0"
+                        <JFXTextField fx:id="textFieldFullName" labelFloat="true" prefHeight="36.0" prefWidth="594.0"
                                       promptText="Full Name" text="Lakindu Aksh Sajeew Jayasinghe Gunasekara"
                                       HBox.hgrow="SOMETIMES">
                             <HBox.margin>
                                 <Insets right="10.0"/>
                             </HBox.margin>
                         </JFXTextField>
-                        <JFXTextField editable="false" labelFloat="true" layoutX="482.0" layoutY="56.0"
+                        <JFXTextField fx:id="textFieldNickName" labelFloat="true" layoutX="482.0" layoutY="56.0"
                                       prefHeight="38.0" prefWidth="237.0" promptText="Nick Name" text="Lakindu"
                                       HBox.hgrow="SOMETIMES">
                             <HBox.margin>
@@ -30,9 +30,6 @@
                         </JFXTextField>
                         <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" prefHeight="42.0"
                                    prefWidth="39.0" textFill="#429e37">
-                            <graphic>
-                                <FontAwesomeIconView glyphName="PENCIL" size="15"/>
-                            </graphic>
                             <HBox.margin>
                                 <Insets right="25.0"/>
                             </HBox.margin>
@@ -49,10 +46,10 @@
                     <children>
                         <FontAwesomeIconView glyphName="CALENDAR" size="30" textAlignment="CENTER"
                                              wrappingWidth="171.0"/>
-                        <JFXTextField editable="false" labelFloat="true" prefHeight="36.0" prefWidth="594.0"
+                        <JFXTextField fx:id="textFieldDob" labelFloat="true" prefHeight="36.0" prefWidth="594.0"
                                       promptText="Date of Birth" text="1995.02.27" HBox.hgrow="SOMETIMES"/>
-                        <JFXTextField editable="false" labelFloat="true" layoutX="482.0" layoutY="56.0"
-                                      prefHeight="38.0" prefWidth="237.0" promptText="Age" text="23">
+                        <JFXTextField fx:id="textFieldAge" editable="false" labelFloat="true" layoutX="482.0"
+                                      layoutY="56.0" prefHeight="38.0" prefWidth="237.0" promptText="Age" text="23">
                             <HBox.margin>
                                 <Insets right="25.0"/>
                             </HBox.margin>
@@ -66,11 +63,11 @@
                     <children>
                         <FontAwesomeIconView glyphName="MAP_MARKER" size="30" textAlignment="CENTER"
                                              wrappingWidth="171.0"/>
-                        <JFXTextField editable="false" labelFloat="true" prefHeight="36.0" prefWidth="408.0"
+                        <JFXTextField fx:id="textFieldStreet" labelFloat="true" prefHeight="36.0" prefWidth="408.0"
                                       promptText="Street Address" text="Ebetota,Karangoda" HBox.hgrow="SOMETIMES"/>
-                        <JFXTextField editable="false" labelFloat="true" layoutX="482.0" layoutY="56.0"
+                        <JFXTextField fx:id="textFieldCity" labelFloat="true" layoutX="482.0" layoutY="56.0"
                                       prefHeight="38.0" prefWidth="202.0" promptText="City" text="Ratnapura"/>
-                        <JFXTextField editable="false" labelFloat="true" layoutX="795.0" layoutY="50.0"
+                        <JFXTextField fx:id="textFieldPostal" labelFloat="true" layoutX="795.0" layoutY="50.0"
                                       prefHeight="38.0" prefWidth="237.0" promptText="Postal Code" text="70018">
                             <HBox.margin>
                                 <Insets right="25.0"/>
@@ -85,17 +82,18 @@
                     <children>
                         <FontAwesomeIconView glyphName="STICKY_NOTE" size="30" textAlignment="CENTER"
                                              wrappingWidth="171.0"/>
-                        <JFXTextField editable="false" labelFloat="true" prefHeight="36.0" prefWidth="540.0"
-                                      promptText="Registration No:" text="2016CS053"/>
-                        <JFXTextField editable="false" labelFloat="true" layoutX="795.0" layoutY="50.0"
-                                      prefHeight="38.0" prefWidth="215.0" promptText="Index No:" text="15544888">
+                        <JFXTextField fx:id="textFieldReg" editable="false" labelFloat="true" prefHeight="36.0"
+                                      prefWidth="540.0" promptText="Registration No:" text="2016CS053"/>
+                        <JFXTextField fx:id="textFieldIndex" editable="false" labelFloat="true" layoutX="795.0"
+                                      layoutY="50.0" prefHeight="38.0" prefWidth="215.0" promptText="Index No:"
+                                      text="15544888">
                             <HBox.margin>
                                 <Insets right="25.0"/>
                             </HBox.margin>
                         </JFXTextField>
-                        <JFXTextField editable="false" labelFloat="true" layoutX="741.0" layoutY="46.0"
-                                      prefHeight="38.0" prefWidth="215.0" promptText="School" text="Schhol of Computing"
-                                      HBox.hgrow="SOMETIMES">
+                        <JFXTextField fx:id="textFieldCourse" editable="false" labelFloat="true" layoutX="741.0"
+                                      layoutY="46.0" prefHeight="38.0" prefWidth="215.0" promptText="School"
+                                      text="Schhol of Computing" HBox.hgrow="SOMETIMES">
                             <HBox.margin>
                                 <Insets right="25.0"/>
                             </HBox.margin>
@@ -109,7 +107,7 @@
                     <children>
                         <FontAwesomeIconView glyphName="CREDIT_CARD" size="30" textAlignment="CENTER"
                                              wrappingWidth="171.0"/>
-                        <JFXTextField editable="false" labelFloat="true" prefHeight="36.0" prefWidth="540.0"
+                        <JFXTextField fx:id="textFieldNIC" labelFloat="true" prefHeight="36.0" prefWidth="540.0"
                                       promptText="NIC/Passport" text="950580143V"/>
                     </children>
                     <opaqueInsets>
@@ -120,24 +118,16 @@
                     <children>
                         <FontAwesomeIconView glyphName="PHONE_SQUARE" size="30" textAlignment="CENTER"
                                              wrappingWidth="171.0"/>
-                        <JFXTextField editable="false" labelFloat="true" prefHeight="36.0" prefWidth="333.0"
+                        <JFXTextField fx:id="textFieldMobile" labelFloat="true" prefHeight="36.0" prefWidth="333.0"
                                       promptText="Mobile" text="0719687661" HBox.hgrow="SOMETIMES"/>
                         <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" prefHeight="42.0"
-                                   prefWidth="39.0" textFill="#429e37">
-                            <graphic>
-                                <FontAwesomeIconView glyphName="PENCIL" size="15"/>
-                            </graphic>
-                        </JFXButton>
-                        <JFXTextField editable="false" labelFloat="true" layoutX="191.0" layoutY="51.0"
+                                   prefWidth="39.0" textFill="#429e37"/>
+                        <JFXTextField fx:id="textFieldHome" labelFloat="true" layoutX="191.0" layoutY="51.0"
                                       prefHeight="36.0" prefWidth="333.0" promptText="Home" text="0456988845"
                                       HBox.hgrow="SOMETIMES"/>
                         <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="536.0"
-                                   layoutY="44.0" prefHeight="42.0" prefWidth="39.0" textFill="#429e37">
-                            <graphic>
-                                <FontAwesomeIconView glyphName="PENCIL" size="15"/>
-                            </graphic>
-                        </JFXButton>
-                        <JFXTextField editable="false" labelFloat="true" layoutX="534.0" layoutY="51.0"
+                                   layoutY="44.0" prefHeight="42.0" prefWidth="39.0" textFill="#429e37"/>
+                        <JFXTextField fx:id="textFieldEmail" labelFloat="true" layoutX="534.0" layoutY="51.0"
                                       prefHeight="36.0" prefWidth="333.0" promptText="email"
                                       text="lakinduakash@gmail.com" HBox.hgrow="SOMETIMES">
                             <HBox.margin>
@@ -155,7 +145,8 @@
                         <Insets top="50.0"/>
                     </opaqueInsets>
                     <children>
-                        <JFXButton ellipsisString="" prefHeight="42.0" prefWidth="120.0" text="Save edits"/>
+                        <JFXButton fx:id="buttonSave" ellipsisString="" onAction="#onSaveButtonClick" prefHeight="42.0"
+                                   prefWidth="120.0" text="Save edits"/>
                     </children>
                 </HBox>
             </children>
