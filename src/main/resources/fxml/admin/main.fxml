@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="500.0" prefWidth="750.0"
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.admin.MainController">
+    <children>
+        <VBox layoutX="182.0" layoutY="2.0" prefHeight="212.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="TOP_RIGHT" prefHeight="63.0" prefWidth="750.0" spacing="5.0">
+                    <children>
+                        <Label prefHeight="24.0" prefWidth="294.0" text="Admin Panel">
+                            <HBox.margin>
+                                <Insets right="300.0" top="20.0"/>
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold Italic" size="17.0"/>
+                            </font>
+                        </Label>
+                        <JFXButton alignment="CENTER" onAction="#onSignOutButtonClicked" prefHeight="58.0"
+                                   prefWidth="127.0" text="Sign Out">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="SIGN_OUT" size="30" wrappingWidth="30.71428680419922"/>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <opaqueInsets>
+                        <Insets right="10.0"/>
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <padding>
+                        <Insets right="10.0"/>
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="138.0" prefWidth="750.0"
+                      spacing="10.0">
+                    <children>
+                        <JFXComboBox fx:id="courseComboBox" labelFloat="true" prefHeight="26.0" prefWidth="231.0"
+                                     promptText="Choose Course"/>
+                        <JFXButton fx:id="registerButton" buttonType="RAISED" contentDisplay="TOP"
+                                   onAction="#onRegisterButtonClicked" prefHeight="112.0" prefWidth="246.0"
+                                   style="-fx-background-color: #ffffff;" text="Register New Student">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="USER" size="80" wrappingWidth="57.71428680419922"/>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <opaqueInsets>
+                        <Insets left="20.0" right="20.0"/>
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="10.0"/>
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="73.0" prefHeight="154.0" prefWidth="750.0"
+                      spacing="10.0">
+                    <children>
+                        <JFXTextField fx:id="textFieldIndexNumber" labelFloat="true" prefHeight="26.0" prefWidth="232.0"
+                                      promptText="Index number"/>
+                        <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#onEditButtonClicked"
+                                   prefHeight="119.0" prefWidth="252.0" style="-fx-background-color: #ffffff;"
+                                   text="Edit Or View Student">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="PENCIL" size="80" text=""
+                                                     wrappingWidth="56.71428680419922"/>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="10.0"/>
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="196.0" prefHeight="142.0" prefWidth="750.0">
+                    <children>
+                        <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#onSettingsButtonClick"
+                                   prefHeight="117.0" prefWidth="253.0" style="-fx-background-color: #ffffff;"
+                                   text="User Settings">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="GEAR" size="80" wrappingWidth="55.71428680419922"/>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
