@@ -1,4 +1,4 @@
-package com.ultimatex.nsbm;
+package com.ultimatex.nsbm.model;
 
 public class Address {
 
