@@ -1,48 +1,85 @@
 package com.ultimatex.nsbm;
 
 import com.mongodb.MongoClient;
+import com.ultimatex.nsbm.model.Course;
+import com.ultimatex.nsbm.model.Subject;
+import com.ultimatex.nsbm.util.GenerateIndex;
 import org.junit.Test;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
-import org.mongodb.morphia.query.Query;
 
 import java.util.ArrayList;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
 
 public class MorphiaTest {
 
     private Morphia morphia = new Morphia();
 
+    private Datastore init() {
+        morphia.mapPackage("com.ultimatex.nsbm.model");
+
+        return morphia.createDatastore(new MongoClient(), "morphia_test");
+    }
+
+
+    @Test
+    public void createSubject() {
+        Datastore d = init();
+
+        ArrayList<Subject> s = new ArrayList<>();
+        s.add(new Subject("SE", "1", 2000, 3));
+        s.add(new Subject("DSA", "2", 2000, 3));
+        s.add(new Subject("NE", "3", 2000, 3));
+        s.add(new Subject("PR", "4", 2000, 3));
+
+
+        d.save(s);
+
+
+
+    }
+
+    @Test
+    public void createCourse() {
+        Datastore d = init();
+        Subject s = d.createQuery(Subject.class).field("name").equal("PR").get();
+
+        if (s != null) {
+            Course course = new Course();
+            course.setMaxYears(3);
+            course.setName("BS");
+
+            ArrayList<Subject> arrayList = new ArrayList<>();
+
+            arrayList.add(s);
+            arrayList.add(s);
+            arrayList.add(s);
+
+            course.setYear1sem1(arrayList);
+
+            d.save(course);
+        }
+
+    }
+
     @Test
     public void createStudent() {
-        morphia.map(AddressTest.class, Student.class);
-
-        final Datastore datastore = morphia.createDatastore(new MongoClient(), "morphia_test");
-        datastore.ensureIndexes();
-
-        AddressTest t = new AddressTest("Ratnapura", "Karangoda");
-        datastore.save(t);
-
-        Student s = new Student("Lakindu", 23, t);
-
-        ArrayList<AddressTest> ki = new ArrayList<AddressTest>();
-        ki.add(t);
-        ki.add(t);
-        s.setAd(ki);
-
-        datastore.save(s);
-
 
     }
 
     @Test
-    public void findStudent() {
-        morphia.map(AddressTest.class, Student.class);
-        final Datastore datastore = morphia.createDatastore(new MongoClient(), "morphia_test");
-        datastore.ensureIndexes();
+    public void genIndex() {
+        GenerateIndex generateIndex = new GenerateIndex();
 
-        Query<Student> q = datastore.find(Student.class);
+        int index1 = generateIndex.genNewIndexAndSave();
+        int index2 = generateIndex.genNewIndexAndSave();
 
-        System.out.print(q.asList().get(0).getAd().get(0).getCity());
+        assertThat(index2, is(index1 + 1));
 
     }
+
+
 }
