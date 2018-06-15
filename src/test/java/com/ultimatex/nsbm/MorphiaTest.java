@@ -42,7 +42,7 @@ public class MorphiaTest {
 
         Query<Student> q = datastore.find(Student.class);
 
-        System.out.print(q.asList().get(1).getAd().get(0).getCity());
+        System.out.print(q.asList().get(0).getAd().get(0).getCity());
 
     }
 }

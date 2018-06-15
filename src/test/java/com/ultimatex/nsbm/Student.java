@@ -16,7 +16,7 @@ public class Student {
     private String name;
     private int age;
 
-
+    @Reference
     private ArrayList<AddressTest> ad;
 
     @Reference
