@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -41,6 +42,8 @@ public class MainController implements Initializable, SideNavController.OnSideNa
     private AnchorPane mainContainer;
 
     private int currentState;
+
+    private HashMap<String, Node> stateCache = new HashMap<>();
 
 
     @Override
@@ -138,15 +141,20 @@ public class MainController implements Initializable, SideNavController.OnSideNa
         Task<Node> task = new Task<Node>() {
             @Override
             protected Node call() throws Exception {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlLocation));
-                Node pane = null;
+                if (stateCache.containsKey(fxmlLocation))
+                    return stateCache.get(fxmlLocation);
+                else {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlLocation));
+                    Node pane = null;
 
-                try {
-                    pane = fxmlLoader.load();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    try {
+                        pane = fxmlLoader.load();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    stateCache.put(fxmlLocation, pane);
+                    return pane;
                 }
-                return pane;
             }
         };
 
