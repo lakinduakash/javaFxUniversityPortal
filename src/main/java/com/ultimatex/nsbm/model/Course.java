@@ -1,9 +1,7 @@
 package com.ultimatex.nsbm.model;
 
 import org.bson.types.ObjectId;
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Id;
-import org.mongodb.morphia.annotations.Reference;
+import org.mongodb.morphia.annotations.*;
 
 import java.util.ArrayList;
 
@@ -15,6 +13,9 @@ public class Course {
 
     private String school;
     private String name;
+
+    @Indexed(options = @IndexOptions(unique = true))
+    private String code;
 
 
     @Reference
@@ -211,5 +212,13 @@ public class Course {
 
     public void setMaxYears(int maxYears) {
         this.maxYears = maxYears;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }
