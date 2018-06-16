@@ -2,7 +2,10 @@ package com.ultimatex.nsbm;
 
 import com.mongodb.MongoClient;
 import com.ultimatex.nsbm.model.Course;
+import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.model.Subject;
+import com.ultimatex.nsbm.model.crud.CourseImp;
+import com.ultimatex.nsbm.model.crud.StudentImp;
 import com.ultimatex.nsbm.util.GenerateIndex;
 import org.junit.Test;
 import org.mongodb.morphia.Datastore;
@@ -68,14 +71,39 @@ public class MorphiaTest {
     @Test
     public void createStudent() {
 
+        StudentImp imp = new StudentImp();
+
+        Student student = new Student();
+        student.setFirstName("Lakindu Akash");
+
+        Course c1 = new Course();
+        c1.setCode("CS");
+        c1.setName("Computer Science");
+        new CourseImp().insertCourse(c1);
+
+        Course course = new CourseImp().getCourseByCode("CS");
+
+        GenerateIndex g = new GenerateIndex();
+
+        student.setCourse(course);
+        student.setIndexNumber(course.getCode() + g.genNewIndex());
+
+        boolean inserted = imp.insertNewStudent(student);
+        g.saveIndex();
+        assertThat(true, is(inserted));
+
     }
 
     @Test
     public void genIndex() {
-        GenerateIndex generateIndex = new GenerateIndex();
+        GenerateIndex generateIndex1 = new GenerateIndex();
+        GenerateIndex generateIndex2 = new GenerateIndex();
 
-        int index1 = generateIndex.genNewIndexAndSave();
-        int index2 = generateIndex.genNewIndexAndSave();
+        int index1 = generateIndex1.genNewIndex();
+        generateIndex1.saveIndex();
+
+        int index2 = generateIndex2.genNewIndex();
+        generateIndex2.saveIndex();
 
         assertThat(index2, is(index1 + 1));
 
