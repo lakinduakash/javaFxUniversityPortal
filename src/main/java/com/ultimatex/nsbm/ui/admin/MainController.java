@@ -76,8 +76,9 @@ public class MainController implements Initializable {
         Course c = new CourseImpl().getCourseByName(l.getText());
 
 
-
         GlobalState.setSelectedCourse(c);
+        GlobalState.setFromInsertAction(true);
+        GlobalState.setSelectedStudent(null);
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/student/main.fxml"));
 
@@ -97,7 +98,6 @@ public class MainController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
 
         stage.show();
-
 
 
     }
