@@ -11,9 +11,6 @@ public class Student {
     @Id
     private ObjectId id;
 
-    private String firstName;
-    private String lastName;
-    private String surName;
 
 
     private Date dob;
@@ -48,8 +45,12 @@ public class Student {
     private String university;
     private Double prevGpv;
 
-    transient private String fullName;
-    transient private int age;
+    private String fullName;
+
+    private String nickName;
+    private String homeNumber;
+    private String mobileNumber;
+    private int age;
 
 
     public ObjectId getId() {
@@ -60,29 +61,6 @@ public class Student {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getSurName() {
-        return surName;
-    }
-
-    public void setSurName(String surName) {
-        this.surName = surName;
-    }
 
     public String getFullName() {
         return fullName;
@@ -258,5 +236,29 @@ public class Student {
 
     public void setResults(Result results) {
         this.results = results;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public String getHomeNumber() {
+        return homeNumber;
+    }
+
+    public void setHomeNumber(String homeNumber) {
+        this.homeNumber = homeNumber;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
 }
