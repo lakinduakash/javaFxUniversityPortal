@@ -5,6 +5,9 @@ import com.mongodb.DuplicateKeyException;
 import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.util.MorphiaHelper;
 import org.mongodb.morphia.Datastore;
+import org.mongodb.morphia.query.Query;
+import org.mongodb.morphia.query.UpdateOperations;
+import org.mongodb.morphia.query.UpdateResults;
 
 import java.util.ArrayList;
 
@@ -33,6 +36,29 @@ public class StudentImpl {
 
     public ArrayList<Student> getStudentByName(String name) {
         return new ArrayList<>(datastore.createQuery(Student.class).field("name").equal(name).asList());
+    }
+
+    public boolean updateOneStudent(Student filter, Student updated) {
+        Query<Student> query = datastore.createQuery(Student.class).field("_id").equal(filter.getId());
+
+        UpdateOperations<Student> updateOperations = datastore.createUpdateOperations(Student.class)
+                .set("fullName", updated.getFullName())
+                .set("dob", updated.getDob())
+                .set("email", updated.getEmail())
+                .set("address", updated.getAddress())
+                .set("nic", updated.getNic())
+                .set("currentSem", updated.getCurrentSem())
+                .set("currentYear", updated.getCurrentYear())
+                .set("forthYear", updated.isFourthYear())
+                .set("results", updated.getResults())
+                .set("homeNumber", updated.getHomeNumber())
+                .set("mobileNumber", updated.getMobileNumber())
+                .set("age", updated.getAge());
+        UpdateResults results = datastore.update(query, updateOperations);
+        if (results.getInsertedCount() > 0)
+            return true;
+        else
+            return false;
     }
 
 
