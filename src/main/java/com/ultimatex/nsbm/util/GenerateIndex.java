@@ -38,11 +38,12 @@ public class GenerateIndex {
 
     }
 
-    public void saveIndex() {
+    public int saveIndex() {
         UpdateOperations<LastIndex> updateOperations = datastore.createUpdateOperations(LastIndex.class);
         Query<LastIndex> query = datastore.createQuery(LastIndex.class).field("index").equal(lastIndex - 1);
         updateOperations.set("index", lastIndex);
         datastore.update(query, updateOperations);
+        return lastIndex;
     }
 
 }
