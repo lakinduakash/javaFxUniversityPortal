@@ -1,9 +1,7 @@
 package com.ultimatex.nsbm.model;
 
 import org.bson.types.ObjectId;
-import org.mongodb.morphia.annotations.Embedded;
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.*;
 
 import java.util.Date;
 
@@ -28,10 +26,12 @@ public class Student {
     private int currentYear;
     private boolean fourthYear;
 
+    @Indexed(options = @IndexOptions(unique = true))
     private String indexNumber;
+    @Indexed(options = @IndexOptions(unique = true))
     private String studentNumber;
 
-
+    @Reference
     private Course course;
 
 
