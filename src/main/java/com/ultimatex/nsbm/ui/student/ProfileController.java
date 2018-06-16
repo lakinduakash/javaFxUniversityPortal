@@ -12,8 +12,11 @@ import com.ultimatex.nsbm.util.GenerateIndex;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -136,7 +139,7 @@ public class ProfileController implements Initializable {
             if (insertStudent()) {
                 showAlert("Success", "New student is registered");
                 studentRegistered = true;
-                buttonSave.setDisable(true);
+                freesFields();
             } else
                 showAlert("Error", "some error occurred");
         }
@@ -160,6 +163,7 @@ public class ProfileController implements Initializable {
         generateIndex.saveIndex();
 
         StudentImpl studentImpl = new StudentImpl();
+        GlobalState.setSelectedStudent(student);
         return studentImpl.insertNewStudent(student);
 
     }
@@ -199,12 +203,31 @@ public class ProfileController implements Initializable {
     }
 
     private void showAlert(String title, String content) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(content);
         alert.show();
 
+    }
+
+    private void freesFields() {
+        for (Node n : profilePane.getChildren())//parent
+        {
+            if (n.getClass() == VBox.class) {
+                for (Node hBoxChild : ((VBox) n).getChildren())//vbox
+                {
+                    if (hBoxChild.getClass() == HBox.class) {
+                        for (Node textField : ((HBox) hBoxChild).getChildren())//hbox
+                            if (textField.getClass() == JFXTextField.class)
+                                ((JFXTextField) textField).setEditable(false);
+                    }
+                }
+            }
+        }
+
+        buttonSave.setDisable(true);
+        datePickerDOB.setDisable(true);
     }
 
 
