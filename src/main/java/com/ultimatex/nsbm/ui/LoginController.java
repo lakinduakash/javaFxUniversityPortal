@@ -10,6 +10,7 @@ import javafx.concurrent.Task;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -138,7 +139,14 @@ public class LoginController {
     }
 
     private void loadMain(Event event) {
-        ((Stage) ((JFXButton) (event.getSource())).getScene().getWindow()).close();
+
+        if (event.getSource().getClass() == Scene.class) {
+            ((Stage) ((Scene) (event.getSource())).getWindow()).close();
+        } else {
+            ((Stage) ((Node) (event.getSource())).getScene().getWindow()).close();
+        }
+
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admin/main.fxml"));
         try {
             fxmlLoader.load();
