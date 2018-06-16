@@ -6,7 +6,7 @@ import com.jfoenix.controls.JFXDecorator;
 import com.jfoenix.controls.JFXTextField;
 import com.ultimatex.nsbm.GlobalState;
 import com.ultimatex.nsbm.model.Course;
-import com.ultimatex.nsbm.model.crud.CourseImp;
+import com.ultimatex.nsbm.model.crud.CourseImpl;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -41,7 +41,7 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        CourseImp courseCRUD = new CourseImp();
+        CourseImpl courseCRUD = new CourseImpl();
 
         ArrayList<Label> labels = new ArrayList<>();
 
@@ -73,7 +73,8 @@ public class MainController implements Initializable {
             return;
         }
 
-        Course c = CourseImp.getCourseByName(l.getText());
+        Course c = new CourseImpl().getCourseByName(l.getText());
+
 
 
         GlobalState.setSelectedCourse(c);
