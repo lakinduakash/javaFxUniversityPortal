@@ -19,10 +19,10 @@ public class Address {
         this.country = country;
     }
 
-    public Address(String street, String city, String country) {
+    public Address(String street, String city, String zipCode) {
         this.street = street;
         this.city = city;
-        this.country = country;
+        this.zipCode = zipCode;
     }
 
     public String getStreet() {
