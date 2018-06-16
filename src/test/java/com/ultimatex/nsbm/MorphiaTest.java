@@ -4,8 +4,8 @@ import com.mongodb.MongoClient;
 import com.ultimatex.nsbm.model.Course;
 import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.model.Subject;
-import com.ultimatex.nsbm.model.crud.CourseImp;
-import com.ultimatex.nsbm.model.crud.StudentImp;
+import com.ultimatex.nsbm.model.crud.CourseImpl;
+import com.ultimatex.nsbm.model.crud.StudentImpl;
 import com.ultimatex.nsbm.util.GenerateIndex;
 import org.junit.Test;
 import org.mongodb.morphia.Datastore;
@@ -71,17 +71,17 @@ public class MorphiaTest {
     @Test
     public void createStudent() {
 
-        StudentImp imp = new StudentImp();
+        StudentImpl imp = new StudentImpl();
 
         Student student = new Student();
-        student.setFirstName("Lakindu Akash");
+        student.setFullName("Lakindu Akash");
 
         Course c1 = new Course();
         c1.setCode("CS");
         c1.setName("Computer Science");
-        new CourseImp().insertCourse(c1);
+        new CourseImpl().insertCourse(c1);
 
-        Course course = new CourseImp().getCourseByCode("CS");
+        Course course = new CourseImpl().getCourseByCode("CS");
 
         GenerateIndex g = new GenerateIndex();
 
