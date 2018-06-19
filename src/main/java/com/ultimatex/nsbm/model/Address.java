@@ -7,6 +7,10 @@ public class Address {
     private String zipCode;
     private String country;
 
+    public Address() {
+
+    }
+
     public Address(String street, String city) {
         this.street = street;
         this.city = city;
