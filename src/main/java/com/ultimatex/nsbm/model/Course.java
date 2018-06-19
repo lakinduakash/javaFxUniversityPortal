@@ -8,11 +8,15 @@ import java.util.ArrayList;
 @Entity("course")
 public class Course {
 
+    public static final int TYPE_UN = 0;
+    public static final int TYPE_MA = 1;
+
     @Id
     private ObjectId id;
 
     private String school;
     private String name;
+    private int type;
 
     @Indexed(options = @IndexOptions(unique = true))
     private String code;
@@ -220,5 +224,13 @@ public class Course {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 }
