@@ -50,6 +50,7 @@ public class CourseImpl {
     public Course getCourseByCode(String code) {
 
         return datastore.createQuery(Course.class).field("code").equal(code).disableValidation().get();
+
     }
 
     /**
