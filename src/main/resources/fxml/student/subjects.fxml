@@ -11,15 +11,18 @@
         <JFXTabPane layoutX="317.0" layoutY="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                     AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <tabs>
-                <Tab text="Year 1">
+                <Tab fx:id="tabYear1" text="Year 1">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane fx:id="anchorPaneYear1" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                    prefWidth="200.0">
                             <children>
                                 <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0"
                                       AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="251.0" prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0"
+                                              prefWidth="1280.0"/>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
                                                     <font>
@@ -29,44 +32,17 @@
                                                         <Insets left="10.0" right="10.0"/>
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXComboBox prefHeight="26.0" prefWidth="180.0" promptText="Subject 1">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="142.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 2">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="332.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 3">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="512.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 4">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="692.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 5(Optianal)">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
+                                                <JFXListView fx:id="listViewy1s1c" prefHeight="302.0"
+                                                             prefWidth="325.0"/>
+                                                <JFXListView fx:id="listViewy1s1o" prefHeight="302.0"
+                                                             prefWidth="339.0"/>
+                                                <JFXButton fx:id="buttony1s1" onAction="#onClickSaveButtonSubjectY1S1"
+                                                           prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="72.0"
-                                              prefWidth="1280.0">
-                                            <children>
-                                                <JFXButton prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
-                                            </children>
-                                        </HBox>
-                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="286.0"
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0"
+                                              prefWidth="1280.0"/>
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0"
                                               prefWidth="1280.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
@@ -77,58 +53,34 @@
                                                         <Insets left="10.0" right="10.0"/>
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXComboBox prefHeight="26.0" prefWidth="180.0" promptText="Subject 1">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="142.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 2">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="332.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 3">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="512.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 4">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="692.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 5(Optianal)">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
+                                                <JFXListView fx:id="listViewy1s2c" prefHeight="317.0"
+                                                             prefWidth="324.0"/>
+                                                <JFXListView fx:id="listViewy1s2o" layoutX="152.0" layoutY="10.0"
+                                                             prefHeight="317.0" prefWidth="340.0"/>
+                                                <JFXButton fx:id="buutony1s2" onAction="#onClickSaveButtonSubjectY1S2"
+                                                           prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="74.0"
-                                              prefWidth="1280.0">
-                                            <children>
-                                                <JFXButton prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
-                                            </children>
-                                        </HBox>
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0"
+                                              prefWidth="1280.0"/>
                                     </children>
                                 </VBox>
                             </children>
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="Year 2">
+                <Tab fx:id="tabYear2" text="Year 2">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane fx:id="anchorPaneYear2" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                    prefWidth="200.0">
                             <children>
                                 <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0"
                                       AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="251.0" prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0"
+                                              prefWidth="1280.0"/>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
                                                     <font>
@@ -138,44 +90,17 @@
                                                         <Insets left="10.0" right="10.0"/>
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXComboBox prefHeight="26.0" prefWidth="180.0" promptText="Subject 1">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="142.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 2">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="332.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 3">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="512.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 4">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="692.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 5(Optianal)">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
+                                                <JFXListView fx:id="listViewy2s1c" prefHeight="302.0"
+                                                             prefWidth="325.0"/>
+                                                <JFXListView fx:id="listViewy2s1o" prefHeight="302.0"
+                                                             prefWidth="339.0"/>
+                                                <JFXButton fx:id="buttony2s1" onAction="#onClickSaveButtonSubjectY2S1"
+                                                           prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="72.0"
-                                              prefWidth="1280.0">
-                                            <children>
-                                                <JFXButton prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
-                                            </children>
-                                        </HBox>
-                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="286.0"
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0"
+                                              prefWidth="1280.0"/>
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0"
                                               prefWidth="1280.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
@@ -186,58 +111,34 @@
                                                         <Insets left="10.0" right="10.0"/>
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXComboBox prefHeight="26.0" prefWidth="180.0" promptText="Subject 1">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="142.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 2">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="332.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 3">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="512.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 4">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="692.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 5(Optianal)">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
+                                                <JFXListView fx:id="listViewy2s2c" prefHeight="317.0"
+                                                             prefWidth="324.0"/>
+                                                <JFXListView fx:id="listViewy2s2o" layoutX="152.0" layoutY="10.0"
+                                                             prefHeight="317.0" prefWidth="340.0"/>
+                                                <JFXButton fx:id="buutony2s2" onAction="#onClickSaveButtonSubjectY2S2"
+                                                           prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="74.0"
-                                              prefWidth="1280.0">
-                                            <children>
-                                                <JFXButton prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
-                                            </children>
-                                        </HBox>
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0"
+                                              prefWidth="1280.0"/>
                                     </children>
                                 </VBox>
                             </children>
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="Year 3">
+                <Tab fx:id="tabYear3" text="Year 3">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane fx:id="anchorPaneYear3" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                    prefWidth="200.0">
                             <children>
                                 <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0"
                                       AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="251.0" prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0"
+                                              prefWidth="1280.0"/>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
                                                     <font>
@@ -247,49 +148,17 @@
                                                         <Insets left="10.0" right="10.0"/>
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXComboBox prefHeight="26.0" prefWidth="180.0" promptText="Subject 1"
-                                                             HBox.hgrow="ALWAYS">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="142.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 2"
-                                                             HBox.hgrow="ALWAYS">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="332.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 3"
-                                                             HBox.hgrow="ALWAYS">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="512.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 4"
-                                                             HBox.hgrow="ALWAYS">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="692.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 5(Optianal)"
-                                                             HBox.hgrow="ALWAYS">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
+                                                <JFXListView fx:id="listViewy3s1c" prefHeight="302.0"
+                                                             prefWidth="325.0"/>
+                                                <JFXListView fx:id="listViewy3s1o" prefHeight="302.0"
+                                                             prefWidth="339.0"/>
+                                                <JFXButton fx:id="buttony3s1" onAction="#onClickSaveButtonSubjectY3S1"
+                                                           prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="72.0"
-                                              prefWidth="1280.0">
-                                            <children>
-                                                <JFXButton prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
-                                            </children>
-                                        </HBox>
-                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="286.0"
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0"
+                                              prefWidth="1280.0"/>
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0"
                                               prefWidth="1280.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
@@ -300,58 +169,34 @@
                                                         <Insets left="10.0" right="10.0"/>
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXComboBox prefHeight="26.0" prefWidth="180.0" promptText="Subject 1">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="142.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 2">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="332.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 3">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="512.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 4">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="692.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 5(Optianal)">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
+                                                <JFXListView fx:id="listViewy3s2c" prefHeight="317.0"
+                                                             prefWidth="324.0"/>
+                                                <JFXListView fx:id="listViewy3s2o" layoutX="152.0" layoutY="10.0"
+                                                             prefHeight="317.0" prefWidth="340.0"/>
+                                                <JFXButton fx:id="buutony3s2" onAction="#onClickSaveButtonSubjectY3S2"
+                                                           prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="74.0"
-                                              prefWidth="1280.0">
-                                            <children>
-                                                <JFXButton prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
-                                            </children>
-                                        </HBox>
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0"
+                                              prefWidth="1280.0"/>
                                     </children>
                                 </VBox>
                             </children>
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="Year 4">
+                <Tab fx:id="tabYear4" text="Year 4">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane fx:id="anchorPaneYear4" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                    prefWidth="200.0">
                             <children>
                                 <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0"
                                       AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="251.0" prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0"
+                                              prefWidth="1280.0"/>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
                                                     <font>
@@ -361,44 +206,17 @@
                                                         <Insets left="10.0" right="10.0"/>
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXComboBox prefHeight="26.0" prefWidth="180.0" promptText="Subject 1">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="142.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 2">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="332.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 3">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="512.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 4">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="692.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 5(Optianal)">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
+                                                <JFXListView fx:id="listViewy4s1c" prefHeight="302.0"
+                                                             prefWidth="325.0"/>
+                                                <JFXListView fx:id="listViewy4s1o" prefHeight="302.0"
+                                                             prefWidth="339.0"/>
+                                                <JFXButton fx:id="buttony4s1" onAction="#onClickSaveButtonSubjectY4S1"
+                                                           prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="72.0"
-                                              prefWidth="1280.0">
-                                            <children>
-                                                <JFXButton prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
-                                            </children>
-                                        </HBox>
-                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="286.0"
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0"
+                                              prefWidth="1280.0"/>
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0"
                                               prefWidth="1280.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
@@ -409,43 +227,16 @@
                                                         <Insets left="10.0" right="10.0"/>
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXComboBox prefHeight="26.0" prefWidth="180.0" promptText="Subject 1">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="142.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 2">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="332.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 3">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="512.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 4">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
-                                                <JFXComboBox layoutX="692.0" layoutY="163.0" prefHeight="26.0"
-                                                             prefWidth="180.0" promptText="Subject 5(Optianal)">
-                                                    <HBox.margin>
-                                                        <Insets right="10.0"/>
-                                                    </HBox.margin>
-                                                </JFXComboBox>
+                                                <JFXListView fx:id="listViewy4s2c" prefHeight="317.0"
+                                                             prefWidth="324.0"/>
+                                                <JFXListView fx:id="listViewy4s2o" layoutX="152.0" layoutY="10.0"
+                                                             prefHeight="317.0" prefWidth="340.0"/>
+                                                <JFXButton fx:id="buutony4s2" onAction="#onClickSaveButtonSubjectY4S2"
+                                                           prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="74.0"
-                                              prefWidth="1280.0">
-                                            <children>
-                                                <JFXButton prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
-                                            </children>
-                                        </HBox>
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0"
+                                              prefWidth="1280.0"/>
                                     </children>
                                 </VBox>
                             </children>
