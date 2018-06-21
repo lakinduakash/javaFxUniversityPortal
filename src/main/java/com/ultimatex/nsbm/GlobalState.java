@@ -3,11 +3,19 @@ package com.ultimatex.nsbm;
 import com.ultimatex.nsbm.model.Course;
 import com.ultimatex.nsbm.model.Student;
 
+/**
+ * This class hold global application states.
+ * Ex: current course which student is registered, which student is being registered,which action triggered now
+ * It is better to set all the field when changing the state. If not previous states may give unexpected results
+ * If you don't want to save state of any field make sure those are set null
+ */
+
 public abstract class GlobalState {
 
     private static Course selectedCourse;
     private static Student selectedStudent;
     private static boolean fromInsertAction;
+    private static boolean fromEditAction;
 
     public static Course getSelectedCourse() {
         return selectedCourse;
@@ -31,5 +39,13 @@ public abstract class GlobalState {
 
     public static void setFromInsertAction(boolean fromInsertAction) {
         GlobalState.fromInsertAction = fromInsertAction;
+    }
+
+    public static boolean isFromEditAction() {
+        return fromEditAction;
+    }
+
+    public static void setFromEditAction(boolean fromEditAction) {
+        GlobalState.fromEditAction = fromEditAction;
     }
 }
