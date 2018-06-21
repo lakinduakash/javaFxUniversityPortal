@@ -3,6 +3,7 @@ package com.ultimatex.nsbm.model;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 @Entity("student")
@@ -51,6 +52,15 @@ public class Student {
     private String homeNumber;
     private String mobileNumber;
     private int age;
+
+    private ArrayList<Subject> selectedSubjectsy1s1;
+    private ArrayList<Subject> selectedSubjectsy1s2;
+    private ArrayList<Subject> selectedSubjectsy2s1;
+    private ArrayList<Subject> selectedSubjectsy2s2;
+    private ArrayList<Subject> selectedSubjectsy3s1;
+    private ArrayList<Subject> selectedSubjectsy3s2;
+    private ArrayList<Subject> selectedSubjectsy4s1;
+    private ArrayList<Subject> selectedSubjectsy4s2;
 
 
     public ObjectId getId() {
@@ -260,5 +270,69 @@ public class Student {
 
     public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
+    }
+
+    public ArrayList<Subject> getSelectedSubjectsy1s1() {
+        return selectedSubjectsy1s1;
+    }
+
+    public void setSelectedSubjectsy1s1(ArrayList<Subject> selectedSubjectsy1s1) {
+        this.selectedSubjectsy1s1 = selectedSubjectsy1s1;
+    }
+
+    public ArrayList<Subject> getSelectedSubjectsy1s2() {
+        return selectedSubjectsy1s2;
+    }
+
+    public void setSelectedSubjectsy1s2(ArrayList<Subject> selectedSubjectsy1s2) {
+        this.selectedSubjectsy1s2 = selectedSubjectsy1s2;
+    }
+
+    public ArrayList<Subject> getSelectedSubjectsy2s1() {
+        return selectedSubjectsy2s1;
+    }
+
+    public void setSelectedSubjectsy2s1(ArrayList<Subject> selectedSubjectsy2s1) {
+        this.selectedSubjectsy2s1 = selectedSubjectsy2s1;
+    }
+
+    public ArrayList<Subject> getSelectedSubjectsy2s2() {
+        return selectedSubjectsy2s2;
+    }
+
+    public void setSelectedSubjectsy2s2(ArrayList<Subject> selectedSubjectsy2s2) {
+        this.selectedSubjectsy2s2 = selectedSubjectsy2s2;
+    }
+
+    public ArrayList<Subject> getSelectedSubjectsy3s1() {
+        return selectedSubjectsy3s1;
+    }
+
+    public void setSelectedSubjectsy3s1(ArrayList<Subject> selectedSubjectsy3s1) {
+        this.selectedSubjectsy3s1 = selectedSubjectsy3s1;
+    }
+
+    public ArrayList<Subject> getSelectedSubjectsy3s2() {
+        return selectedSubjectsy3s2;
+    }
+
+    public void setSelectedSubjectsy3s2(ArrayList<Subject> selectedSubjectsy3s2) {
+        this.selectedSubjectsy3s2 = selectedSubjectsy3s2;
+    }
+
+    public ArrayList<Subject> getSelectedSubjectsy4s1() {
+        return selectedSubjectsy4s1;
+    }
+
+    public void setSelectedSubjectsy4s1(ArrayList<Subject> selectedSubjectsy4s1) {
+        this.selectedSubjectsy4s1 = selectedSubjectsy4s1;
+    }
+
+    public ArrayList<Subject> getSelectedSubjectsy4s2() {
+        return selectedSubjectsy4s2;
+    }
+
+    public void setSelectedSubjectsy4s2(ArrayList<Subject> selectedSubjectsy4s2) {
+        this.selectedSubjectsy4s2 = selectedSubjectsy4s2;
     }
 }
