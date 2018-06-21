@@ -4,19 +4,19 @@
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.scene.layout.*?>
 <StackPane xmlns:fx="http://javafx.com/fxml/1" minHeight="100.0" minWidth="100.0" prefHeight="720.0" prefWidth="1080.0"
-           xmlns="http://javafx.com/javafx/8.0" fx:controller="com.ultimatex.nsbm.ui.student.MainController">
+           xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.student.MainController">
    <children>
-      <JFXDrawer fx:id="drawer"/>
+       <JFXDrawer fx:id="drawer"/>
       <AnchorPane>
          <children>
-            <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="566.0" prefWidth="640.0"
-                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                        AnchorPane.topAnchor="0.0">
+             <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="566.0" prefWidth="640.0"
+                         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                         AnchorPane.topAnchor="0.0">
                <children>
-                  <AnchorPane fx:id="mainContainer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
-                  <JFXHamburger fx:id="hamburger" onMouseClicked="#onHamburgerClick" spacing="5.0"
-                                AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0"/>
+                   <AnchorPane fx:id="mainContainer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                   <JFXHamburger fx:id="hamburger" onMouseClicked="#onHamburgerClick" spacing="5.0"
+                                 AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0"/>
                </children>
             </AnchorPane>
          </children>
