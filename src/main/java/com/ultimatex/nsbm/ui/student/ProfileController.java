@@ -74,10 +74,20 @@ public class ProfileController implements Initializable {
     private JFXTextField textFieldEmail;
 
     @FXML
+    private JFXTextField textFieldC1;
+
+    @FXML
+    private JFXTextField textFieldC2;
+
+    @FXML
+    private JFXTextField textFieldC3;
+
+    @FXML
     private JFXButton buttonSave;
 
 
     private GenerateIndex generateIndex = new GenerateIndex();
+
 
     private boolean fromInsert;
     private Course selectedCourse;
@@ -86,6 +96,11 @@ public class ProfileController implements Initializable {
 
     private String sIndex;
 
+    /**************************************************************************
+     *
+     * Constructors
+     *
+     **************************************************************************/
     public ProfileController() {
         fromInsert = GlobalState.isFromInsertAction();
         selectedCourse = GlobalState.getSelectedCourse();
@@ -96,7 +111,11 @@ public class ProfileController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        datePickerDOB.setOnAction(event -> {
+            textFieldAge.setText(Integer.toString(getAgeFromDob(datePickerDOB.getValue())));
+        });
 
+        initExtraFieldNames();
         if (fromInsert) {
             initFromInsert();
         } else {
@@ -106,6 +125,22 @@ public class ProfileController implements Initializable {
 
     }
 
+    private void initExtraFieldNames() {
+        if (selectedCourse.getType() == Course.TYPE_MA) {
+            textFieldC1.setPromptText("Undergraduate University");
+            textFieldC2.setPromptText("Degree name");
+            textFieldC3.setPromptText("Previous GPA");
+        } else {
+            textFieldC1.setPromptText("AL year");
+            textFieldC2.setPromptText("Z score");
+            textFieldC3.setPromptText("AL Results");
+            textFieldC3.setText("SUB1:Grade, SUB2:Grade, SUB3:Grade");
+        }
+    }
+
+    /**
+     * initialise the state if comes from adding new student.
+     */
     private void initFromInsert() {
         if (GlobalState.getSelectedCourse() != null) {
             textFieldCourse.setText(GlobalState.getSelectedCourse().getName());
@@ -115,17 +150,25 @@ public class ProfileController implements Initializable {
 
         datePickerDOB.setValue(LocalDate.now());
 
-        datePickerDOB.setOnAction(event -> {
-            textFieldAge.setText(Integer.toString(getAgeFromDob(datePickerDOB.getValue())));
-        });
     }
 
     private void initFromUpdate() {
+        buttonSave.setText("Save edit");
+
+        initTextFields();
 
     }
 
+
+    /**
+     * Handle button when saving details of student
+     *
+     * @param event
+     * @return void
+     */
+
     @FXML
-    void onSaveButtonClick(ActionEvent event) {
+    public void onSaveButtonClick(ActionEvent event) {
 
         if (!validateFields()) {
             return;
@@ -135,6 +178,7 @@ public class ProfileController implements Initializable {
             showAlert("Already registered", "Student is already registered");
             return;
         }
+
         if (GlobalState.isFromInsertAction()) {
             if (insertStudent()) {
                 showAlert("Success", "New student is registered");
@@ -142,9 +186,16 @@ public class ProfileController implements Initializable {
                 freesFields();
             } else
                 showAlert("Error", "some error occurred");
+        } else if (GlobalState.isFromEditAction()) {
+
         }
 
     }
+
+    /**
+     * insert student to database
+     * @return boolean value whether student is successfully inserted
+     */
 
     private boolean insertStudent() {
         Student student = new Student();
@@ -159,14 +210,26 @@ public class ProfileController implements Initializable {
         student.setHomeNumber(textFieldHome.getText().trim());
         student.setMobileNumber(textFieldMobile.getText().trim());
         student.setEmail(textFieldEmail.getText().trim());
+        student.setFullName(textFieldFullName.getText().trim());
 
         generateIndex.saveIndex();
 
+        if (selectedCourse.getType() == Course.TYPE_MA) {
+            student.setUniversity(textFieldC1.getText().trim());
+            student.setDegree(textFieldC2.getText().trim());
+            student.setPrevGpv(Double.parseDouble(textFieldC3.getText().trim()));
+        } else {
+            student.setALYear(Integer.parseInt(textFieldC1.getText().trim()));
+            student.setALResults(textFieldC2.getText().trim());
+            student.setzScore(Double.parseDouble(textFieldC3.getText().trim()));
+        }
+
         StudentImpl studentImpl = new StudentImpl();
         GlobalState.setSelectedStudent(student);
-        return studentImpl.insertNewStudent(student);
+        return studentImpl.insert(student);
 
     }
+
 
     private int getAgeFromDob(LocalDate date) {
         Date dob = java.sql.Date.valueOf(date);
@@ -196,11 +259,47 @@ public class ProfileController implements Initializable {
         } else if ("".equals(textFieldEmail.getText()) || textFieldAge.getText().contains("@")) {
             showAlert("Error", "Please enter valid email");
             return false;
+        } else {
+            if (selectedCourse.getType() == Course.TYPE_MA) {
+                if (textFieldC1.getText().trim().length() < 1) {
+                    showAlert("Error", "Please enter valid University name");
+                    return false;
+                } else if (textFieldC2.getText().trim().length() < 1) {
+                    showAlert("Error", "Please enter valid degree name");
+                    return false;
+                } else {
+                    try {
+                        Double.parseDouble(textFieldC3.getText().trim());
+                    } catch (Exception e) {
+                        showAlert("Error", "Please enter valid gpa");
+                        return false;
+                    }
+                }
+            } else {
+                try {
+                    int y = Integer.parseInt(textFieldC1.getText().trim());
+                    if (y < 2008) {
+                        showAlert("Error", "Please enter valid AL year");
+                        return false;
+                    }
+                    Double.parseDouble(textFieldC3.getText().trim());
+                    if (textFieldC2.getText().trim().length() < 12) {
+                        showAlert("Error", "Please enter valid result");
+                        return false;
+                    }
+                } catch (Exception e) {
+                    showAlert("Error", "Please enter valid Z core and AL year");
+                    return false;
+                }
+
+
+            }
         }
 
 
         return true;
     }
+
 
     private void showAlert(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -227,7 +326,34 @@ public class ProfileController implements Initializable {
         }
 
         buttonSave.setDisable(true);
-        datePickerDOB.setDisable(true);
+        datePickerDOB.setEditable(false);
+    }
+
+
+    private void initTextFields() {
+        textFieldFullName.setText(selectedStudent.getFullName());
+        textFieldNickName.setText(selectedStudent.getNickName());
+        datePickerDOB.setValue(new java.sql.Date(selectedStudent.getDob().getTime()).toLocalDate());
+        textFieldEmail.setText(selectedStudent.getEmail());
+        textFieldAge.setText(Integer.toString(selectedStudent.getAge()));
+        textFieldStreet.setText(selectedStudent.getAddress().getStreet());
+        textFieldCity.setText(selectedStudent.getAddress().getCity());
+        textFieldPostal.setText(selectedStudent.getAddress().getZipCode());
+        textFieldNIC.setText(selectedStudent.getNic());
+        textFieldIndex.setText(selectedStudent.getIndexNumber());
+        textFieldMobile.setText(selectedStudent.getMobileNumber());
+        textFieldHome.setText(selectedStudent.getHomeNumber());
+        textFieldCourse.setText(selectedStudent.getCourse().getName());
+
+        if (selectedCourse.getType() == Course.TYPE_MA) {
+            textFieldC1.setText(selectedStudent.getUniversity());
+            textFieldC2.setText(selectedStudent.getDegree());
+            textFieldC3.setText("" + selectedStudent.getPrevGpv());
+        } else {
+            textFieldC1.setText("" + selectedStudent.getALYear());
+            textFieldC2.setText(selectedStudent.getALResults());
+            textFieldC3.setText("" + selectedStudent.getzScore());
+        }
     }
 
 
