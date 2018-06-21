@@ -6,10 +6,12 @@ import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.model.Subject;
 import com.ultimatex.nsbm.model.crud.CourseImpl;
 import com.ultimatex.nsbm.model.crud.StudentImpl;
+import com.ultimatex.nsbm.model.crud.SubjectImpl;
 import com.ultimatex.nsbm.util.GenerateIndex;
 import org.junit.Test;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
+import org.mongodb.morphia.query.Query;
 
 import java.util.ArrayList;
 
@@ -54,6 +56,7 @@ public class MorphiaTest {
             Course course = new Course();
             course.setMaxYears(3);
             course.setName("BS");
+
 
             ArrayList<Subject> arrayList = new ArrayList<>();
 
@@ -108,6 +111,32 @@ public class MorphiaTest {
         assertThat(index2, is(index1 + 1));
 
     }
+
+    @Test
+    public void clearAllStudent() {
+        Datastore d = init();
+        final Query<Student> q = d.createQuery(Student.class);
+
+        d.delete(q);
+    }
+
+    @Test
+    public void insertSubject() {
+        Subject[] s1 = {new Subject("SE 1", "1001", 3000, 3),
+                new Subject("DSA 1", "1002", 3000, 3),
+                new Subject("DSA 3", "1003", 3000, 3),
+                new Subject("PRO 1", "1004", 3000, 3),
+                new Subject("DB 1", "1004", 3000, 3),
+                new Subject("DB 2", "1006", 3000, 3),
+                new Subject("EN 1", "1007", 3000, 3),
+                new Subject("DSA 2", "1008", 3000, 3)};
+
+        for (Subject s : s1) {
+            new SubjectImpl().insert(s);
+        }
+    }
+
+
 
 
 }
