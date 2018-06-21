@@ -4,6 +4,7 @@ package com.ultimatex.nsbm.model.crud;
 import com.mongodb.DuplicateKeyException;
 import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.util.MorphiaHelper;
+import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.query.Query;
 import org.mongodb.morphia.query.UpdateOperations;
@@ -11,15 +12,17 @@ import org.mongodb.morphia.query.UpdateResults;
 
 import java.util.ArrayList;
 
-public class StudentImpl {
+public class StudentImpl extends BaseImpl<Student> {
 
     private Datastore datastore;
 
     public StudentImpl() {
+        super();
         datastore = MorphiaHelper.getInstance().getDataStore();
     }
 
-    public boolean insertNewStudent(Student student) {
+    @Override
+    public boolean insert(Student student) {
         try {
             datastore.save(student);
             return true;
@@ -27,8 +30,32 @@ public class StudentImpl {
             e.printStackTrace();
             return false;
         }
-
     }
+
+    @Override
+    public boolean update(ObjectId id, Student updated) {
+        return false;
+    }
+
+    @Override
+    public boolean update(Student student) {
+        if (student.getId() != null)
+            datastore.save(student);
+        else
+            return false;
+        return true;
+    }
+
+    @Override
+    public boolean delete(ObjectId id) {
+        return false;
+    }
+
+    @Override
+    public Student find(String key, Object value) {
+        return null;
+    }
+
 
     public Student getStudentByIndex(String index) {
         return datastore.createQuery(Student.class).field("indexNumber").equal(index).get();

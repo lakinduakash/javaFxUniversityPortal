@@ -16,6 +16,8 @@ public abstract class BaseImpl<T> {
 
     public abstract boolean update(ObjectId id, T updated);
 
+    public abstract boolean update(T t);
+
     public abstract boolean delete(ObjectId id);
 
     public abstract T find(String key, Object value);

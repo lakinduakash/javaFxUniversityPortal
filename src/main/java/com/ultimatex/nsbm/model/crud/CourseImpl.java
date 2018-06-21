@@ -58,6 +58,15 @@ public class CourseImpl extends BaseImpl<Course> {
     }
 
     @Override
+    public boolean update(Course course) {
+        if (course.getId() != null)
+            datastore.save(course);
+        else
+            return false;
+        return true;
+    }
+
+    @Override
     public boolean delete(ObjectId id) {
         return false;
     }

@@ -25,6 +25,11 @@ public class SubjectImpl extends BaseImpl<Subject> {
     }
 
     @Override
+    public boolean update(Subject subject) {
+        return false;
+    }
+
+    @Override
     public boolean delete(ObjectId id) {
         int i = datastore.delete(datastore.createQuery(Subject.class).field("_id").equal(id)).getN();
         return i != 0;
@@ -32,6 +37,11 @@ public class SubjectImpl extends BaseImpl<Subject> {
 
     @Override
     public Subject find(String key, Object value) {
+        return datastore.createQuery(Subject.class).field("code").equal(value).get();
+    }
+
+    public Subject findById(String id, Object value) {
         return datastore.createQuery(Subject.class).field("_id").equal(value).get();
     }
+
 }
