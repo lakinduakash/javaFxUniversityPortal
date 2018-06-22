@@ -9,6 +9,9 @@ import java.util.Date;
 @Entity("student")
 public class Student {
 
+    public static final String INTAKE_FEB = "February";
+    public static final String INTAKE_JULY = "July";
+
     @Id
     private ObjectId id;
 
@@ -52,6 +55,7 @@ public class Student {
     private String homeNumber;
     private String mobileNumber;
     private int age;
+    private String intake;
 
     private ArrayList<Subject> selectedSubjectsy1s1;
     private ArrayList<Subject> selectedSubjectsy1s2;
