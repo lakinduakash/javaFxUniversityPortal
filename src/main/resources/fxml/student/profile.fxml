@@ -87,8 +87,8 @@
                     <children>
                         <FontAwesomeIconView glyphName="STICKY_NOTE" size="30" textAlignment="CENTER"
                                              wrappingWidth="171.0"/>
-                        <JFXTextField fx:id="textFieldReg" editable="false" labelFloat="true" prefHeight="36.0"
-                                      prefWidth="540.0" promptText="Registration No:"/>
+                        <JFXTextField fx:id="textFieldAddmissionDate" editable="false" labelFloat="true"
+                                      prefHeight="36.0" prefWidth="425.0" promptText="Admission Date"/>
                         <JFXTextField fx:id="textFieldIndex" editable="false" labelFloat="true" layoutX="795.0"
                                       layoutY="50.0" prefHeight="38.0" prefWidth="215.0" promptText="Index No:">
                             <HBox.margin>
@@ -114,6 +114,8 @@
                                              wrappingWidth="171.0"/>
                         <JFXTextField fx:id="textFieldNIC" labelFloat="true" prefHeight="36.0" prefWidth="540.0"
                                       promptText="NIC/Passport"/>
+                        <JFXTextField fx:id="textFieldIntake" labelFloat="true" layoutX="191.0" layoutY="37.0"
+                                      prefHeight="36.0" prefWidth="291.0" promptText="Intake"/>
                     </children>
                     <opaqueInsets>
                         <Insets top="50.0"/>
@@ -147,16 +149,14 @@
                       spacing="10.0">
                     <children>
                         <FontAwesomeIconView glyphName="BOOK" size="30" textAlignment="CENTER" wrappingWidth="171.0"/>
-                        <JFXTextField fx:id="textFieldC1" labelFloat="true" prefHeight="36.0" prefWidth="157.0"
+                        <JFXTextField fx:id="textFieldC1" labelFloat="true" prefHeight="36.0" prefWidth="267.0"
                                       promptText="Mobile" HBox.hgrow="SOMETIMES"/>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" prefHeight="42.0"
-                                   prefWidth="39.0" textFill="#429e37"/>
                         <JFXTextField fx:id="textFieldC2" labelFloat="true" layoutX="191.0" layoutY="51.0"
-                                      prefHeight="36.0" prefWidth="146.0" promptText="Home" HBox.hgrow="SOMETIMES"/>
+                                      prefHeight="36.0" prefWidth="232.0" promptText="Home" HBox.hgrow="SOMETIMES"/>
                         <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="536.0"
                                    layoutY="44.0" prefHeight="42.0" prefWidth="39.0" textFill="#429e37"/>
                         <JFXTextField fx:id="textFieldC3" labelFloat="true" layoutX="534.0" layoutY="51.0"
-                                      prefHeight="36.0" prefWidth="595.0" promptText="email" HBox.hgrow="SOMETIMES">
+                                      prefHeight="36.0" prefWidth="514.0" promptText="email" HBox.hgrow="SOMETIMES">
                             <HBox.margin>
                                 <Insets right="25.0"/>
                             </HBox.margin>
