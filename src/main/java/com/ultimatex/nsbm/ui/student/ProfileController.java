@@ -215,7 +215,7 @@ public class ProfileController implements Initializable {
         student.setMobileNumber(textFieldMobile.getText().trim());
         student.setEmail(textFieldEmail.getText().trim());
         student.setFullName(textFieldFullName.getText().trim());
-        student.setAdmissionDate(new Date());
+        student.setAdmissionDate(nowDate);
         student.setIntake(getIntake());
 
         generateIndex.saveIndex();
@@ -352,6 +352,8 @@ public class ProfileController implements Initializable {
         textFieldCourse.setText(selectedStudent.getCourse().getName());
         textFieldAddmissionDate.setText(selectedStudent.getAdmissionDate().toString());
         textFieldAddmissionDate.setEditable(false);
+        textFieldIntake.setText(selectedStudent.getIntake());
+        textFieldIntake.setEditable(false);
 
         if (selectedCourse.getType() == Course.TYPE_MA) {
             textFieldC1.setText(selectedStudent.getUniversity());
