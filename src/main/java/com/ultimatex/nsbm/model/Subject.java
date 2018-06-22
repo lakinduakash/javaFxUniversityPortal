@@ -69,10 +69,10 @@ public class Subject {
 
     @Override
     public boolean equals(Object obj) {
-        Subject s = (Subject) obj;
-        if (s.getId() == this.getId())
-            return true;
-        else
-            return false;
+        if (obj instanceof Subject) {
+            Subject s = (Subject) obj;
+            return s.getId() == this.getId();
+        } else return false;
+
     }
 }
