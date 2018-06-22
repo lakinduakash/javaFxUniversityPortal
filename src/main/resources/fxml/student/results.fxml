@@ -6,7 +6,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <JFXTabPane xmlns:fx="http://javafx.com/fxml/1" fx:id="resultPane" prefHeight="720.0" prefWidth="1280.0"
-            xmlns="http://javafx.com/javafx/10.0.1">
+            stylesheets="@../../css/global.css" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="com.ultimatex.nsbm.ui.student.ResultsController">
     <Tab text="1st Year">
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <children>
@@ -30,14 +31,35 @@
                                 </Label>
                             </children>
                         </HBox>
-                        <HBox prefHeight="506.0" prefWidth="1280.0">
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="506.0" prefWidth="1280.0">
                             <children>
-                                <JFXListView prefHeight="506.0" prefWidth="376.0">
+                                <JFXListView fx:id="listViewResy1s1" prefHeight="506.0" prefWidth="376.0">
                                     <HBox.margin>
-                                        <Insets right="50.0"/>
+                                        <Insets right="30.0"/>
                                     </HBox.margin>
                                 </JFXListView>
-                                <JFXListView layoutX="10.0" layoutY="10.0" prefHeight="506.0" prefWidth="383.0"/>
+                                <JFXButton buttonType="RAISED" onAction="#onSaveButtonClicky1s1" prefHeight="52.0"
+                                           prefWidth="89.0" text="Save" textFill="#252323">
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
+                                <JFXListView fx:id="listViewResy1s2" layoutX="10.0" layoutY="10.0" prefHeight="506.0"
+                                             prefWidth="383.0">
+                                    <HBox.margin>
+                                        <Insets left="30.0" right="30.0"/>
+                                    </HBox.margin>
+                                </JFXListView>
+                                <JFXButton buttonType="RAISED" layoutX="436.0" layoutY="237.0"
+                                           onAction="#onSaveButtonClicky1s2" prefHeight="52.0" prefWidth="89.0"
+                                           text="Save">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
                             </children>
                         </HBox>
                     </children>
@@ -68,14 +90,35 @@
                                 </Label>
                             </children>
                         </HBox>
-                        <HBox prefHeight="506.0" prefWidth="1280.0">
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="506.0" prefWidth="1280.0">
                             <children>
-                                <JFXListView prefHeight="506.0" prefWidth="376.0">
+                                <JFXListView fx:id="listViewResy2s1" prefHeight="506.0" prefWidth="376.0">
                                     <HBox.margin>
-                                        <Insets right="50.0"/>
+                                        <Insets right="30.0"/>
                                     </HBox.margin>
                                 </JFXListView>
-                                <JFXListView layoutX="10.0" layoutY="10.0" prefHeight="506.0" prefWidth="383.0"/>
+                                <JFXButton buttonType="RAISED" onAction="#onSaveButtonClicky2s1" prefHeight="52.0"
+                                           prefWidth="89.0" text="Save" textFill="#252323">
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
+                                <JFXListView fx:id="listViewResy2s2" layoutX="10.0" layoutY="10.0" prefHeight="506.0"
+                                             prefWidth="383.0">
+                                    <HBox.margin>
+                                        <Insets left="30.0" right="30.0"/>
+                                    </HBox.margin>
+                                </JFXListView>
+                                <JFXButton buttonType="RAISED" layoutX="436.0" layoutY="237.0"
+                                           onAction="#onSaveButtonClicky2s2" prefHeight="52.0" prefWidth="89.0"
+                                           text="Save">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
                             </children>
                         </HBox>
                     </children>
@@ -106,14 +149,35 @@
                                 </Label>
                             </children>
                         </HBox>
-                        <HBox prefHeight="506.0" prefWidth="1280.0">
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="506.0" prefWidth="1280.0">
                             <children>
-                                <JFXListView prefHeight="506.0" prefWidth="376.0">
+                                <JFXListView fx:id="listViewResy3s1" prefHeight="506.0" prefWidth="376.0">
                                     <HBox.margin>
-                                        <Insets right="50.0"/>
+                                        <Insets right="30.0"/>
                                     </HBox.margin>
                                 </JFXListView>
-                                <JFXListView layoutX="10.0" layoutY="10.0" prefHeight="506.0" prefWidth="383.0"/>
+                                <JFXButton buttonType="RAISED" onAction="#onSaveButtonClicky3s1" prefHeight="52.0"
+                                           prefWidth="89.0" text="Save" textFill="#252323">
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
+                                <JFXListView fx:id="listViewResy3s2" layoutX="10.0" layoutY="10.0" prefHeight="506.0"
+                                             prefWidth="383.0">
+                                    <HBox.margin>
+                                        <Insets left="30.0" right="30.0"/>
+                                    </HBox.margin>
+                                </JFXListView>
+                                <JFXButton buttonType="RAISED" layoutX="436.0" layoutY="237.0"
+                                           onAction="#onSaveButtonClicky3s2" prefHeight="52.0" prefWidth="89.0"
+                                           text="Save">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
                             </children>
                         </HBox>
                     </children>
@@ -121,7 +185,7 @@
             </children>
         </AnchorPane>
     </Tab>
-    <Tab text="1st Year">
+    <Tab text="4th year">
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <children>
                 <VBox layoutX="297.0" layoutY="91.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
@@ -144,14 +208,35 @@
                                 </Label>
                             </children>
                         </HBox>
-                        <HBox prefHeight="506.0" prefWidth="1280.0">
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="506.0" prefWidth="1280.0">
                             <children>
-                                <JFXListView prefHeight="506.0" prefWidth="376.0">
+                                <JFXListView fx:id="listViewResy4s1" prefHeight="506.0" prefWidth="376.0">
                                     <HBox.margin>
-                                        <Insets right="50.0"/>
+                                        <Insets right="30.0"/>
                                     </HBox.margin>
                                 </JFXListView>
-                                <JFXListView layoutX="10.0" layoutY="10.0" prefHeight="506.0" prefWidth="383.0"/>
+                                <JFXButton buttonType="RAISED" onAction="#onSaveButtonClicky4s1" prefHeight="52.0"
+                                           prefWidth="89.0" text="Save" textFill="#252323">
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
+                                <JFXListView fx:id="listViewResy4s2" layoutX="10.0" layoutY="10.0" prefHeight="506.0"
+                                             prefWidth="383.0">
+                                    <HBox.margin>
+                                        <Insets left="30.0" right="30.0"/>
+                                    </HBox.margin>
+                                </JFXListView>
+                                <JFXButton buttonType="RAISED" layoutX="436.0" layoutY="237.0"
+                                           onAction="#onSaveButtonClicky4s2" prefHeight="52.0" prefWidth="89.0"
+                                           text="Save">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0"/>
+                                    </HBox.margin>
+                                </JFXButton>
                             </children>
                         </HBox>
                     </children>
