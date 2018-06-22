@@ -3,6 +3,8 @@ package com.ultimatex.nsbm;
 import com.ultimatex.nsbm.model.Course;
 import com.ultimatex.nsbm.model.Student;
 
+import java.util.Date;
+
 /**
  * This class hold global application states.
  * Ex: current course which student is registered, which student is being registered,which action triggered now
@@ -16,6 +18,8 @@ public abstract class GlobalState {
     private static Student selectedStudent;
     private static boolean fromInsertAction;
     private static boolean fromEditAction;
+
+    private static Date simulatedDate = new Date();
 
     public static Course getSelectedCourse() {
         return selectedCourse;
@@ -47,5 +51,13 @@ public abstract class GlobalState {
 
     public static void setFromEditAction(boolean fromEditAction) {
         GlobalState.fromEditAction = fromEditAction;
+    }
+
+    public static Date getSimulatedDate() {
+        return simulatedDate;
+    }
+
+    public static void setSimulatedDate(Date simulatedDate) {
+        GlobalState.simulatedDate = simulatedDate;
     }
 }
