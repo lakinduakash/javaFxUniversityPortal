@@ -339,4 +339,12 @@ public class Student {
     public void setSelectedSubjectsy4s2(ArrayList<Subject> selectedSubjectsy4s2) {
         this.selectedSubjectsy4s2 = selectedSubjectsy4s2;
     }
+
+    public String getIntake() {
+        return intake;
+    }
+
+    public void setIntake(String intake) {
+        this.intake = intake;
+    }
 }
