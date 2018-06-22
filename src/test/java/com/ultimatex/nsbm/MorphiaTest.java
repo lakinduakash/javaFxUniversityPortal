@@ -50,24 +50,14 @@ public class MorphiaTest {
     @Test
     public void createCourse() {
         Datastore d = init();
-        Subject s = d.createQuery(Subject.class).field("name").equal("PR").get();
-
-        if (s != null) {
-            Course course = new Course();
-            course.setMaxYears(3);
-            course.setName("BS");
 
 
-            ArrayList<Subject> arrayList = new ArrayList<>();
-
-            arrayList.add(s);
-            arrayList.add(s);
-            arrayList.add(s);
-
-            course.setYear1sem1(arrayList);
-
+        Course course = new Course();
+        course.setMaxYears(2);
+        course.setCode("SEM");
+        course.setName("Software Engineering (MSc)");
             d.save(course);
-        }
+
 
     }
 
@@ -91,7 +81,7 @@ public class MorphiaTest {
         student.setCourse(course);
         student.setIndexNumber(course.getCode() + g.genNewIndex());
 
-        boolean inserted = imp.insertNewStudent(student);
+        boolean inserted = imp.insert(student);
         g.saveIndex();
         assertThat(true, is(inserted));
 
@@ -126,7 +116,7 @@ public class MorphiaTest {
                 new Subject("DSA 1", "1002", 3000, 3),
                 new Subject("DSA 3", "1003", 3000, 3),
                 new Subject("PRO 1", "1004", 3000, 3),
-                new Subject("DB 1", "1004", 3000, 3),
+                new Subject("DB 1", "1005", 3000, 3),
                 new Subject("DB 2", "1006", 3000, 3),
                 new Subject("EN 1", "1007", 3000, 3),
                 new Subject("DSA 2", "1008", 3000, 3)};
@@ -136,7 +126,33 @@ public class MorphiaTest {
         }
     }
 
+    @Test
+    public void removeAllSubject() {
+        Datastore d = init();
+        d.delete(d.createQuery(Subject.class));
+    }
 
+    @Test
+    public void addSubjectToCourse() {
+        CourseImpl ci = new CourseImpl();
+        SubjectImpl si = new SubjectImpl();
+        ArrayList<Subject> a = new ArrayList<>();
+        a.add(si.find("code", "1003"));
+        a.add(si.find("code", "1004"));
+        a.add(si.find("code", "1005"));
+        a.add(si.find("code", "1006"));
 
+        ci.addOptionalSubject(ci.getCourseByCode("SEM"), a, false, CourseImpl.Y1S2O);
+        ci.addCompulsorySubject(ci.getCourseByCode("SEM"), a, false, CourseImpl.Y1S2);
+    }
+
+    @Test
+    public void updateAsWholeObject() {
+        SubjectImpl si = new SubjectImpl();
+        Subject s = si.find("code", "1103");
+        s.setCode("1003");
+        s.setPrice(4000);
+        init().save(s);
+    }
 
 }
