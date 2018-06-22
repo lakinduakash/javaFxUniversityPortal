@@ -26,12 +26,6 @@
                                 <Insets/>
                             </HBox.margin>
                         </JFXTextField>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" prefHeight="42.0"
-                                   prefWidth="39.0" textFill="#429e37">
-                            <HBox.margin>
-                                <Insets right="25.0"/>
-                            </HBox.margin>
-                        </JFXButton>
                     </children>
                     <opaqueInsets>
                         <Insets top="50.0"/>
@@ -128,12 +122,8 @@
                                              wrappingWidth="171.0"/>
                         <JFXTextField fx:id="textFieldMobile" labelFloat="true" prefHeight="36.0" prefWidth="333.0"
                                       promptText="Mobile" HBox.hgrow="SOMETIMES"/>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" prefHeight="42.0"
-                                   prefWidth="39.0" textFill="#429e37"/>
                         <JFXTextField fx:id="textFieldHome" labelFloat="true" layoutX="191.0" layoutY="51.0"
                                       prefHeight="36.0" prefWidth="333.0" promptText="Home" HBox.hgrow="SOMETIMES"/>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="536.0"
-                                   layoutY="44.0" prefHeight="42.0" prefWidth="39.0" textFill="#429e37"/>
                         <JFXTextField fx:id="textFieldEmail" labelFloat="true" layoutX="534.0" layoutY="51.0"
                                       prefHeight="36.0" prefWidth="333.0" promptText="email" HBox.hgrow="SOMETIMES">
                             <HBox.margin>
@@ -153,8 +143,6 @@
                                       promptText="Mobile" HBox.hgrow="SOMETIMES"/>
                         <JFXTextField fx:id="textFieldC2" labelFloat="true" layoutX="191.0" layoutY="51.0"
                                       prefHeight="36.0" prefWidth="232.0" promptText="Home" HBox.hgrow="SOMETIMES"/>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="536.0"
-                                   layoutY="44.0" prefHeight="42.0" prefWidth="39.0" textFill="#429e37"/>
                         <JFXTextField fx:id="textFieldC3" labelFloat="true" layoutX="534.0" layoutY="51.0"
                                       prefHeight="36.0" prefWidth="514.0" promptText="email" HBox.hgrow="SOMETIMES">
                             <HBox.margin>
