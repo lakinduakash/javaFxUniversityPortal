@@ -30,15 +30,12 @@ public class ProfileController implements Initializable {
 
     @FXML
     private JFXTextField textFieldFullName;
-    private String fullName;
 
     @FXML
     private JFXTextField textFieldNickName;
-    private String nickName;
 
     @FXML
     private JFXDatePicker datePickerDOB;
-    private Date date;
 
     @FXML
     private JFXTextField textFieldAge;
@@ -53,7 +50,10 @@ public class ProfileController implements Initializable {
     private JFXTextField textFieldPostal;
 
     @FXML
-    private JFXTextField textFieldReg;
+    private JFXTextField textFieldAddmissionDate;
+
+    @FXML
+    private JFXTextField textFieldIntake;
 
     @FXML
     private JFXTextField textFieldIndex;
@@ -93,6 +93,7 @@ public class ProfileController implements Initializable {
     private Course selectedCourse;
     private Student selectedStudent;
     private boolean studentRegistered;
+    private Date nowDate = new Date();
 
     private String sIndex;
 
@@ -102,6 +103,7 @@ public class ProfileController implements Initializable {
      *
      **************************************************************************/
     public ProfileController() {
+        nowDate = GlobalState.getSimulatedDate();
         fromInsert = GlobalState.isFromInsertAction();
         selectedCourse = GlobalState.getSelectedCourse();
         selectedStudent = GlobalState.getSelectedStudent();
@@ -149,6 +151,8 @@ public class ProfileController implements Initializable {
         }
 
         datePickerDOB.setValue(LocalDate.now());
+        textFieldAddmissionDate.setText(nowDate.toString());
+        textFieldIntake.setText(getIntake());
 
     }
 
@@ -211,6 +215,8 @@ public class ProfileController implements Initializable {
         student.setMobileNumber(textFieldMobile.getText().trim());
         student.setEmail(textFieldEmail.getText().trim());
         student.setFullName(textFieldFullName.getText().trim());
+        student.setAdmissionDate(new Date());
+        student.setIntake(getIntake());
 
         generateIndex.saveIndex();
 
@@ -344,6 +350,8 @@ public class ProfileController implements Initializable {
         textFieldMobile.setText(selectedStudent.getMobileNumber());
         textFieldHome.setText(selectedStudent.getHomeNumber());
         textFieldCourse.setText(selectedStudent.getCourse().getName());
+        textFieldAddmissionDate.setText(selectedStudent.getAdmissionDate().toString());
+        textFieldAddmissionDate.setEditable(false);
 
         if (selectedCourse.getType() == Course.TYPE_MA) {
             textFieldC1.setText(selectedStudent.getUniversity());
@@ -354,6 +362,20 @@ public class ProfileController implements Initializable {
             textFieldC2.setText(selectedStudent.getALResults());
             textFieldC3.setText("" + selectedStudent.getzScore());
         }
+    }
+
+    private String getIntake() {
+
+        if (nowDate.getMonth() < 2 && nowDate.getMonth() >= 7) {
+            if (nowDate.getMonth() >= 1)
+                return Student.INTAKE_FEB + " " + (nowDate.getYear() + 1900);
+            else if (nowDate.getMonth() >= 7)
+                return Student.INTAKE_FEB + " " + (nowDate.getYear() + 1 + 1900);
+        } else {
+            return Student.INTAKE_JULY + " " + (nowDate.getYear() + 1900);
+        }
+        return "";
+
     }
 
 
