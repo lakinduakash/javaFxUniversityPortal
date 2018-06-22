@@ -66,4 +66,13 @@ public class Subject {
     public void setCredit(int credit) {
         this.credit = credit;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Subject s = (Subject) obj;
+        if (s.getId() == this.getId())
+            return true;
+        else
+            return false;
+    }
 }
