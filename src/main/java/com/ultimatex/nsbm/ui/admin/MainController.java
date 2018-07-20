@@ -6,7 +6,9 @@ import com.jfoenix.controls.JFXDecorator;
 import com.jfoenix.controls.JFXTextField;
 import com.ultimatex.nsbm.GlobalState;
 import com.ultimatex.nsbm.model.Course;
+import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.model.crud.CourseImpl;
+import com.ultimatex.nsbm.model.crud.StudentImpl;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,6 +28,12 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
+    /**************************************************************************
+     *
+     * Fields as
+     *
+     **************************************************************************/
+
     private Datastore datastore;
 
     @FXML
@@ -36,6 +44,8 @@ public class MainController implements Initializable {
 
     @FXML
     private JFXTextField textFieldIndexNumber;
+
+
 
 
     @Override
@@ -63,6 +73,7 @@ public class MainController implements Initializable {
     @FXML
     public void onRegisterButtonClicked(Event event) {
 
+
         Label l = courseComboBox.getValue();
         if (l == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -80,6 +91,46 @@ public class MainController implements Initializable {
         GlobalState.setFromInsertAction(true);
         GlobalState.setSelectedStudent(null);
 
+        loadMainStudentView("Register new student");
+
+
+
+
+    }
+
+    @FXML
+    public void onEditButtonClicked(Event event) {
+
+        String index=textFieldIndexNumber.getText().trim();
+        StudentImpl impl=new StudentImpl();
+        Student student=impl.getStudentByIndex(index);
+        if(student !=null)
+        {
+            GlobalState.setSelectedStudent(student);
+            GlobalState.setFromEditAction(true);
+            GlobalState.setFromInsertAction(false);
+            GlobalState.setSelectedCourse(student.getCourse());
+
+            loadMainStudentView("Profile "+student.getIndexNumber());
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Invalid Index Number");
+            alert.setHeaderText(null);
+            alert.setContentText("PIndex number invalid or not found!");
+            alert.show();
+        }
+
+    }
+
+    @FXML
+    public void onSettingsButtonClick(Event event) {
+
+    }
+
+    private void loadMainStudentView(String title)
+    {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/student/main.fxml"));
 
         try {
@@ -90,7 +141,7 @@ public class MainController implements Initializable {
 
 
         Stage stage = new Stage(StageStyle.DECORATED);
-        stage.setTitle("Register new student");
+        stage.setTitle(title);
         JFXDecorator decorator = new JFXDecorator(stage, fxmlLoader.getRoot());
         decorator.setCustomMaximize(true);
         Scene scene = new Scene(decorator);
@@ -98,18 +149,6 @@ public class MainController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
 
         stage.show();
-
-
-    }
-
-    @FXML
-    public void onEditButtonClicked(Event event) {
-
-    }
-
-    @FXML
-    public void onSettingsButtonClick(Event event) {
-
     }
 
 
