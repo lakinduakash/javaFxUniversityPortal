@@ -9,7 +9,7 @@
       minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="407.0"
       xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.ResultViewItemController">
     <children>
-        <Label fx:id="LablesubjectName" prefHeight="48.0" prefWidth="312.0" text="Label">
+        <Label fx:id="LabelSubjectName" prefHeight="48.0" prefWidth="312.0" text="Label">
             <HBox.margin>
                 <Insets left="5.0"/>
             </HBox.margin>
