@@ -6,7 +6,10 @@ public class Subject {
     private String name;
     private int price;
 
-    public Subject() {
+    public Subject(String name,int price) {
+
+        this.name=name;
+        this.price=price;
 
     }
 
