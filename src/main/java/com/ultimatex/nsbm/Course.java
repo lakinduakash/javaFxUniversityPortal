@@ -1,5 +1,7 @@
 package com.ultimatex.nsbm;
 
+import org.mongodb.morphia.annotations.Entity;
+
 public class Course {
 
     private String school;
@@ -14,7 +16,80 @@ public class Course {
     private Subject[] year4sem1;
     private Subject[] year4sem2;
 
+    private Subject[] year1sem1c;
+    private Subject[] year1sem2c;
+    private Subject[] year2sem1c;
+    private Subject[] year2sem2c;
+    private Subject[] year3sem1c;
+    private Subject[] year3sem2c;
+    private Subject[] year4sem1c;
+    private Subject[] year4sem2c;
+
     private int maxYears;
+
+    public Subject[] getYear1sem1c() {
+        return year1sem1c;
+    }
+
+    public void setYear1sem1c(Subject[] year1sem1c) {
+        this.year1sem1c = year1sem1c;
+    }
+
+    public Subject[] getYear1sem2c() {
+        return year1sem2c;
+    }
+
+    public void setYear1sem2c(Subject[] year1sem2c) {
+        this.year1sem2c = year1sem2c;
+    }
+
+    public Subject[] getYear2sem1c() {
+        return year2sem1c;
+    }
+
+    public void setYear2sem1c(Subject[] year2sem1c) {
+        this.year2sem1c = year2sem1c;
+    }
+
+    public Subject[] getYear2sem2c() {
+        return year2sem2c;
+    }
+
+    public void setYear2sem2c(Subject[] year2sem2c) {
+        this.year2sem2c = year2sem2c;
+    }
+
+    public Subject[] getYear3sem1c() {
+        return year3sem1c;
+    }
+
+    public void setYear3sem1c(Subject[] year3sem1c) {
+        this.year3sem1c = year3sem1c;
+    }
+
+    public Subject[] getYear3sem2c() {
+        return year3sem2c;
+    }
+
+    public void setYear3sem2c(Subject[] year3sem2c) {
+        this.year3sem2c = year3sem2c;
+    }
+
+    public Subject[] getYear4sem1c() {
+        return year4sem1c;
+    }
+
+    public void setYear4sem1c(Subject[] year4sem1c) {
+        this.year4sem1c = year4sem1c;
+    }
+
+    public Subject[] getYear4sem2c() {
+        return year4sem2c;
+    }
+
+    public void setYear4sem2c(Subject[] year4sem2c) {
+        this.year4sem2c = year4sem2c;
+    }
 
     public Subject[] getYear1sem1() {
         return year1sem1;
