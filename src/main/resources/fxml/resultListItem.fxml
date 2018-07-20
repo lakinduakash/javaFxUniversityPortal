@@ -6,7 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <HBox xmlns:fx="http://javafx.com/fxml/1" fx:id="resultViewItem" maxHeight="-Infinity" maxWidth="-Infinity"
-      minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="407.0"
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="376.0"
       xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.ResultViewItemController">
     <children>
         <Label fx:id="LabelSubjectName" prefHeight="48.0" prefWidth="312.0" text="Label">
