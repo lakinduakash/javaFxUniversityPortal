@@ -1,7 +1,7 @@
 package com.ultimatex.nsbm;
 
 import com.mongodb.client.MongoDatabase;
-
+//User sb
 public abstract class User {
 
     public final static String TYPE_STUDENT = "student";
