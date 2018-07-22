@@ -11,7 +11,7 @@ public abstract class User {
 
 
     private MongoDatabase database;
-    
+    //
     protected User(String email, MongoDatabase database) {
         this.email = email;
         this.database = database;
