@@ -53,7 +53,23 @@ public class ResultsController implements Initializable {
     private ArrayList<ResultViewItemController> resultViewItemControllersy3s2 = new ArrayList<>();
     private ArrayList<ResultViewItemController> resultViewItemControllersy4s1 = new ArrayList<>();
     private ArrayList<ResultViewItemController> resultViewItemControllersy4s2 = new ArrayList<>();
+
     private Student selectedStudent = GlobalState.getSelectedStudent();
+    private Course selectedCourse = GlobalState.getSelectedCourse();
+
+    @FXML
+    void onSaveButtonClicky1s1(ActionEvent event) {
+        if (selectedStudent.getResults() == null) {
+            Result r = new Result();
+            r.setYear1sem1(getUpdatedResultValue(resultViewItemControllersy1s1));
+            new ResultImpl(selectedStudent).insert(r);
+        } else {
+            Result r = selectedStudent.getResults();
+            r.setYear1sem1(getUpdatedResultValue(resultViewItemControllersy1s1));
+            new ResultImpl(selectedStudent).insert(r);
+
+        }
+    }
 
     @FXML
     void onSaveButtonClicky1s2(ActionEvent event) {
@@ -85,21 +101,7 @@ public class ResultsController implements Initializable {
 
     }
 
-    private Course selectedCourse = GlobalState.getSelectedCourse();
 
-    @FXML
-    void onSaveButtonClicky1s1(ActionEvent event) {
-        if (selectedStudent.getResults() == null) {
-            Result r = new Result();
-            r.setYear1sem1(getUpdatedResultValue(resultViewItemControllersy1s1));
-            new ResultImpl(selectedStudent).insert(r);
-        } else {
-            Result r = selectedStudent.getResults();
-            r.setYear1sem1(getUpdatedResultValue(resultViewItemControllersy1s1));
-            new ResultImpl(selectedStudent).insert(r);
-
-        }
-    }
 
 
     @FXML
