@@ -288,8 +288,8 @@ public class ProfileController implements Initializable {
                         showAlert("Error", "Please enter valid AL year");
                         return false;
                     }
-                    Double.parseDouble(textFieldC3.getText().trim());
-                    if (textFieldC2.getText().trim().length() < 12) {
+                    Double.parseDouble(textFieldC2.getText().trim());
+                    if (textFieldC3.getText().trim().length() < 12) {
                         showAlert("Error", "Please enter valid result");
                         return false;
                     }
