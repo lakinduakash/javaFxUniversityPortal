@@ -300,6 +300,7 @@ public class SubjectController implements Initializable {
         }
         if (subjects.size() > 0) {
             selectedStudent.setSelectedSubjectsy1s1(subjects);
+            //TODO make common to all semesters (updated subjects only added to y1s1)
             new StudentImpl().update(selectedStudent);
         }
     }

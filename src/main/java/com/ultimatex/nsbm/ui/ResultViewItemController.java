@@ -2,7 +2,6 @@ package com.ultimatex.nsbm.ui;
 
 import com.jfoenix.controls.JFXComboBox;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -19,7 +18,7 @@ public class ResultViewItemController implements Initializable {
     private HBox resultViewItem;
 
     @FXML
-    private Label LabelSubjectName;
+    private Label labelSubjectName;
 
     @FXML
     private JFXComboBox<String> comboBoxGradeSelector;
@@ -58,12 +57,12 @@ public class ResultViewItemController implements Initializable {
 
     public Label getLabelSubjectName() {
         while (!initialized);
-        return LabelSubjectName;
+        return labelSubjectName;
     }
 
-    public void setLabelSubjectName(Label labelSubjectName) {
+    public void setLabelSubjectName(String labelSubjectName) {
         while (!initialized);
-        LabelSubjectName = labelSubjectName;
+        this.labelSubjectName.setText(labelSubjectName);
     }
 
     public JFXComboBox<String> getComboBoxGradeSelector() {

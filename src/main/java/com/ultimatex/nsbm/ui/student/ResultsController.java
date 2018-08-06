@@ -3,16 +3,13 @@ package com.ultimatex.nsbm.ui.student;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTabPane;
 import com.ultimatex.nsbm.GlobalState;
-import com.ultimatex.nsbm.model.Course;
-import com.ultimatex.nsbm.model.SingleResult;
-import com.ultimatex.nsbm.model.Student;
-import com.ultimatex.nsbm.model.Subject;
+import com.ultimatex.nsbm.model.*;
+import com.ultimatex.nsbm.model.crud.ResultImpl;
 import com.ultimatex.nsbm.ui.ResultViewItemController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
@@ -47,10 +44,16 @@ public class ResultsController implements Initializable {
     @FXML
     private JFXListView<?> listViewResy4s2;
 
-    @FXML
-    void onSaveButtonClicky1s1(ActionEvent event) {
 
-    }
+    private ArrayList<ResultViewItemController> resultViewItemControllersy1s1 = new ArrayList<>();
+    private ArrayList<ResultViewItemController> resultViewItemControllersy1s2 = new ArrayList<>();
+    private ArrayList<ResultViewItemController> resultViewItemControllersy2s1 = new ArrayList<>();
+    private ArrayList<ResultViewItemController> resultViewItemControllersy2s2 = new ArrayList<>();
+    private ArrayList<ResultViewItemController> resultViewItemControllersy3s1 = new ArrayList<>();
+    private ArrayList<ResultViewItemController> resultViewItemControllersy3s2 = new ArrayList<>();
+    private ArrayList<ResultViewItemController> resultViewItemControllersy4s1 = new ArrayList<>();
+    private ArrayList<ResultViewItemController> resultViewItemControllersy4s2 = new ArrayList<>();
+    private Student selectedStudent = GlobalState.getSelectedStudent();
 
     @FXML
     void onSaveButtonClicky1s2(ActionEvent event) {
@@ -82,8 +85,22 @@ public class ResultsController implements Initializable {
 
     }
 
-    Student selectedStudent = GlobalState.getSelectedStudent();
-    Course selectedCourse = GlobalState.getSelectedCourse();
+    private Course selectedCourse = GlobalState.getSelectedCourse();
+
+    @FXML
+    void onSaveButtonClicky1s1(ActionEvent event) {
+        if (selectedStudent.getResults() == null) {
+            Result r = new Result();
+            r.setYear1sem1(getUpdatedResultValue(resultViewItemControllersy1s1));
+            new ResultImpl(selectedStudent).insert(r);
+        } else {
+            Result r = selectedStudent.getResults();
+            r.setYear1sem1(getUpdatedResultValue(resultViewItemControllersy1s1));
+            new ResultImpl(selectedStudent).insert(r);
+
+        }
+    }
+
 
     @FXML
     void onSaveButtonClicky4s2(ActionEvent event) {
@@ -91,40 +108,73 @@ public class ResultsController implements Initializable {
 
     }
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        listViewResy1s1.getItems().add(initOneItem().getResultViewItem());
-        listViewResy1s1.getItems().add(initOneItem().getResultViewItem());
-        listViewResy1s1.getItems().add(initOneItem().getResultViewItem());
-    }
 
-    void initTab1() {
+        initTab1();
 
     }
 
+    private void initTab1() {
 
-    private void addResultsToList(ArrayList<SingleResult> cResults, ArrayList<Subject> cSubject, JFXListView<HBox> listView) {
-        for (Subject s : cSubject) {
+        Result r = selectedStudent.getResults();
+        if (r != null) {
+            ArrayList<SingleResult> sr = r.getYear1sem1();
+            addResultsToList(sr, selectedCourse.getYear1sem1(),
+                    selectedStudent.getSelectedSubjectsy1s1(), listViewResy1s1, resultViewItemControllersy1s1);
+        } else {
+            addResultsToList(null, selectedCourse.getYear1sem1(),
+                    selectedStudent.getSelectedSubjectsy1s1(), listViewResy1s1, resultViewItemControllersy1s1);
+        }
+
+
+
+    }
+
+
+    private void addResultsToList(ArrayList<SingleResult> cResults, ArrayList<Subject> cSubject, ArrayList<Subject> oSubject,
+                                  JFXListView<HBox> listView, ArrayList<ResultViewItemController> controllerList) {
+        addToListHelper(cResults, cSubject, listView, controllerList);
+
+        addToListHelper(cResults, oSubject, listView, controllerList);
+
+
+    }
+
+    private void addToListHelper(ArrayList<SingleResult> cResults, ArrayList<Subject> oSubject, JFXListView<HBox> listView, ArrayList<ResultViewItemController> controllerList) {
+        for (Subject s : oSubject) {
             ResultViewItemController rc = initOneItem();
-            rc.setLabelSubjectName(new Label(s.getName()));
+            rc.setLabelSubjectName(s.getName());
             rc.setCustomObject(s);
 
-            for (SingleResult r : cResults) {
-                if (r.getSubject().equals(s)) {
-                    rc.getComboBoxGradeSelector().setValue(r.getGrade());
+            if (cResults != null)
+                for (SingleResult r : cResults) {
+                    if (r.getSubject().equals(s)) {
+                        rc.getComboBoxGradeSelector().setValue(r.getGrade());
+                    }
                 }
-            }
+            controllerList.add(rc);
             listView.getItems().add(rc.getResultViewItem());
+
         }
     }
 
 
-    private ArrayList<SingleResult> getUpdateResultValue(JFXListView<HBox> item) {
-        for (HBox h : item.getItems()) {
+    private ArrayList<SingleResult> getUpdatedResultValue(ArrayList<ResultViewItemController> controllerArrayList) {
+
+        ArrayList<SingleResult> list = new ArrayList<>();
+
+        for (ResultViewItemController c : controllerArrayList) {
+            SingleResult singleResult = new SingleResult();
+            Subject s = (Subject) (c.getCustomObject());
+            singleResult.setSubject(s);
+            singleResult.setGrade(c.getComboBoxGradeSelector().getValue());
+
+            list.add(singleResult);
+
         }
 
-        return null;
+        return list;
     }
 
 
