@@ -220,8 +220,8 @@ public class SubjectController implements Initializable {
         ArrayList<Subject> y2s1 = selectedStudent.getSelectedSubjectsy2s1();
         ArrayList<Subject> y2s2 = selectedStudent.getSelectedSubjectsy2s2();
 
-        addOptionalSubjectsToList(y2s1, selectedCourse.getYear1sem1o(), listItemViewControllersy1s1, listViewy2s1o);
-        addOptionalSubjectsToList(y2s2, selectedCourse.getYear1sem2o(), listItemViewControllersy1s2, listViewy2s2o);
+        addOptionalSubjectsToList(y2s1, selectedCourse.getYear2sem1o(), listItemViewControllersy2s1, listViewy2s1o);
+        addOptionalSubjectsToList(y2s2, selectedCourse.getYear2sem2o(), listItemViewControllersy2s2, listViewy2s2o);
 
         addCompulsorySubjectsToList(selectedCourse.getYear2sem1(), listViewy2s1c);
         addCompulsorySubjectsToList(selectedCourse.getYear2sem2(), listViewy2s2c);
@@ -232,8 +232,8 @@ public class SubjectController implements Initializable {
         ArrayList<Subject> y3s1 = selectedStudent.getSelectedSubjectsy3s1();
         ArrayList<Subject> y3s2 = selectedStudent.getSelectedSubjectsy3s2();
 
-        addOptionalSubjectsToList(y3s1, selectedCourse.getYear3sem1o(), listItemViewControllersy1s1, listViewy3s1o);
-        addOptionalSubjectsToList(y3s2, selectedCourse.getYear3sem2o(), listItemViewControllersy1s2, listViewy3s2o);
+        addOptionalSubjectsToList(y3s1, selectedCourse.getYear3sem1o(), listItemViewControllersy3s1, listViewy3s1o);
+        addOptionalSubjectsToList(y3s2, selectedCourse.getYear3sem2o(), listItemViewControllersy3s2, listViewy3s2o);
 
         addCompulsorySubjectsToList(selectedCourse.getYear3sem1(), listViewy2s1c);
         addCompulsorySubjectsToList(selectedCourse.getYear3sem2(), listViewy2s2c);
@@ -243,8 +243,8 @@ public class SubjectController implements Initializable {
         ArrayList<Subject> y4s1 = selectedStudent.getSelectedSubjectsy4s1();
         ArrayList<Subject> y4s2 = selectedStudent.getSelectedSubjectsy4s2();
 
-        addOptionalSubjectsToList(y4s1, selectedCourse.getYear4sem1o(), listItemViewControllersy1s1, listViewy4s1o);
-        addOptionalSubjectsToList(y4s2, selectedCourse.getYear4sem2o(), listItemViewControllersy1s2, listViewy4s2o);
+        addOptionalSubjectsToList(y4s1, selectedCourse.getYear4sem1o(), listItemViewControllersy4s1, listViewy4s1o);
+        addOptionalSubjectsToList(y4s2, selectedCourse.getYear4sem2o(), listItemViewControllersy4s2, listViewy4s2o);
 
         addCompulsorySubjectsToList(selectedCourse.getYear4sem1(), listViewy4s1c);
         addCompulsorySubjectsToList(selectedCourse.getYear4sem2(), listViewy4s2c);
