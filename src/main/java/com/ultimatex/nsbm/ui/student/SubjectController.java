@@ -292,12 +292,14 @@ public class SubjectController implements Initializable {
         //if()
     }
 
+
     private void updateStudentSubject(ArrayList<ListItemViewController> listItemViewController) {
         ArrayList<Subject> subjects = new ArrayList<>();
         for (ListItemViewController l : listItemViewController) {
             if (l.getCheckBox().isSelected())
                 subjects.add((Subject) (l.getCustomObject()));
         }
+
         if (subjects.size() > 0) {
             selectedStudent.setSelectedSubjectsy1s1(subjects);
             //TODO make common to all semesters (updated subjects only added to y1s1)
