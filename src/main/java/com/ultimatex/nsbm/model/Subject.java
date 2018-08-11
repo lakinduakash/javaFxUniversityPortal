@@ -69,6 +69,7 @@ public class Subject {
 
     @Override
     public boolean equals(Object obj) {
+
         if (obj instanceof Subject) {
             Subject s = (Subject) obj;
             return s.getId() == this.getId();
