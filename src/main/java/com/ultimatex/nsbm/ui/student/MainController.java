@@ -41,8 +41,10 @@ public class MainController implements Initializable, SideNavController.OnSideNa
     @FXML
     private AnchorPane mainContainer;
 
+    //current state of the view(Profile,Results etc).
     private int currentState;
 
+    //holder for cached states of view. Once loaded the state it will be saved in this hash map and reused.
     private HashMap<String, Node> stateCache = new HashMap<>();
 
 
