@@ -153,6 +153,17 @@ public class ResultsController implements Initializable {
     @FXML
     void onSaveButtonClicky4s1(ActionEvent event) {
 
+        if (selectedStudent.getResults() == null) {
+            Result r = new Result();
+            r.setYear4sem1(getUpdatedResultValue(resultViewItemControllersy4s1));
+            new ResultImpl(selectedStudent).insert(r);
+        } else {
+            Result r = selectedStudent.getResults();
+            r.setYear4sem1(getUpdatedResultValue(resultViewItemControllersy4s1));
+            new ResultImpl(selectedStudent).insert(r);
+
+        }
+
     }
 
 
@@ -160,7 +171,16 @@ public class ResultsController implements Initializable {
 
     @FXML
     void onSaveButtonClicky4s2(ActionEvent event) {
+        if (selectedStudent.getResults() == null) {
+            Result r = new Result();
+            r.setYear4sem2(getUpdatedResultValue(resultViewItemControllersy4s2));
+            new ResultImpl(selectedStudent).insert(r);
+        } else {
+            Result r = selectedStudent.getResults();
+            r.setYear4sem2(getUpdatedResultValue(resultViewItemControllersy4s2));
+            new ResultImpl(selectedStudent).insert(r);
 
+        }
 
     }
 
