@@ -65,6 +65,9 @@ public class MainController implements Initializable, SideNavController.OnSideNa
 
     }
 
+    /**
+     * initialise drawer with basic elements
+     */
     private void initDrawer() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/student/sidenav.fxml"));
@@ -92,6 +95,11 @@ public class MainController implements Initializable, SideNavController.OnSideNa
         });
     }
 
+    /**
+     * Change the state of the container according to state id.
+     *
+     * @param stateId state id (Profile, Payment, Results etc)
+     */
     private void changeContainer(int stateId) {
 
         ObservableList<Node> child = mainContainer.getChildren();
@@ -138,8 +146,13 @@ public class MainController implements Initializable, SideNavController.OnSideNa
     }
 
 
+    /**
+     * load the state into main container.
+     * @param fxmlLocation fxml relative file location
+     */
     private void loadContainer(String fxmlLocation) {
 
+        //load sub-containers from another thread.
         Task<Node> task = new Task<Node>() {
             @Override
             protected Node call() throws Exception {
@@ -160,7 +173,7 @@ public class MainController implements Initializable, SideNavController.OnSideNa
             }
         };
 
-
+        //after loaded
         task.setOnSucceeded((e) -> {
             Node pane = task.getValue();
             mainContainer.getChildren().addAll(pane);
@@ -170,13 +183,18 @@ public class MainController implements Initializable, SideNavController.OnSideNa
             AnchorPane.setTopAnchor(pane, (double) 0);
         });
 
-
+        //run tasks
         Thread thread = new Thread(task);
         thread.start();
 
 
     }
 
+    /**
+     * Avoid duplicate adding of states
+     * @param paneId id of the node object
+     * @return container can be added or not tomain container
+     */
     private boolean canStateAdded(String paneId) {
         ObservableList<Node> children = mainContainer.getChildren();
 
