@@ -187,10 +187,15 @@ public class ResultsController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        initTab1();
-        initTab2();
-        initTab3();
-        initTab4();
+        if (selectedStudent != null) {
+            resultPane.setDisable(false);
+            initTab1();
+            initTab2();
+            initTab3();
+            initTab4();
+        } else {
+            resultPane.setDisable(true);
+        }
 
     }
 
