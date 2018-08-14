@@ -76,11 +76,11 @@ public class ResultsController implements Initializable {
 
         if (selectedStudent.getResults() == null) {
             Result r = new Result();
-            r.setYear2sem1(getUpdatedResultValue(resultViewItemControllersy2s1));
+            r.setYear1sem2(getUpdatedResultValue(resultViewItemControllersy1s2));
             new ResultImpl(selectedStudent).insert(r);
         } else {
             Result r = selectedStudent.getResults();
-            r.setYear1sem1(getUpdatedResultValue(resultViewItemControllersy2s1));
+            r.setYear1sem2(getUpdatedResultValue(resultViewItemControllersy1s2));
             new ResultImpl(selectedStudent).insert(r);
 
         }
@@ -90,20 +90,63 @@ public class ResultsController implements Initializable {
     @FXML
     void onSaveButtonClicky2s1(ActionEvent event) {
 
+        if (selectedStudent.getResults() == null) {
+            Result r = new Result();
+            r.setYear2sem1(getUpdatedResultValue(resultViewItemControllersy2s1));
+            new ResultImpl(selectedStudent).insert(r);
+        } else {
+            Result r = selectedStudent.getResults();
+            r.setYear2sem1(getUpdatedResultValue(resultViewItemControllersy2s1));
+            new ResultImpl(selectedStudent).insert(r);
+
+        }
+
     }
 
     @FXML
     void onSaveButtonClicky2s2(ActionEvent event) {
+
+        if (selectedStudent.getResults() == null) {
+            Result r = new Result();
+            r.setYear2sem2(getUpdatedResultValue(resultViewItemControllersy2s2));
+            new ResultImpl(selectedStudent).insert(r);
+        } else {
+            Result r = selectedStudent.getResults();
+            r.setYear2sem2(getUpdatedResultValue(resultViewItemControllersy2s2));
+            new ResultImpl(selectedStudent).insert(r);
+
+        }
 
     }
 
     @FXML
     void onSaveButtonClicky3s1(ActionEvent event) {
 
+        if (selectedStudent.getResults() == null) {
+            Result r = new Result();
+            r.setYear3sem1(getUpdatedResultValue(resultViewItemControllersy3s1));
+            new ResultImpl(selectedStudent).insert(r);
+        } else {
+            Result r = selectedStudent.getResults();
+            r.setYear3sem1(getUpdatedResultValue(resultViewItemControllersy3s1));
+            new ResultImpl(selectedStudent).insert(r);
+
+        }
+
     }
 
     @FXML
     void onSaveButtonClicky3s2(ActionEvent event) {
+        if (selectedStudent.getResults() == null) {
+            Result r = new Result();
+            r.setYear3sem2(getUpdatedResultValue(resultViewItemControllersy3s2));
+            new ResultImpl(selectedStudent).insert(r);
+        } else {
+            Result r = selectedStudent.getResults();
+            r.setYear3sem2(getUpdatedResultValue(resultViewItemControllersy3s2));
+            new ResultImpl(selectedStudent).insert(r);
+
+        }
 
     }
 
@@ -126,6 +169,8 @@ public class ResultsController implements Initializable {
 
         initTab1();
         initTab2();
+        initTab3();
+        initTab4();
 
     }
 
