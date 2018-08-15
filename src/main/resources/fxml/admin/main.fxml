@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.*?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
@@ -94,6 +94,26 @@
                         <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#onSettingsButtonClick"
                                    prefHeight="117.0" prefWidth="253.0" style="-fx-background-color: #ffffff;"
                                    text="User Settings">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="GEAR" size="80" wrappingWidth="55.71428680419922"/>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="259.0" layoutY="23.0"
+                                   onAction="#onSettingsButtonClick" prefHeight="117.0" prefWidth="253.0"
+                                   style="-fx-background-color: #ffffff;" text="User Settings">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="GEAR" size="80" wrappingWidth="55.71428680419922"/>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="385.0" layoutY="23.0"
+                                   onAction="#onSettingsButtonClick" prefHeight="117.0" prefWidth="253.0"
+                                   style="-fx-background-color: #ffffff;" text="User Settings">
                             <graphic>
                                 <FontAwesomeIconView glyphName="GEAR" size="80" wrappingWidth="55.71428680419922"/>
                             </graphic>
