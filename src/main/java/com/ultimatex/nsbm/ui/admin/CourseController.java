@@ -109,7 +109,6 @@ public class CourseController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        g1.getToggles().get(0).setUserData(9);
 
     }
 }
