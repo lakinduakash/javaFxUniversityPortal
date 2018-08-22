@@ -202,5 +202,30 @@ public class MainController implements Initializable {
         stage.show();
     }
 
+    @FXML
+    public void onViewAllClicked(ActionEvent event) {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admin/view_all_students.fxml"));
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("Manage Lecturers and Instructors");
+        JFXDecorator decorator = new JFXDecorator(stage, fxmlLoader.getRoot());
+        decorator.setCustomMaximize(true);
+        Scene scene = new Scene(decorator);
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setMinWidth(600);
+
+
+        stage.show();
+    }
+
 
 }
