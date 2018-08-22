@@ -60,6 +60,12 @@ public class StudentImpl extends BaseImpl<Student> {
 
     }
 
+    /**
+     * Find student by index number
+     *
+     * @param index index number of student
+     * @return student selected
+     */
 
     public Student getStudentByIndex(String index) {
         return datastore.createQuery(Student.class).field("indexNumber").equal(index).get();
@@ -90,10 +96,7 @@ public class StudentImpl extends BaseImpl<Student> {
                 .set("mobileNumber", updated.getMobileNumber())
                 .set("age", updated.getAge());
         UpdateResults results = datastore.update(query, updateOperations);
-        if (results.getInsertedCount() > 0)
-            return true;
-        else
-            return false;
+        return results.getInsertedCount() > 0;
     }
 
 
