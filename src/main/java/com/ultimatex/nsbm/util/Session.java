@@ -80,8 +80,7 @@ public class Session {
 
         if (User.TYPE_ADMIN.equals(type))
             return new AdminHelper(session.email, database);
-        else
-            return new StudentHelper(session.email, database);
+        return null;
     }
 
     public boolean isValid() {

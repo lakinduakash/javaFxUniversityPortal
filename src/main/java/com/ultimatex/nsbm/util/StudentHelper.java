@@ -6,7 +6,6 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.UpdateResult;
 import com.ultimatex.nsbm.Course;
-import com.ultimatex.nsbm.Result;
 import com.ultimatex.nsbm.User;
 import com.ultimatex.nsbm.model.Address;
 import org.bson.BsonDocument;
@@ -41,7 +40,6 @@ public class StudentHelper extends User {
 
 
     private Course course;
-    private Result results;
 
     private String school;
     private int ALYear;
