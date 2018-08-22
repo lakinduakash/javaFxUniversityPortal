@@ -17,8 +17,14 @@ public class SubjectImpl extends BaseImpl<Subject> {
 
     @Override
     public boolean insert(Subject subject) {
-        datastore.save(subject);
-        return false;
+        try {
+            datastore.save(subject);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
+
     }
 
     @Override
