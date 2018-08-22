@@ -4,11 +4,10 @@
 
 package com.ultimatex.nsbm.ui.admin;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXRadioButton;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.*;
+import com.ultimatex.nsbm.model.Course;
 import com.ultimatex.nsbm.model.Subject;
+import com.ultimatex.nsbm.model.crud.CourseImpl;
 import com.ultimatex.nsbm.model.crud.SubjectImpl;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -64,30 +63,52 @@ public class CourseController implements Initializable {
     @FXML // fx:id="comboBoxEditSem"
     private JFXComboBox<Label> comboBoxEditSem; // Value injected by FXMLLoader
 
-    @FXML // fx:id="radioDelete"
-    private JFXRadioButton radioDelete; // Value injected by FXMLLoader
-
-    @FXML // fx:id="g1"
-    private ToggleGroup g1; // Value injected by FXMLLoader
-
-    @FXML // fx:id="radioAddNew"
-    private JFXRadioButton radioAddNew; // Value injected by FXMLLoader
-
     @FXML // fx:id="comboBoxEditCourseSubject"
     private JFXComboBox<Label> comboBoxEditCourseSubject; // Value injected by FXMLLoader
 
     @FXML
-    void onAddNewRadioClicked(ActionEvent event) {
+    private JFXCheckBox checkBoxEditCourse;
 
-    }
-
-    @FXML
-    void onDeleteRadioSelected(ActionEvent event) {
-
-    }
 
     @FXML
     void onEditCourseSaveButtonClicked(ActionEvent event) {
+        if(comboBoxEditCourseSubject.getValue()!=null && comboBoxEditCourse.getValue()!=null && comboBoxEditSem.getValue()!=null) {
+            CourseImpl ci=new CourseImpl();
+
+            if (checkBoxEditCourse.isSelected()) {
+                Subject s=(Subject)comboBoxEditCourseSubject.getValue().getUserData();
+                ArrayList<Subject> as= CourseImpl.getSubjectList((Course)comboBoxEditCourse.getValue().getUserData(),(String)comboBoxEditSem.getValue().getUserData());
+                as.add(s);
+
+                ci.addOptionalSubject((Course)comboBoxEditCourse.getValue().getUserData(), as,true,(String)comboBoxEditSem.getValue().getUserData());
+                ci.addCompulsorySubject((Course)comboBoxEditCourse.getValue().getUserData(), as,true,(String)comboBoxEditSem.getValue().getUserData());
+                showAlert("Success","Subject added to course");
+
+            } else {
+                ArrayList<Label> subL = new ArrayList<>(comboBoxEditCourseSubject.getItems());
+                ArrayList<Subject> s=new ArrayList<>();
+
+                ObjectId id=((Subject)comboBoxEditCourseSubject.getValue().getUserData()).getId();
+
+                for(Label l:subL)
+                {
+                    if(!((Subject)l.getUserData()).getId().equals(id))
+                        s.add(((Subject)l.getUserData()));
+                }
+
+                ci.addOptionalSubject((Course)comboBoxEditCourse.getValue().getUserData(), s,true,(String)comboBoxEditSem.getValue().getUserData());
+                ci.addCompulsorySubject((Course)comboBoxEditCourse.getValue().getUserData(), s,true,(String)comboBoxEditSem.getValue().getUserData());
+                showAlert("Success","Subject removed from course");
+
+            }
+
+            initSelectCourseComboBox();
+            initComboBoxEditSem();
+        }
+        else
+        {
+            showAlert("Error","Select values");
+        }
 
     }
 
@@ -149,6 +170,12 @@ public class CourseController implements Initializable {
 
     }
 
+    @FXML
+    public void onEditCourseCheckBoxChecked(ActionEvent event)
+    {
+
+    }
+
     /**
      * Called to initialize a controller after its root element has been
      * completely processed.
@@ -165,6 +192,8 @@ public class CourseController implements Initializable {
         setTextFieldNumericOnly(textFieldNewSubPrice);
 
         initEditSubjectComboBox();
+        initSelectCourseComboBox();
+        initComboBoxEditSem();
 
         comboBoxEditSubChoose.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -178,6 +207,20 @@ public class CourseController implements Initializable {
             }
 
         });
+
+        comboBoxEditSem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(comboBoxEditSem.getValue()!=null && comboBoxEditCourse.getValue()!=null)
+                {
+                    iniEditCourseSubjectComboBox((Course)comboBoxEditCourse.getValue().getUserData(),(String)comboBoxEditSem.getValue().getUserData(),checkBoxEditCourse.isSelected());
+                }
+            }
+        });
+
+
+
+
     }
 
     private void clearAddNewSubTextFields() {
@@ -227,5 +270,59 @@ public class CourseController implements Initializable {
         comboBoxEditSubChoose.getItems().addAll(al);
 
     }
+
+    private void initSelectCourseComboBox()
+    {
+        comboBoxEditCourse.getItems().clear();
+        ArrayList<Course> ac=new CourseImpl().getAllCourse();
+
+        for(Course c:ac)
+        {
+            Label l=new Label(c.getName());
+            l.setUserData(c);
+            comboBoxEditCourse.getItems().add(l);
+        }
+    }
+
+    private void initComboBoxEditSem()
+    {
+        comboBoxEditSem.getItems().clear();
+        for(String s:CourseImpl.getSemesterCodes())
+        {
+            Label l=new Label(s);
+            l.setUserData(s);
+            comboBoxEditSem.getItems().add(l);
+        }
+    }
+
+    private void iniEditCourseSubjectComboBox(Course c,String sem,boolean add)
+    {
+        comboBoxEditCourseSubject.getItems().clear();
+        if(add)
+        {
+            SubjectImpl si = new SubjectImpl();
+            ArrayList<Subject> subjects = si.find("", null);
+
+            ArrayList<Label> al = new ArrayList<>();
+
+            for (Subject s : subjects) {
+                Label l = new Label(s.getCode() + "  " + s.getName());
+                l.setUserData(s);
+                al.add(l);
+            }
+            comboBoxEditCourseSubject.getItems().addAll(al);
+        }
+        else
+        {
+            for (Subject s:CourseImpl.getSubjectList(c,sem))
+            {
+                Label l=new Label(s.getCode()+" "+s.getName());
+                l.setUserData(s);
+                comboBoxEditCourseSubject.getItems().add(l);
+            }
+        }
+    }
+
+
 
 }
