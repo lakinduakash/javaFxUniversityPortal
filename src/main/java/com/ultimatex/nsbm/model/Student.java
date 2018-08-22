@@ -12,6 +12,9 @@ public class Student {
     public static final String INTAKE_FEB = "February";
     public static final String INTAKE_JULY = "July";
 
+    public static final String TYPE_UN = "UN";
+    public static final String TYPE_MA = "MA";
+
     @Id
     private ObjectId id;
 
@@ -26,6 +29,9 @@ public class Student {
     private int currentSem;
     private int currentYear;
     private boolean fourthYear;
+
+
+    private String type;
 
     @Indexed(options = @IndexOptions(unique = true))
     private String indexNumber;
@@ -346,5 +352,13 @@ public class Student {
 
     public void setIntake(String intake) {
         this.intake = intake;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
