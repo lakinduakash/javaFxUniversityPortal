@@ -1,5 +1,5 @@
 /**
- * Sample Skeleton for 'course_managment.fxml' Controller Class
+ * Sample Skeleton for 'course_management.fxml' Controller Class
  */
 
 package com.ultimatex.nsbm.ui.admin;
@@ -13,14 +13,17 @@ import com.ultimatex.nsbm.model.crud.SubjectImpl;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.input.MouseEvent;
+import org.bson.types.ObjectId;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class CourseController implements Initializable {
@@ -44,7 +47,7 @@ public class CourseController implements Initializable {
     private JFXButton buttonAddNewSub; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxEditSubChoose"
-    private JFXComboBox<?> comboBoxEditSubChoose; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxEditSubChoose; // Value injected by FXMLLoader
 
     @FXML // fx:id="textFieldEditSubName"
     private JFXTextField textFieldEditSubName; // Value injected by FXMLLoader
@@ -56,10 +59,10 @@ public class CourseController implements Initializable {
     private JFXTextField textFieldEditSubPrice; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxEditCourse"
-    private JFXComboBox<?> comboBoxEditCourse; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxEditCourse; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxEditSem"
-    private JFXComboBox<?> comboBoxEditSem; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxEditSem; // Value injected by FXMLLoader
 
     @FXML // fx:id="radioDelete"
     private JFXRadioButton radioDelete; // Value injected by FXMLLoader
@@ -71,7 +74,7 @@ public class CourseController implements Initializable {
     private JFXRadioButton radioAddNew; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxEditCourseSubject"
-    private JFXComboBox<?> comboBoxEditCourseSubject; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxEditCourseSubject; // Value injected by FXMLLoader
 
     @FXML
     void onAddNewRadioClicked(ActionEvent event) {
@@ -89,13 +92,43 @@ public class CourseController implements Initializable {
     }
 
     @FXML
-    void onEditSubAddButtonClicked(MouseEvent event) {
+    void onEditSubAddButtonClicked(ActionEvent event) {
+
+        if (comboBoxEditSubChoose.getValue() != null) {
+
+            Subject s = new SubjectImpl().findById((ObjectId) comboBoxEditSubChoose.getValue().getUserData());
+            s.setPrice(Integer.parseInt(textFieldEditSubPrice.getText()));
+            s.setName(textFieldEditSubName.getText());
+            s.setCredit(Integer.parseInt(textFieldEditSubCredit.getText()));
+
+            if (new SubjectImpl().update(s)) {
+                showAlert("Success", "Subject updated");
+                initEditSubjectComboBox();
+
+            } else
+                showAlert("Failed", "Error");
+
+
+        }
 
     }
 
     @FXML
-    void onEditSubRemoveButtonClicked(MouseEvent event) {
+    void onEditSubRemoveButtonClicked(ActionEvent event) {
 
+        if (comboBoxEditSubChoose.getValue() != null) {
+            ObjectId id = (ObjectId) comboBoxEditSubChoose.getValue().getUserData();
+            System.out.println(id);
+            if (new SubjectImpl().delete(id)) {
+                comboBoxEditSubChoose.getItems().removeAll();
+                initEditSubjectComboBox();
+                showAlert("Success", "Subject deleted");
+
+            } else
+                showAlert("Failed", "Error");
+
+
+        }
     }
 
     @FXML
@@ -104,8 +137,10 @@ public class CourseController implements Initializable {
         Subject s = new Subject(textFieldNewSubName.getText().trim(), textFieldNewSubCode.getText().trim(),
                 Integer.parseInt(textFieldNewSubPrice.getText().trim()), Integer.parseInt(textFieldNewSubCredit.getText()));
         SubjectImpl si = new SubjectImpl();
-        if (si.insert(s))
+        if (si.insert(s)) {
             showAlert("Success", "Subject Saved");
+            initEditSubjectComboBox();
+        }
         else
             showAlert("Error", "Some Error occurred");
         clearAddNewSubTextFields();
@@ -129,11 +164,28 @@ public class CourseController implements Initializable {
         setTextFieldNumericOnly(textFieldNewSubCredit);
         setTextFieldNumericOnly(textFieldNewSubPrice);
 
+        initEditSubjectComboBox();
+
+        comboBoxEditSubChoose.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (comboBoxEditSubChoose.getValue() != null) {
+                    Subject s = new SubjectImpl().findById((ObjectId) comboBoxEditSubChoose.getValue().getUserData());
+                    textFieldEditSubPrice.setText(Integer.toString(s.getPrice()));
+                    textFieldEditSubName.setText(s.getName());
+                    textFieldEditSubCredit.setText(Integer.toString(s.getCredit()));
+                }
+            }
+
+        });
     }
 
     private void clearAddNewSubTextFields() {
         textFieldNewSubName.clear();
         textFieldNewSubCode.clear();
+        textFieldNewSubPrice.clear();
+        textFieldNewSubCredit.clear();
+
         textFieldEditSubCredit.clear();
         textFieldEditSubPrice.clear();
     }
@@ -157,6 +209,23 @@ public class CourseController implements Initializable {
                 }
             }
         });
+    }
+
+    private void initEditSubjectComboBox() {
+        SubjectImpl si = new SubjectImpl();
+        ArrayList<Subject> subjects = si.find("", null);
+
+        comboBoxEditSubChoose.getItems().clear();
+
+        ArrayList<Label> al = new ArrayList<>();
+
+        for (Subject s : subjects) {
+            Label l = new Label(s.getCode() + "  " + s.getName());
+            l.setUserData(s.getId());
+            al.add(l);
+        }
+        comboBoxEditSubChoose.getItems().addAll(al);
+
     }
 
 }
