@@ -169,7 +169,7 @@ public class MainController implements Initializable {
 
 
         Stage stage = new Stage(StageStyle.DECORATED);
-        stage.setTitle("Manage Lecturers and Instructors");
+        stage.setTitle("Manage Subjects And Courses");
         JFXDecorator decorator = new JFXDecorator(stage, fxmlLoader.getRoot());
         decorator.setCustomMaximize(true);
         Scene scene = new Scene(decorator);
@@ -192,7 +192,7 @@ public class MainController implements Initializable {
 
 
         Stage stage = new Stage(StageStyle.DECORATED);
-        stage.setTitle("Manage Subjects And Courses");
+        stage.setTitle("Manage Lecturers and Instructors");
         JFXDecorator decorator = new JFXDecorator(stage, fxmlLoader.getRoot());
         decorator.setCustomMaximize(true);
         Scene scene = new Scene(decorator);
