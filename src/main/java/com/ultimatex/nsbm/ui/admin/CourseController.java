@@ -8,9 +8,15 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
+import com.ultimatex.nsbm.model.Subject;
+import com.ultimatex.nsbm.model.crud.SubjectImpl;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 
@@ -95,6 +101,17 @@ public class CourseController implements Initializable {
     @FXML
     void onNewSubAddButtonClicked(ActionEvent event) {
 
+        Subject s = new Subject(textFieldNewSubName.getText().trim(), textFieldNewSubCode.getText().trim(),
+                Integer.parseInt(textFieldEditSubPrice.getText().trim()), Integer.parseInt(textFieldEditSubCredit.getText()));
+        SubjectImpl si = new SubjectImpl();
+        if (si.insert(s))
+            showAlert("Success", "Subject Saved");
+        else
+            showAlert("Error", "Some Error occurred");
+        clearAddNewSubTextFields();
+
+
+
     }
 
     /**
@@ -107,7 +124,39 @@ public class CourseController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        setTextFieldNumericOnly(textFieldEditSubCredit);
+        setTextFieldNumericOnly(textFieldEditSubPrice);
+        setTextFieldNumericOnly(textFieldNewSubCredit);
+        setTextFieldNumericOnly(textFieldNewSubCredit);
 
     }
+
+    private void clearAddNewSubTextFields() {
+        textFieldNewSubName.clear();
+        textFieldNewSubCode.clear();
+        textFieldEditSubCredit.clear();
+        textFieldEditSubPrice.clear();
+    }
+
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.show();
+
+    }
+
+    private void setTextFieldNumericOnly(TextField textField) {
+        textField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    textField.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+    }
+
 }
