@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.layout.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="653.0" prefWidth="876.0"
-            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.admin.ViewAllController">
+            xmlns="http://javafx.com/javafx/10.0.1">
     <children>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
                     prefHeight="589.0" prefWidth="876.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
