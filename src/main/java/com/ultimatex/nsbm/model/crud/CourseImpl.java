@@ -34,6 +34,31 @@ public class CourseImpl extends BaseImpl<Course> {
     public static final String Y4S1O = "year4sem1o";
     public static final String Y4S2O = "year4sem2o";
 
+    public static ArrayList<String> getSemesterCodes()
+    {
+        ArrayList<String> a=new ArrayList<>();
+        a.add(Y1S1);
+        a.add(Y1S2);
+        a.add(Y2S1);
+        a.add(Y2S2);
+        a.add(Y3S1);
+        a.add(Y3S2);
+        a.add(Y4S1);
+        a.add(Y4S2);
+        a.add(Y1S1O);
+        a.add(Y1S2O);
+        a.add(Y2S1O);
+        a.add(Y2S2O);
+        a.add(Y3S1O);
+        a.add(Y3S2O);
+        a.add(Y4S1O);
+        a.add(Y4S2O);
+        return a;
+
+    }
+
+
+
     //Datastore object from Morphia
     private Datastore datastore;
 
@@ -290,6 +315,51 @@ public class CourseImpl extends BaseImpl<Course> {
 
     public void addCompulsorySubject(String courseCode, ArrayList<Subject> subjects, boolean override, String semesterCode) {
         addCompulsorySubject(this.getCourseByCode(courseCode), subjects, override, semesterCode);
+    }
+
+    public void addSubjectToCourse()
+    {
+
+    }
+
+    public static ArrayList<Subject> getSubjectList(Course c,String semesterCode)
+    {
+        switch (semesterCode) {
+            case Y1S1:
+                return c.getYear1sem1();
+            case Y1S2:
+                return c.getYear1sem2();
+            case Y2S1:
+                return c.getYear2sem1();
+            case Y2S2:
+                return c.getYear2sem2();
+            case Y3S1:
+                return c.getYear3sem1();
+            case Y3S2:
+                return c.getYear3sem2();
+            case Y4S1:
+                return c.getYear4sem1();
+            case Y4S2:
+                return c.getYear4sem2();
+            case Y1S1O:
+                return c.getYear1sem1o();
+            case Y1S2O:
+                return c.getYear1sem2o();
+            case Y2S1O:
+                return c.getYear2sem1o();
+            case Y2S2O:
+                return c.getYear2sem2o();
+            case Y3S1O:
+                return c.getYear3sem1o();
+            case Y3S2O:
+                return c.getYear3sem2o();
+            case Y4S1O:
+                return c.getYear4sem1o();
+            case Y4S2O:
+                return c.getYear4sem2o();
+
+        }
+        return new ArrayList<>();
     }
 
 }
