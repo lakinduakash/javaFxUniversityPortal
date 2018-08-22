@@ -9,6 +9,7 @@ import com.ultimatex.nsbm.model.Course;
 import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.model.crud.CourseImpl;
 import com.ultimatex.nsbm.model.crud.StudentImpl;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -94,8 +95,6 @@ public class MainController implements Initializable {
         loadMainStudentView("Register new student");
 
 
-
-
     }
 
     @FXML
@@ -142,6 +141,58 @@ public class MainController implements Initializable {
 
         Stage stage = new Stage(StageStyle.DECORATED);
         stage.setTitle(title);
+        JFXDecorator decorator = new JFXDecorator(stage, fxmlLoader.getRoot());
+        decorator.setCustomMaximize(true);
+        Scene scene = new Scene(decorator);
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+
+        stage.show();
+    }
+
+    @FXML
+    void onLabClicked(ActionEvent event) {
+
+
+    }
+
+    @FXML
+    void onManageCourseClicked(ActionEvent event) {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admin/course_management.fxml"));
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("Manage Lecturers and Instructors");
+        JFXDecorator decorator = new JFXDecorator(stage, fxmlLoader.getRoot());
+        decorator.setCustomMaximize(true);
+        Scene scene = new Scene(decorator);
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+
+        stage.show();
+    }
+
+    @FXML
+    void onManageLecClicked(ActionEvent event) {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admin/lecturer_management.fxml"));
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("Manage Subjects And Courses");
         JFXDecorator decorator = new JFXDecorator(stage, fxmlLoader.getRoot());
         decorator.setCustomMaximize(true);
         Scene scene = new Scene(decorator);
