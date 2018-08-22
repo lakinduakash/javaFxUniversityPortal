@@ -15,5 +15,12 @@ public class Lecture {
 
     private String dept;
 
+    public Lecture() {
 
+    }
+
+    public Lecture(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
 }
