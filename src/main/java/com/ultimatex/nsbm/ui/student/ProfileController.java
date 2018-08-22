@@ -226,8 +226,8 @@ public class ProfileController implements Initializable {
             student.setPrevGpv(Double.parseDouble(textFieldC3.getText().trim()));
         } else {
             student.setALYear(Integer.parseInt(textFieldC1.getText().trim()));
-            student.setALResults(textFieldC2.getText().trim());
-            student.setzScore(Double.parseDouble(textFieldC3.getText().trim()));
+            student.setALResults(textFieldC3.getText().trim());
+            student.setzScore(Double.parseDouble(textFieldC2.getText().trim()));
         }
 
         StudentImpl studentImpl = new StudentImpl();
