@@ -35,6 +35,12 @@ public abstract class BaseImpl<T> {
      */
     public abstract boolean update(ObjectId id, T updated);
 
+    /**
+     * Update without provided object id. It get id from given object
+     *
+     * @param t updated value. ObjectId should not null
+     * @return returns true if successfully updated
+     */
     public abstract boolean update(T t);
 
     /**
