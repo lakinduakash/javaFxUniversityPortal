@@ -2,7 +2,8 @@
 
 <?import com.jfoenix.controls.*?>
 <?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1"
@@ -105,13 +106,13 @@
             <JFXComboBox fx:id="comboBoxEditCourse" labelFloat="true" promptText="Select course"/>
             <JFXComboBox fx:id="comboBoxEditSem" labelFloat="true" layoutX="20.0" layoutY="80.0"
                          promptText="Select semester"/>
-            <RadioButton fx:id="radioDelete" mnemonicParsing="false" onAction="#onDeleteRadioSelected" selected="true"
-                         text="Delete">
+            <JFXRadioButton fx:id="radioDelete" mnemonicParsing="false" onAction="#onDeleteRadioSelected"
+                            selected="true" text="Delete">
                <toggleGroup>
                   <ToggleGroup fx:id="g1"/>
                </toggleGroup>
-            </RadioButton>
-            <RadioButton mnemonicParsing="false" text="Add new" toggleGroup="$g1"/>
+            </JFXRadioButton>
+            <JFXRadioButton mnemonicParsing="false" text="Add new" toggleGroup="$g1"/>
             <JFXComboBox fx:id="comboBoxEditCourseSubject" labelFloat="true" layoutX="158.0" layoutY="80.0"
                          promptText="Select subject"/>
             <JFXButton onAction="#onEditCourseSaveButtonClicked" prefHeight="28.0" prefWidth="137.0" text="Save"/>
