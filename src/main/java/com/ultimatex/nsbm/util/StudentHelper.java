@@ -5,7 +5,6 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.UpdateResult;
-import com.ultimatex.nsbm.Course;
 import com.ultimatex.nsbm.User;
 import com.ultimatex.nsbm.model.Address;
 import org.bson.BsonDocument;
@@ -39,7 +38,6 @@ public class StudentHelper extends User {
     private String studentNumber;
 
 
-    private Course course;
 
     private String school;
     private int ALYear;
@@ -269,13 +267,6 @@ public class StudentHelper extends User {
         this.zScore = zScore;
     }
 
-    public Course getCourse() {
-        return course;
-    }
-
-    public void setCourse(Course course) {
-        this.course = course;
-    }
 
     public void setPassword(String password) {
         updateOne(set("password", password));
