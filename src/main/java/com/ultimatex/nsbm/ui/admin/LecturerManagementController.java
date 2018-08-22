@@ -6,10 +6,21 @@ package com.ultimatex.nsbm.ui.admin;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import com.ultimatex.nsbm.model.Course;
+import com.ultimatex.nsbm.model.Lecture;
+import com.ultimatex.nsbm.model.crud.CourseImpl;
+import com.ultimatex.nsbm.model.crud.LecturerImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 
-public class LecturerManagementController {
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
+public class LecturerManagementController implements Initializable {
 
     @FXML // fx:id="textFieldID"
     private JFXTextField textFieldID; // Value injected by FXMLLoader
@@ -18,22 +29,45 @@ public class LecturerManagementController {
     private JFXTextField textFieldName; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxSelectNewType"
-    private JFXComboBox<?> comboBoxSelectNewType; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxSelectNewType; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxNewDept"
-    private JFXComboBox<?> comboBoxNewDept; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxNewDept; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxSelectLec"
-    private JFXComboBox<?> comboBoxSelectLec; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxSelectLec; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxSelectType"
-    private JFXComboBox<?> comboBoxSelectType; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxSelectType; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxSelectDept"
-    private JFXComboBox<?> comboBoxSelectDept; // Value injected by FXMLLoader
+    private JFXComboBox<Label> comboBoxSelectDept; // Value injected by FXMLLoader
 
     @FXML
     void onAddNewLecturer(ActionEvent event) {
+
+        Lecture lecture=new Lecture();
+        lecture.setEmpId(textFieldID.getText().trim());
+        lecture.setName(textFieldName.getText().trim());
+        lecture.setType(comboBoxSelectNewType.getValue().getText());
+        lecture.setDept(comboBoxNewDept.getValue().getText());
+
+        if(new LecturerImpl().insert(lecture))
+        {
+            Alert a=new Alert(Alert.AlertType.INFORMATION);
+            a.setHeaderText("Success");
+            a.setContentText("Lecturer Added");
+            a.show();
+        }
+        else
+        {
+            Alert a=new Alert(Alert.AlertType.INFORMATION);
+            a.setHeaderText("Failed");
+            a.setContentText("Error");
+            a.show();
+        }
+
+
 
     }
 
@@ -47,4 +81,34 @@ public class LecturerManagementController {
 
     }
 
+    /**
+     * Called to initialize a controller after its root element has been
+     * completely processed.
+     *
+     * @param location  The location used to resolve relative paths for the root object, or
+     *                  <tt>null</tt> if the location is not known.
+     * @param resources The resources used to localize the root object, or <tt>null</tt> if
+     */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        comboBoxSelectNewType.getItems().add(new Label(Lecture.TYPE_INS));
+        comboBoxSelectNewType.getItems().add(new Label(Lecture.TYPE_LEC));
+
+        initSelectCourseComboBox();
+
+
+    }
+
+    private void initSelectCourseComboBox()
+    {
+        comboBoxNewDept.getItems().clear();
+        ArrayList<Course> ac=new CourseImpl().getAllCourse();
+
+        for(Course c:ac)
+        {
+            javafx.scene.control.Label l=new javafx.scene.control.Label(c.getName());
+            l.setUserData(c);
+            comboBoxNewDept.getItems().add(l);
+        }
+    }
 }
