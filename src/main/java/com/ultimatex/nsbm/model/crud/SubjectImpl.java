@@ -45,7 +45,10 @@ public class SubjectImpl extends BaseImpl<Subject> {
 
     @Override
     public ArrayList<Subject> find(String key, Object value) {
-        return (ArrayList<Subject>) datastore.createQuery(Subject.class).field("code").equal(value).asList();
+        if (value != null)
+            return (ArrayList<Subject>) datastore.createQuery(Subject.class).field("code").equal(value).asList();
+        else
+            return (ArrayList<Subject>) datastore.createQuery(Subject.class).asList();
     }
 
     public Subject findById(String id, Object value) {
