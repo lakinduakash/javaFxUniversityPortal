@@ -53,7 +53,11 @@ public class StudentImpl extends BaseImpl<Student> {
 
     @Override
     public ArrayList<Student> find(String key, Object value) {
-        return new ArrayList<>(datastore.createQuery(Student.class).field(key).equal(value).asList());
+        if (value != null)
+            return new ArrayList<>(datastore.createQuery(Student.class).field(key).equal(value).asList());
+        else
+            return new ArrayList<>(datastore.createQuery(Student.class).asList());
+
     }
 
 
