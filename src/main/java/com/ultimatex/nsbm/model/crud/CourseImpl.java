@@ -72,7 +72,7 @@ public class CourseImpl extends BaseImpl<Course> {
     }
 
     @Override
-    public Course find(String key, Object value) {
+    public ArrayList<Course> find(String key, Object value) {
         return null;
     }
 

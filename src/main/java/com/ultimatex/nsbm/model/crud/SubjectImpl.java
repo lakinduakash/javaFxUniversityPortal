@@ -4,6 +4,8 @@ import com.ultimatex.nsbm.model.Subject;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 
+import java.util.ArrayList;
+
 public class SubjectImpl extends BaseImpl<Subject> {
 
     private Datastore datastore;
@@ -36,8 +38,8 @@ public class SubjectImpl extends BaseImpl<Subject> {
     }
 
     @Override
-    public Subject find(String key, Object value) {
-        return datastore.createQuery(Subject.class).field("code").equal(value).get();
+    public ArrayList<Subject> find(String key, Object value) {
+        return (ArrayList<Subject>) datastore.createQuery(Subject.class).field("code").equal(value).asList();
     }
 
     public Subject findById(String id, Object value) {

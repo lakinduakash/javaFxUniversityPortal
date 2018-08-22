@@ -5,6 +5,8 @@ import com.ultimatex.nsbm.model.Student;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 
+import java.util.ArrayList;
+
 public class ResultImpl extends BaseImpl<Result> {
 
     private Student student;
@@ -39,7 +41,7 @@ public class ResultImpl extends BaseImpl<Result> {
     }
 
     @Override
-    public Result find(String key, Object value) {
+    public ArrayList<Result> find(String key, Object value) {
         return null;
     }
 }

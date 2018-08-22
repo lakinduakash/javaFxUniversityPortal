@@ -4,6 +4,8 @@ import com.ultimatex.nsbm.util.MorphiaHelper;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 
+import java.util.ArrayList;
+
 public abstract class BaseImpl<T> {
 
     private Datastore datastore;
@@ -20,7 +22,7 @@ public abstract class BaseImpl<T> {
 
     public abstract boolean delete(ObjectId id);
 
-    public abstract T find(String key, Object value);
+    public abstract ArrayList<T> find(String key, Object value);
 
     protected Datastore getDatastore() {
         return datastore;

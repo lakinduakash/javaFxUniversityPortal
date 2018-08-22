@@ -52,8 +52,8 @@ public class StudentImpl extends BaseImpl<Student> {
     }
 
     @Override
-    public Student find(String key, Object value) {
-        return null;
+    public ArrayList<Student> find(String key, Object value) {
+        return new ArrayList<>(datastore.createQuery(Student.class).field(key).equal(value).asList());
     }
 
 
@@ -63,6 +63,10 @@ public class StudentImpl extends BaseImpl<Student> {
 
     public ArrayList<Student> getStudentByName(String name) {
         return new ArrayList<>(datastore.createQuery(Student.class).field("name").equal(name).asList());
+    }
+
+    public ArrayList<Student> getStudentList() {
+        return new ArrayList<>(datastore.createQuery(Student.class).asList());
     }
 
     public boolean updateOneStudent(Student filter, Student updated) {

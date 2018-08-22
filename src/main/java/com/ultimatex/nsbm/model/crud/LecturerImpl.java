@@ -3,6 +3,8 @@ package com.ultimatex.nsbm.model.crud;
 import com.ultimatex.nsbm.model.Lecture;
 import org.bson.types.ObjectId;
 
+import java.util.ArrayList;
+
 public class LecturerImpl extends BaseImpl<Lecture> {
 
 
@@ -27,7 +29,7 @@ public class LecturerImpl extends BaseImpl<Lecture> {
     }
 
     @Override
-    public Lecture find(String key, Object value) {
+    public ArrayList<Lecture> find(String key, Object value) {
         return null;
     }
 }
