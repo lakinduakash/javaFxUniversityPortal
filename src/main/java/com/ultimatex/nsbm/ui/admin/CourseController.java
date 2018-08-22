@@ -102,7 +102,7 @@ public class CourseController implements Initializable {
     void onNewSubAddButtonClicked(ActionEvent event) {
 
         Subject s = new Subject(textFieldNewSubName.getText().trim(), textFieldNewSubCode.getText().trim(),
-                Integer.parseInt(textFieldEditSubPrice.getText().trim()), Integer.parseInt(textFieldEditSubCredit.getText()));
+                Integer.parseInt(textFieldNewSubPrice.getText().trim()), Integer.parseInt(textFieldNewSubCredit.getText()));
         SubjectImpl si = new SubjectImpl();
         if (si.insert(s))
             showAlert("Success", "Subject Saved");
@@ -127,7 +127,7 @@ public class CourseController implements Initializable {
         setTextFieldNumericOnly(textFieldEditSubCredit);
         setTextFieldNumericOnly(textFieldEditSubPrice);
         setTextFieldNumericOnly(textFieldNewSubCredit);
-        setTextFieldNumericOnly(textFieldNewSubCredit);
+        setTextFieldNumericOnly(textFieldNewSubPrice);
 
     }
 
