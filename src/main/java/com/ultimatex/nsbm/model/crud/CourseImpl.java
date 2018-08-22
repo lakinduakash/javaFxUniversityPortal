@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 public class CourseImpl extends BaseImpl<Course> {
 
+    //compulsory subjects
     public static final String Y1S1 = "year1sem1";
     public static final String Y1S2 = "year1sem2";
     public static final String Y2S1 = "year2sem1";
@@ -25,6 +26,8 @@ public class CourseImpl extends BaseImpl<Course> {
     public static final String Y4S1 = "year4sem1";
     public static final String Y4S2 = "year4sem2";
 
+
+    //optional subjects
     public static final String Y1S1O = "year1sem1o";
     public static final String Y1S2O = "year1sem2o";
     public static final String Y2S1O = "year2sem1o";
@@ -34,8 +37,10 @@ public class CourseImpl extends BaseImpl<Course> {
     public static final String Y4S1O = "year4sem1o";
     public static final String Y4S2O = "year4sem2o";
 
-    public static ArrayList<String> getSemesterCodes()
-    {
+    /**
+     * @return Returns list of constants above semester codes
+     */
+    public static ArrayList<String> getSemesterCodes() {
         ArrayList<String> a=new ArrayList<>();
         a.add(Y1S1);
         a.add(Y1S2);
@@ -57,6 +62,50 @@ public class CourseImpl extends BaseImpl<Course> {
 
     }
 
+    /**
+     *
+     * @param c course you need
+     * @param semesterCode semester code- one of constant declared in this class
+     * @return Subject list according to selection
+     */
+    public static ArrayList<Subject> getSubjectList(Course c, String semesterCode) {
+        switch (semesterCode) {
+            case Y1S1:
+                return c.getYear1sem1();
+            case Y1S2:
+                return c.getYear1sem2();
+            case Y2S1:
+                return c.getYear2sem1();
+            case Y2S2:
+                return c.getYear2sem2();
+            case Y3S1:
+                return c.getYear3sem1();
+            case Y3S2:
+                return c.getYear3sem2();
+            case Y4S1:
+                return c.getYear4sem1();
+            case Y4S2:
+                return c.getYear4sem2();
+            case Y1S1O:
+                return c.getYear1sem1o();
+            case Y1S2O:
+                return c.getYear1sem2o();
+            case Y2S1O:
+                return c.getYear2sem1o();
+            case Y2S2O:
+                return c.getYear2sem2o();
+            case Y3S1O:
+                return c.getYear3sem1o();
+            case Y3S2O:
+                return c.getYear3sem2o();
+            case Y4S1O:
+                return c.getYear4sem1o();
+            case Y4S2O:
+                return c.getYear4sem2o();
+
+        }
+        return new ArrayList<>();
+    }
 
 
     //Datastore object from Morphia
@@ -322,45 +371,7 @@ public class CourseImpl extends BaseImpl<Course> {
 
     }
 
-    public static ArrayList<Subject> getSubjectList(Course c,String semesterCode)
-    {
-        switch (semesterCode) {
-            case Y1S1:
-                return c.getYear1sem1();
-            case Y1S2:
-                return c.getYear1sem2();
-            case Y2S1:
-                return c.getYear2sem1();
-            case Y2S2:
-                return c.getYear2sem2();
-            case Y3S1:
-                return c.getYear3sem1();
-            case Y3S2:
-                return c.getYear3sem2();
-            case Y4S1:
-                return c.getYear4sem1();
-            case Y4S2:
-                return c.getYear4sem2();
-            case Y1S1O:
-                return c.getYear1sem1o();
-            case Y1S2O:
-                return c.getYear1sem2o();
-            case Y2S1O:
-                return c.getYear2sem1o();
-            case Y2S2O:
-                return c.getYear2sem2o();
-            case Y3S1O:
-                return c.getYear3sem1o();
-            case Y3S2O:
-                return c.getYear3sem2o();
-            case Y4S1O:
-                return c.getYear4sem1o();
-            case Y4S2O:
-                return c.getYear4sem2o();
 
-        }
-        return new ArrayList<>();
-    }
 
 }
 
