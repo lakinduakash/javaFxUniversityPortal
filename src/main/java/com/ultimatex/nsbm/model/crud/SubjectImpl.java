@@ -62,7 +62,7 @@ public class SubjectImpl extends BaseImpl<Subject> {
             return (ArrayList<Subject>) datastore.createQuery(Subject.class).asList();
     }
 
-    public Subject findById(String id, Object value) {
+    public Subject findById(ObjectId value) {
         return datastore.createQuery(Subject.class).field("_id").equal(value).get();
     }
 
