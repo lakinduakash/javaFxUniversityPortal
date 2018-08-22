@@ -29,12 +29,23 @@ public class SubjectImpl extends BaseImpl<Subject> {
 
     @Override
     public boolean update(ObjectId id, Subject updated) {
-        return false;
+        try {
+            updated.setId(id);
+            datastore.save(updated);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Override
     public boolean update(Subject subject) {
-        return false;
+        try {
+            datastore.save(subject);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Override
