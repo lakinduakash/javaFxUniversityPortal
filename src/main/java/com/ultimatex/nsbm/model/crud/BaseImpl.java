@@ -6,6 +6,11 @@ import org.mongodb.morphia.Datastore;
 
 import java.util.ArrayList;
 
+/**
+ * This class is the base class for all classes which have direct database connectivity and Entity classes
+ * @param <T>  T is the type of entity class
+ */
+
 public abstract class BaseImpl<T> {
 
     private Datastore datastore;
