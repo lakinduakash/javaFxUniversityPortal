@@ -7,6 +7,9 @@ import org.mongodb.morphia.Datastore;
 
 import java.util.ArrayList;
 
+/**
+ * class for handle lecturer
+ */
 public class LecturerImpl extends BaseImpl<Lecture> {
 
 
