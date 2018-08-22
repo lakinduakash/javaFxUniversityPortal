@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <JFXTabPane xmlns:fx="http://javafx.com/fxml/1" fx:id="paymentPane" prefHeight="459.0" prefWidth="742.0"
-            xmlns="http://javafx.com/javafx/10.0.1">
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.student.PaymentController">
     <Tab text="1st Year">
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
             <children>
