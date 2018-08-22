@@ -66,7 +66,7 @@
                         <Insets left="10.0"/>
                     </padding>
                 </HBox>
-                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="73.0" prefHeight="154.0" prefWidth="750.0"
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="73.0" prefHeight="148.0" prefWidth="750.0"
                       spacing="10.0">
                     <children>
                         <JFXTextField fx:id="textFieldIndexNumber" labelFloat="true" prefHeight="28.0" prefWidth="211.0"
@@ -100,10 +100,10 @@
                         <Insets left="10.0" right="10.0"/>
                     </padding>
                 </HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="196.0" prefHeight="142.0" prefWidth="750.0"
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="196.0" prefHeight="150.0" prefWidth="750.0"
                       spacing="10.0" VBox.vgrow="NEVER">
                     <children>
-                        <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#onSettingsButtonClick"
+                        <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#onManageCourseClicked"
                                    prefHeight="117.0" prefWidth="253.0" style="-fx-background-color: #ffffff;"
                                    text="Manage Courses &amp; Subjects">
                             <graphic>
@@ -114,7 +114,7 @@
                             </font>
                         </JFXButton>
                         <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="259.0" layoutY="23.0"
-                                   onAction="#onSettingsButtonClick" prefHeight="117.0" prefWidth="253.0"
+                                   onAction="#onManageLecClicked" prefHeight="117.0" prefWidth="253.0"
                                    style="-fx-background-color: #ffffff;" text="Manage Lectureres">
                             <graphic>
                                 <FontAwesomeIconView glyphName="GEAR" size="80" wrappingWidth="55.71428680419922"/>
@@ -124,7 +124,7 @@
                             </font>
                         </JFXButton>
                         <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="385.0" layoutY="23.0"
-                                   onAction="#onSettingsButtonClick" prefHeight="117.0" prefWidth="253.0"
+                                   onAction="#onLabClicked" prefHeight="117.0" prefWidth="253.0"
                                    style="-fx-background-color: #ffffff;" text="Manage Labs">
                             <graphic>
                                 <FontAwesomeIconView glyphName="GEAR" size="80" wrappingWidth="55.71428680419922"/>
