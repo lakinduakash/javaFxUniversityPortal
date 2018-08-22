@@ -137,10 +137,10 @@ public class MorphiaTest {
         CourseImpl ci = new CourseImpl();
         SubjectImpl si = new SubjectImpl();
         ArrayList<Subject> a = new ArrayList<>();
-        a.add(si.find("code", "1003"));
-        a.add(si.find("code", "1004"));
-        a.add(si.find("code", "1005"));
-        a.add(si.find("code", "1006"));
+        a.add(si.find("code", "1003").get(0));
+        a.add(si.find("code", "1004").get(0));
+        a.add(si.find("code", "1005").get(0));
+        a.add(si.find("code", "1006").get(0));
 
         ci.addOptionalSubject(ci.getCourseByCode("SEM"), a, false, CourseImpl.Y1S2O);
         ci.addCompulsorySubject(ci.getCourseByCode("SEM"), a, false, CourseImpl.Y1S2);
@@ -149,7 +149,7 @@ public class MorphiaTest {
     @Test
     public void updateAsWholeObject() {
         SubjectImpl si = new SubjectImpl();
-        Subject s = si.find("code", "1103");
+        Subject s = si.find("code", "1103").get(0);
         s.setCode("1003");
         s.setPrice(4000);
         init().save(s);
