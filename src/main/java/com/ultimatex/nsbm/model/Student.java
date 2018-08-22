@@ -6,18 +6,22 @@ import org.mongodb.morphia.annotations.*;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Entity class for student object.
+ */
 @Entity("student")
 public class Student {
 
+    //intake constants
     public static final String INTAKE_FEB = "February";
     public static final String INTAKE_JULY = "July";
 
     public static final String TYPE_UN = "UN";
     public static final String TYPE_MA = "MA";
 
+    //attributes
     @Id
     private ObjectId id;
-
 
 
     private Date dob;

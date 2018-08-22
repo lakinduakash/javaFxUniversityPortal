@@ -8,7 +8,9 @@ import java.util.ArrayList;
 @Entity("course")
 public class Course {
 
+    //undergraduate
     public static final int TYPE_UN = 0;
+    //master degree
     public static final int TYPE_MA = 1;
 
     @Id

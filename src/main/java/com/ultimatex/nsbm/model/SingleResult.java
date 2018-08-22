@@ -4,6 +4,9 @@ import jdk.nashorn.internal.ir.annotations.Reference;
 
 import java.util.HashMap;
 
+/**
+ * Single result object which have grade and subject
+ */
 public class SingleResult {
 
     public static final String A_PLUS = "A+";
@@ -21,8 +24,7 @@ public class SingleResult {
     public static final String E_ = "E";
     public static final String AB_ = "AB";
 
-    public static final HashMap<String,Double> gradeMap =new HashMap<String, Double>()
-    {{
+    public static final HashMap<String,Double> gradeMap =new HashMap<String, Double>() {{
         put("A+", 4.25);
         put("A", 4.0);
         put("A-", 3.75);
