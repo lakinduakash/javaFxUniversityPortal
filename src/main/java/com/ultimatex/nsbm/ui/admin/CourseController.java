@@ -6,14 +6,13 @@ package com.ultimatex.nsbm.ui.admin;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -50,9 +49,6 @@ public class CourseController implements Initializable {
     @FXML // fx:id="textFieldEditSubPrice"
     private JFXTextField textFieldEditSubPrice; // Value injected by FXMLLoader
 
-    @FXML // fx:id="radioNew"
-    private HBox radioNew; // Value injected by FXMLLoader
-
     @FXML // fx:id="comboBoxEditCourse"
     private JFXComboBox<?> comboBoxEditCourse; // Value injected by FXMLLoader
 
@@ -60,16 +56,19 @@ public class CourseController implements Initializable {
     private JFXComboBox<?> comboBoxEditSem; // Value injected by FXMLLoader
 
     @FXML // fx:id="radioDelete"
-    private RadioButton radioDelete; // Value injected by FXMLLoader
+    private JFXRadioButton radioDelete; // Value injected by FXMLLoader
 
     @FXML // fx:id="g1"
     private ToggleGroup g1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="radioAddNew"
+    private JFXRadioButton radioAddNew; // Value injected by FXMLLoader
 
     @FXML // fx:id="comboBoxEditCourseSubject"
     private JFXComboBox<?> comboBoxEditCourseSubject; // Value injected by FXMLLoader
 
     @FXML
-    void onAddNewSelected(MouseEvent event) {
+    void onAddNewRadioClicked(ActionEvent event) {
 
     }
 
