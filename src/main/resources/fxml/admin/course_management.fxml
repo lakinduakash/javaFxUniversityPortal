@@ -100,8 +100,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox fx:id="radioNew" alignment="CENTER_LEFT" layoutX="10.0" layoutY="194.0" onDragDetected="#onAddNewSelected"
-            prefHeight="168.0" prefWidth="1080.0" spacing="20.0">
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="194.0" prefHeight="168.0" prefWidth="1080.0" spacing="20.0">
          <children>
             <JFXComboBox fx:id="comboBoxEditCourse" labelFloat="true" promptText="Select course"/>
             <JFXComboBox fx:id="comboBoxEditSem" labelFloat="true" layoutX="20.0" layoutY="80.0"
@@ -112,7 +111,8 @@
                   <ToggleGroup fx:id="g1"/>
                </toggleGroup>
             </JFXRadioButton>
-            <JFXRadioButton mnemonicParsing="false" text="Add new" toggleGroup="$g1"/>
+            <JFXRadioButton fx:id="radioAddNew" mnemonicParsing="false" onAction="#onAddNewRadioClicked" text="Add new"
+                            toggleGroup="$g1"/>
             <JFXComboBox fx:id="comboBoxEditCourseSubject" labelFloat="true" layoutX="158.0" layoutY="80.0"
                          promptText="Select subject"/>
             <JFXButton onAction="#onEditCourseSaveButtonClicked" prefHeight="28.0" prefWidth="137.0" text="Save"/>
