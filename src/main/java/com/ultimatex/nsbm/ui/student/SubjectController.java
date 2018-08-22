@@ -6,6 +6,7 @@ import com.ultimatex.nsbm.GlobalState;
 import com.ultimatex.nsbm.model.Course;
 import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.model.Subject;
+import com.ultimatex.nsbm.model.crud.CourseImpl;
 import com.ultimatex.nsbm.model.crud.StudentImpl;
 import com.ultimatex.nsbm.ui.ListItemViewController;
 import javafx.event.ActionEvent;
@@ -139,43 +140,43 @@ public class SubjectController implements Initializable {
 
     @FXML
     void onClickSaveButtonSubjectY1S1(ActionEvent event) {
-        updateStudentSubject(listItemViewControllersy1s1);
+        updateStudentSubject(listItemViewControllersy1s1,CourseImpl.Y1S1O);
 
     }
 
     @FXML
     void onClickSaveButtonSubjectY1S2(ActionEvent event) {
-        updateStudentSubject(listItemViewControllersy1s2);
+        updateStudentSubject(listItemViewControllersy1s2,CourseImpl.Y1S2O);
     }
 
     @FXML
     void onClickSaveButtonSubjectY2S1(ActionEvent event) {
-        updateStudentSubject(listItemViewControllersy2s1);
+        updateStudentSubject(listItemViewControllersy2s1,CourseImpl.Y2S1O);
     }
 
     @FXML
     void onClickSaveButtonSubjectY2S2(ActionEvent event) {
-        updateStudentSubject(listItemViewControllersy2s2);
+        updateStudentSubject(listItemViewControllersy2s2,CourseImpl.Y2S2O);
     }
 
     @FXML
     void onClickSaveButtonSubjectY3S1(ActionEvent event) {
-        updateStudentSubject(listItemViewControllersy3s1);
+        updateStudentSubject(listItemViewControllersy3s1,CourseImpl.Y3S1O);
     }
 
     @FXML
     void onClickSaveButtonSubjectY3S2(ActionEvent event) {
-        updateStudentSubject(listItemViewControllersy3s2);
+        updateStudentSubject(listItemViewControllersy3s2,CourseImpl.Y3S2O);
     }
 
     @FXML
     void onClickSaveButtonSubjectY4S1(ActionEvent event) {
-        updateStudentSubject(listItemViewControllersy4s1);
+        updateStudentSubject(listItemViewControllersy4s1,CourseImpl.Y4S1O);
     }
 
     @FXML
     void onClickSaveButtonSubjectY4S2(ActionEvent event) {
-        updateStudentSubject(listItemViewControllersy4s2);
+        updateStudentSubject(listItemViewControllersy4s2,CourseImpl.Y4S2O);
     }
 
     @Override
@@ -187,6 +188,8 @@ public class SubjectController implements Initializable {
             initTab3();
             initTab4();
         }
+
+        initTabPermission();
 
 
     }
@@ -212,7 +215,7 @@ public class SubjectController implements Initializable {
         addOptionalSubjectsToList(y1s2, selectedCourse.getYear1sem2o(), listItemViewControllersy1s2, listViewy1s2o);
 
         addCompulsorySubjectsToList(selectedCourse.getYear1sem1(), listViewy1s1c);
-        addCompulsorySubjectsToList(selectedCourse.getYear1sem1(), listViewy1s2c);
+        addCompulsorySubjectsToList(selectedCourse.getYear1sem2(), listViewy1s2c);
 
     }
 
@@ -235,8 +238,8 @@ public class SubjectController implements Initializable {
         addOptionalSubjectsToList(y3s1, selectedCourse.getYear3sem1o(), listItemViewControllersy3s1, listViewy3s1o);
         addOptionalSubjectsToList(y3s2, selectedCourse.getYear3sem2o(), listItemViewControllersy3s2, listViewy3s2o);
 
-        addCompulsorySubjectsToList(selectedCourse.getYear3sem1(), listViewy2s1c);
-        addCompulsorySubjectsToList(selectedCourse.getYear3sem2(), listViewy2s2c);
+        addCompulsorySubjectsToList(selectedCourse.getYear3sem1(), listViewy3s1c);
+        addCompulsorySubjectsToList(selectedCourse.getYear3sem2(), listViewy3s2c);
     }
 
     private void initTab4() {
@@ -289,11 +292,15 @@ public class SubjectController implements Initializable {
     }
 
     private void initTabPermission() {
-        //if()
+        if(selectedCourse.getType()==Course.TYPE_MA)
+        {
+            tabYear3.setDisable(true);
+            tabYear4.setDisable(true);
+        }
     }
 
 
-    private void updateStudentSubject(ArrayList<ListItemViewController> listItemViewController) {
+    private void updateStudentSubject(ArrayList<ListItemViewController> listItemViewController,String sem) {
         ArrayList<Subject> subjects = new ArrayList<>();
         for (ListItemViewController l : listItemViewController) {
             if (l.getCheckBox().isSelected())
@@ -301,9 +308,19 @@ public class SubjectController implements Initializable {
         }
 
         if (subjects.size() > 0) {
-            selectedStudent.setSelectedSubjectsy1s1(subjects);
-            //TODO make common to all semesters (updated subjects only added to y1s1)
-            new StudentImpl().update(selectedStudent);
+
+
+            switch (sem)
+            {
+                case CourseImpl.Y1S1O: selectedStudent.setSelectedSubjectsy1s1(subjects);new StudentImpl().update(selectedStudent);break;
+                case CourseImpl.Y1S2O: selectedStudent.setSelectedSubjectsy1s2(subjects);new StudentImpl().update(selectedStudent);break;
+                case CourseImpl.Y2S1O: selectedStudent.setSelectedSubjectsy2s1(subjects);new StudentImpl().update(selectedStudent);break;
+                case CourseImpl.Y2S2O: selectedStudent.setSelectedSubjectsy2s2(subjects);new StudentImpl().update(selectedStudent);break;
+                case CourseImpl.Y3S1O: selectedStudent.setSelectedSubjectsy3s1(subjects);new StudentImpl().update(selectedStudent);break;
+                case CourseImpl.Y3S2O: selectedStudent.setSelectedSubjectsy3s2(subjects);new StudentImpl().update(selectedStudent);break;
+                case CourseImpl.Y4S1O: selectedStudent.setSelectedSubjectsy4s1(subjects);new StudentImpl().update(selectedStudent);break;
+                case CourseImpl.Y4S2O: selectedStudent.setSelectedSubjectsy4s2(subjects);new StudentImpl().update(selectedStudent);break;
+            }
         }
     }
 }
