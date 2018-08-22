@@ -1,69 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="subjectPane" prefHeight="720.0" prefWidth="1280.0"
-            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.student.SubjectController"
-            stylesheets="@../../css/global.css">
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="subjectPane" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../css/global.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ultimatex.nsbm.ui.student.SubjectController">
     <children>
-        <JFXTabPane layoutX="317.0" layoutY="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <JFXTabPane layoutX="317.0" layoutY="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <tabs>
                 <Tab fx:id="tabYear1" text="Year 1">
                     <content>
-                        <AnchorPane fx:id="anchorPaneYear1" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                                    prefWidth="200.0">
+                        <AnchorPane fx:id="anchorPaneYear1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0"
-                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0"
-                                              prefWidth="1280.0"/>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0" prefWidth="1280.0" />
+                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0" spacing="5.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
                                                     <font>
-                                                        <Font name="System Bold" size="15.0"/>
+                                                        <Font name="System Bold" size="15.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets left="10.0" right="10.0"/>
+                                                        <Insets left="10.0" right="10.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXListView fx:id="listViewy1s1c" prefHeight="300.0"
-                                                             prefWidth="340.0"/>
-                                                <JFXListView fx:id="listViewy1s1o" prefHeight="300.0"
-                                                             prefWidth="340.0"/>
-                                                <JFXButton fx:id="buttony1s1" onAction="#onClickSaveButtonSubjectY1S1"
-                                                           prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
+                                                <JFXListView fx:id="listViewy1s1c" prefHeight="300.0" prefWidth="340.0" />
+                                                <JFXListView fx:id="listViewy1s1o" prefHeight="300.0" prefWidth="340.0" />
+                                                <JFXButton fx:id="buttony1s1" onAction="#onClickSaveButtonSubjectY1S1" prefHeight="43.0" prefWidth="127.0" text="Save Changes" />
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0"
-                                              prefWidth="1280.0"/>
-                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0"
-                                              prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="1280.0" />
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="1280.0" spacing="5.0">
                                             <children>
-                                                <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
+                                                <Label prefHeight="47.0" prefWidth="122.0" text="Semester 2">
                                                     <font>
-                                                        <Font name="System Bold" size="15.0"/>
+                                                        <Font name="System Bold" size="15.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets left="10.0" right="10.0"/>
+                                                        <Insets left="10.0" right="10.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXListView fx:id="listViewy1s2c" prefHeight="300.0"
-                                                             prefWidth="340.0"/>
-                                                <JFXListView fx:id="listViewy1s2o" layoutX="152.0" layoutY="10.0"
-                                                             prefHeight="300.0" prefWidth="340.0"/>
-                                                <JFXButton fx:id="buutony1s2" onAction="#onClickSaveButtonSubjectY1S2"
-                                                           prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
+                                                <JFXListView fx:id="listViewy1s2c" prefHeight="300.0" prefWidth="340.0" />
+                                                <JFXListView fx:id="listViewy1s2o" layoutX="152.0" layoutY="10.0" prefHeight="300.0" prefWidth="340.0" />
+                                                <JFXButton fx:id="buutony1s2" onAction="#onClickSaveButtonSubjectY1S2" prefHeight="41.0" prefWidth="129.0" text="Save Changes" />
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0"
-                                              prefWidth="1280.0"/>
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0" prefWidth="1280.0" />
                                     </children>
                                 </VBox>
                             </children>
@@ -72,56 +62,43 @@
                 </Tab>
                 <Tab fx:id="tabYear2" text="Year 2">
                     <content>
-                        <AnchorPane fx:id="anchorPaneYear2" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                                    prefWidth="200.0">
+                        <AnchorPane fx:id="anchorPaneYear2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0"
-                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0"
-                                              prefWidth="1280.0"/>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0" prefWidth="1280.0" />
+                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0" spacing="5.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
                                                     <font>
-                                                        <Font name="System Bold" size="15.0"/>
+                                                        <Font name="System Bold" size="15.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets left="10.0" right="10.0"/>
+                                                        <Insets left="10.0" right="10.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXListView fx:id="listViewy2s1c" prefHeight="302.0"
-                                                             prefWidth="325.0"/>
-                                                <JFXListView fx:id="listViewy2s1o" prefHeight="302.0"
-                                                             prefWidth="339.0"/>
-                                                <JFXButton fx:id="buttony2s1" onAction="#onClickSaveButtonSubjectY2S1"
-                                                           prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
+                                                <JFXListView fx:id="listViewy2s1c" prefHeight="302.0" prefWidth="325.0" />
+                                                <JFXListView fx:id="listViewy2s1o" prefHeight="302.0" prefWidth="339.0" />
+                                                <JFXButton fx:id="buttony2s1" onAction="#onClickSaveButtonSubjectY2S1" prefHeight="43.0" prefWidth="127.0" text="Save Changes" />
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0"
-                                              prefWidth="1280.0"/>
-                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0"
-                                              prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="1280.0" />
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="1280.0" spacing="5.0">
                                             <children>
-                                                <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
+                                                <Label prefHeight="47.0" prefWidth="122.0" text="Semester 2">
                                                     <font>
-                                                        <Font name="System Bold" size="15.0"/>
+                                                        <Font name="System Bold" size="15.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets left="10.0" right="10.0"/>
+                                                        <Insets left="10.0" right="10.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXListView fx:id="listViewy2s2c" prefHeight="317.0"
-                                                             prefWidth="324.0"/>
-                                                <JFXListView fx:id="listViewy2s2o" layoutX="152.0" layoutY="10.0"
-                                                             prefHeight="317.0" prefWidth="340.0"/>
-                                                <JFXButton fx:id="buutony2s2" onAction="#onClickSaveButtonSubjectY2S2"
-                                                           prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
+                                                <JFXListView fx:id="listViewy2s2c" prefHeight="317.0" prefWidth="324.0" />
+                                                <JFXListView fx:id="listViewy2s2o" layoutX="152.0" layoutY="10.0" prefHeight="317.0" prefWidth="340.0" />
+                                                <JFXButton fx:id="buutony2s2" onAction="#onClickSaveButtonSubjectY2S2" prefHeight="41.0" prefWidth="129.0" text="Save Changes" />
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0"
-                                              prefWidth="1280.0"/>
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0" prefWidth="1280.0" />
                                     </children>
                                 </VBox>
                             </children>
@@ -130,56 +107,43 @@
                 </Tab>
                 <Tab fx:id="tabYear3" text="Year 3">
                     <content>
-                        <AnchorPane fx:id="anchorPaneYear3" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                                    prefWidth="200.0">
+                        <AnchorPane fx:id="anchorPaneYear3" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0"
-                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0"
-                                              prefWidth="1280.0"/>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0" prefWidth="1280.0" />
+                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0" spacing="5.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
                                                     <font>
-                                                        <Font name="System Bold" size="15.0"/>
+                                                        <Font name="System Bold" size="15.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets left="10.0" right="10.0"/>
+                                                        <Insets left="10.0" right="10.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXListView fx:id="listViewy3s1c" prefHeight="302.0"
-                                                             prefWidth="325.0"/>
-                                                <JFXListView fx:id="listViewy3s1o" prefHeight="302.0"
-                                                             prefWidth="339.0"/>
-                                                <JFXButton fx:id="buttony3s1" onAction="#onClickSaveButtonSubjectY3S1"
-                                                           prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
+                                                <JFXListView fx:id="listViewy3s1c" prefHeight="302.0" prefWidth="325.0" />
+                                                <JFXListView fx:id="listViewy3s1o" prefHeight="302.0" prefWidth="339.0" />
+                                                <JFXButton fx:id="buttony3s1" onAction="#onClickSaveButtonSubjectY3S1" prefHeight="43.0" prefWidth="127.0" text="Save Changes" />
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0"
-                                              prefWidth="1280.0"/>
-                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0"
-                                              prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="1280.0" />
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="1280.0" spacing="5.0">
                                             <children>
-                                                <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
+                                                <Label prefHeight="47.0" prefWidth="122.0" text="Semester 2">
                                                     <font>
-                                                        <Font name="System Bold" size="15.0"/>
+                                                        <Font name="System Bold" size="15.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets left="10.0" right="10.0"/>
+                                                        <Insets left="10.0" right="10.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXListView fx:id="listViewy3s2c" prefHeight="317.0"
-                                                             prefWidth="324.0"/>
-                                                <JFXListView fx:id="listViewy3s2o" layoutX="152.0" layoutY="10.0"
-                                                             prefHeight="317.0" prefWidth="340.0"/>
-                                                <JFXButton fx:id="buutony3s2" onAction="#onClickSaveButtonSubjectY3S2"
-                                                           prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
+                                                <JFXListView fx:id="listViewy3s2c" prefHeight="317.0" prefWidth="324.0" />
+                                                <JFXListView fx:id="listViewy3s2o" layoutX="152.0" layoutY="10.0" prefHeight="317.0" prefWidth="340.0" />
+                                                <JFXButton fx:id="buutony3s2" onAction="#onClickSaveButtonSubjectY3S2" prefHeight="41.0" prefWidth="129.0" text="Save Changes" />
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0"
-                                              prefWidth="1280.0"/>
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0" prefWidth="1280.0" />
                                     </children>
                                 </VBox>
                             </children>
@@ -188,56 +152,43 @@
                 </Tab>
                 <Tab fx:id="tabYear4" text="Year 4">
                     <content>
-                        <AnchorPane fx:id="anchorPaneYear4" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                                    prefWidth="200.0">
+                        <AnchorPane fx:id="anchorPaneYear4" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0"
-                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <VBox layoutX="14.0" layoutY="14.0" prefHeight="673.0" prefWidth="1267.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0"
-                                              prefWidth="1280.0"/>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="312.0" prefHeight="25.0" prefWidth="1280.0" />
+                                        <HBox alignment="CENTER_LEFT" prefHeight="306.0" prefWidth="1280.0" spacing="5.0">
                                             <children>
                                                 <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
                                                     <font>
-                                                        <Font name="System Bold" size="15.0"/>
+                                                        <Font name="System Bold" size="15.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets left="10.0" right="10.0"/>
+                                                        <Insets left="10.0" right="10.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXListView fx:id="listViewy4s1c" prefHeight="302.0"
-                                                             prefWidth="325.0"/>
-                                                <JFXListView fx:id="listViewy4s1o" prefHeight="302.0"
-                                                             prefWidth="339.0"/>
-                                                <JFXButton fx:id="buttony4s1" onAction="#onClickSaveButtonSubjectY4S1"
-                                                           prefHeight="43.0" prefWidth="127.0" text="Save Changes"/>
+                                                <JFXListView fx:id="listViewy4s1c" prefHeight="302.0" prefWidth="325.0" />
+                                                <JFXListView fx:id="listViewy4s1o" prefHeight="302.0" prefWidth="339.0" />
+                                                <JFXButton fx:id="buttony4s1" onAction="#onClickSaveButtonSubjectY4S1" prefHeight="43.0" prefWidth="127.0" text="Save Changes" />
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0"
-                                              prefWidth="1280.0"/>
-                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0"
-                                              prefWidth="1280.0">
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="1280.0" />
+                                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="1280.0" spacing="5.0">
                                             <children>
-                                                <Label prefHeight="47.0" prefWidth="122.0" text="Semester 1">
+                                                <Label prefHeight="47.0" prefWidth="122.0" text="Semester 2">
                                                     <font>
-                                                        <Font name="System Bold" size="15.0"/>
+                                                        <Font name="System Bold" size="15.0" />
                                                     </font>
                                                     <HBox.margin>
-                                                        <Insets left="10.0" right="10.0"/>
+                                                        <Insets left="10.0" right="10.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <JFXListView fx:id="listViewy4s2c" prefHeight="317.0"
-                                                             prefWidth="324.0"/>
-                                                <JFXListView fx:id="listViewy4s2o" layoutX="152.0" layoutY="10.0"
-                                                             prefHeight="317.0" prefWidth="340.0"/>
-                                                <JFXButton fx:id="buutony4s2" onAction="#onClickSaveButtonSubjectY4S2"
-                                                           prefHeight="41.0" prefWidth="129.0" text="Save Changes"/>
+                                                <JFXListView fx:id="listViewy4s2c" prefHeight="317.0" prefWidth="324.0" />
+                                                <JFXListView fx:id="listViewy4s2o" layoutX="152.0" layoutY="10.0" prefHeight="317.0" prefWidth="340.0" />
+                                                <JFXButton fx:id="buutony4s2" onAction="#onClickSaveButtonSubjectY4S2" prefHeight="41.0" prefWidth="129.0" text="Save Changes" />
                                             </children>
                                         </HBox>
-                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0"
-                                              prefWidth="1280.0"/>
+                                        <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="231.0" prefHeight="51.0" prefWidth="1280.0" />
                                     </children>
                                 </VBox>
                             </children>
