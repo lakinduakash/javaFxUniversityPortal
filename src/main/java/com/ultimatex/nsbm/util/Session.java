@@ -21,19 +21,25 @@ public class Session {
 
     private Session(String email, String password) {
 
+        //get database
         DatabaseHelper dh = DatabaseHelper.getInstance();
         db = dh.getDatabase();
+
+        //get user collection from database
         MongoCollection<Document> userCollection = db.getCollection("user");
 
+        //find email from collection
         FindIterable<Document> findIterable = userCollection.find(new Document("email", email));
 
+        //get first value(There is only single value)
         Document user = findIterable.first();
 
+        //if there is no such user user variable is null. Then it throws Custom exception and make session instance null with revoking the access
         if (user == null) {
             sessionInstance = null;
             throw new UserNotFoundException();
         }
-
+        //Login on valid credentials
         if (password.equals(user.get("password"))) {
             valid = true;
             this.email = email;
