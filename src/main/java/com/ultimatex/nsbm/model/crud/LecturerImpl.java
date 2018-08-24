@@ -47,6 +47,9 @@ public class LecturerImpl extends BaseImpl<Lecture> {
 
     @Override
     public ArrayList<Lecture> find(String key, Object value) {
-        return null;
+        if (value == null)
+            return new ArrayList<>(datastore.createQuery(Lecture.class).asList());
+        else
+            return new ArrayList<>(datastore.createQuery(Lecture.class).field(key).equal(value).asList());
     }
 }
