@@ -18,6 +18,7 @@ public class NsbmMain extends Application {
         FXMLLoader loader =new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
         loader.load();
 
+        //Load login view
         LoginController lc=loader.getController();
         primaryStage.setTitle("Login to NSBM portal");
         primaryStage.initStyle(StageStyle.TRANSPARENT);
@@ -25,6 +26,7 @@ public class NsbmMain extends Application {
         Scene scene = new Scene(loader.getRoot(), lc.loginPane.getPrefWidth(), lc.loginPane.getPrefHeight());
 
 
+        //Login on enter key press
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
