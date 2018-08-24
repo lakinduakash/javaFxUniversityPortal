@@ -1,10 +1,12 @@
 package com.ultimatex.nsbm.ui.student;
 
+import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTabPane;
 import com.ultimatex.nsbm.GlobalState;
 import com.ultimatex.nsbm.model.*;
 import com.ultimatex.nsbm.model.crud.ResultImpl;
+import com.ultimatex.nsbm.model.crud.StudentImpl;
 import com.ultimatex.nsbm.ui.ResultViewItemController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +17,7 @@ import javafx.scene.layout.HBox;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 public class ResultsController implements Initializable {
     @FXML
@@ -43,6 +46,9 @@ public class ResultsController implements Initializable {
 
     @FXML
     private JFXListView<HBox> listViewResy4s2;
+
+    @FXML
+    private JFXCheckBox checkBox4thYear;
 
 
     private ArrayList<ResultViewItemController> resultViewItemControllersy1s1 = new ArrayList<>();
@@ -184,15 +190,32 @@ public class ResultsController implements Initializable {
 
     }
 
+    @FXML
+    void onCheckBoxSelected(ActionEvent e) {
+        selectedStudent.setFourthYear(checkBox4thYear.isSelected());
+        StudentImpl si = new StudentImpl();
+        if (!si.update(selectedStudent)) {
+            Logger.getGlobal().fine("Error on save");
+        }
+
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         if (selectedStudent != null) {
+
+            checkBox4thYear.setSelected(selectedStudent.isFourthYear());
             resultPane.setDisable(false);
             initTab1();
             initTab2();
             initTab3();
             initTab4();
+
+            if (selectedStudent.getCourse().getType() == Course.TYPE_MA)
+                checkBox4thYear.setDisable(true);
+
         } else {
             resultPane.setDisable(true);
         }
