@@ -110,10 +110,10 @@ public class PaymentController implements Initializable {
         initTotalPayments(CourseImpl.Y1S2);
         initTotalPayments(CourseImpl.Y2S1);
         initTotalPayments(CourseImpl.Y2S2);
-//        initTotalPayments(CourseImpl.Y3S1);
-//        initTotalPayments(CourseImpl.Y3S2);
-//        initTotalPayments(CourseImpl.Y4S1);
-//        initTotalPayments(CourseImpl.Y4S2);
+        initTotalPayments(CourseImpl.Y3S1);
+        initTotalPayments(CourseImpl.Y3S2);
+        initTotalPayments(CourseImpl.Y4S1);
+        initTotalPayments(CourseImpl.Y4S2);
 
         labelY1s1PaidStatus.setText("Paid");
     }
