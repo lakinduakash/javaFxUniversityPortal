@@ -110,10 +110,10 @@ public class PaymentController implements Initializable {
         initTotalPayments(CourseImpl.Y1S2);
         initTotalPayments(CourseImpl.Y2S1);
         initTotalPayments(CourseImpl.Y2S2);
-        initTotalPayments(CourseImpl.Y3S1);
-        initTotalPayments(CourseImpl.Y3S2);
-        initTotalPayments(CourseImpl.Y4S1);
-        initTotalPayments(CourseImpl.Y4S2);
+//        initTotalPayments(CourseImpl.Y3S1);
+//        initTotalPayments(CourseImpl.Y3S2);
+//        initTotalPayments(CourseImpl.Y4S1);
+//        initTotalPayments(CourseImpl.Y4S2);
 
         labelY1s1PaidStatus.setText("Paid");
     }
@@ -123,108 +123,109 @@ public class PaymentController implements Initializable {
         switch (sem)
         {
             case CourseImpl.Y1S1:
-                int total=0;
-                for(Subject s:selectedStudent.getCourse().getYear1sem1())
-                {
-                    total+=s.getPrice();
-                }
-                for(Subject s:selectedStudent.getSelectedSubjectsy1s1())
-                {
-                    total+=s.getPrice();
-                }
+                int total = 0;
+                if (selectedStudent.getSelectedSubjectsy1s1() != null && selectedStudent.getCourse().getYear1sem1() != null) {
 
-                labelY1S1Total.setText(Integer.toString(total)+".00");
+                    for (Subject s : selectedStudent.getCourse().getYear1sem1()) {
+                        total += s.getPrice();
+                    }
+                    for (Subject s : selectedStudent.getSelectedSubjectsy1s1()) {
+                        total += s.getPrice();
+                    }
+
+                    labelY1S1Total.setText(Integer.toString(total) + ".00");
+                }
                 break;
             case CourseImpl.Y1S2:
                 total=0;
-                for(Subject s:selectedStudent.getCourse().getYear1sem2())
-                {
-                    total+=s.getPrice();
-                }
-                for(Subject s:selectedStudent.getSelectedSubjectsy1s2())
-                {
-                    total+=s.getPrice();
-                }
+                if (selectedStudent.getSelectedSubjectsy1s2() != null && selectedStudent.getCourse().getYear1sem2() != null) {
+                    for (Subject s : selectedStudent.getCourse().getYear1sem2()) {
+                        total += s.getPrice();
+                    }
+                    for (Subject s : selectedStudent.getSelectedSubjectsy1s2()) {
+                        total += s.getPrice();
+                    }
 
-                labelY1S2Total.setText(Integer.toString(total)+".00");
+                    labelY1S2Total.setText(Integer.toString(total) + ".00");
+                }
                 break;
             case CourseImpl.Y2S1:
                 total=0;
-                for(Subject s:selectedStudent.getCourse().getYear2sem1())
-                {
-                    total+=s.getPrice();
-                }
-                for(Subject s:selectedStudent.getSelectedSubjectsy2s1())
-                {
-                    total+=s.getPrice();
-                }
+                if (selectedStudent.getSelectedSubjectsy2s1() != null && selectedStudent.getCourse().getYear2sem1() != null) {
+                    for (Subject s : selectedStudent.getCourse().getYear2sem1()) {
+                        total += s.getPrice();
+                    }
+                    for (Subject s : selectedStudent.getSelectedSubjectsy2s1()) {
+                        total += s.getPrice();
+                    }
 
-                labelY2S1Total.setText(Integer.toString(total)+".00");
+                    labelY2S1Total.setText(Integer.toString(total) + ".00");
+                }
                 break;
             case CourseImpl.Y2S2:
                 total=0;
-                for(Subject s:selectedStudent.getCourse().getYear2sem2())
-                {
-                    total+=s.getPrice();
-                }
-                for(Subject s:selectedStudent.getSelectedSubjectsy2s2())
-                {
-                    total+=s.getPrice();
-                }
+                if (selectedStudent.getSelectedSubjectsy2s2() != null && selectedStudent.getCourse().getYear2sem2() != null) {
+                    for (Subject s : selectedStudent.getCourse().getYear2sem2()) {
+                        total += s.getPrice();
+                    }
+                    for (Subject s : selectedStudent.getSelectedSubjectsy2s2()) {
+                        total += s.getPrice();
+                    }
 
-                labelY2S2Total.setText(Integer.toString(total)+".00");
+                    labelY2S2Total.setText(Integer.toString(total) + ".00");
+                }
                 break;
             case CourseImpl.Y3S1:
                 total=0;
-                for(Subject s:selectedStudent.getCourse().getYear3sem1())
-                {
-                    total+=s.getPrice();
-                }
-                for(Subject s:selectedStudent.getSelectedSubjectsy3s1())
-                {
-                    total+=s.getPrice();
-                }
+                if (selectedStudent.getSelectedSubjectsy3s1() != null && selectedStudent.getCourse().getYear3sem1() != null) {
+                    for (Subject s : selectedStudent.getCourse().getYear3sem1()) {
+                        total += s.getPrice();
+                    }
+                    for (Subject s : selectedStudent.getSelectedSubjectsy3s1()) {
+                        total += s.getPrice();
+                    }
 
-                labelY3S1Total.setText(Integer.toString(total)+".00");
+                    labelY3S1Total.setText(Integer.toString(total) + ".00");
+                }
                 break;
             case CourseImpl.Y3S2:
                 total=0;
-                for(Subject s:selectedStudent.getCourse().getYear3sem2())
-                {
-                    total+=s.getPrice();
-                }
-                for(Subject s:selectedStudent.getSelectedSubjectsy3s2())
-                {
-                    total+=s.getPrice();
-                }
+                if (selectedStudent.getSelectedSubjectsy3s2() != null && selectedStudent.getCourse().getYear3sem2() != null) {
+                    for (Subject s : selectedStudent.getCourse().getYear3sem2()) {
+                        total += s.getPrice();
+                    }
+                    for (Subject s : selectedStudent.getSelectedSubjectsy3s2()) {
+                        total += s.getPrice();
+                    }
 
-                labelY3S2Total.setText(Integer.toString(total)+".00");
+                    labelY3S2Total.setText(Integer.toString(total) + ".00");
+                }
                 break;
             case CourseImpl.Y4S1:
                 total=0;
-                for(Subject s:selectedStudent.getCourse().getYear4sem1())
-                {
-                    total+=s.getPrice();
-                }
-                for(Subject s:selectedStudent.getSelectedSubjectsy4s1())
-                {
-                    total+=s.getPrice();
-                }
+                if (selectedStudent.getSelectedSubjectsy4s1() != null && selectedStudent.getCourse().getYear4sem1() != null) {
+                    for (Subject s : selectedStudent.getCourse().getYear4sem1()) {
+                        total += s.getPrice();
+                    }
+                    for (Subject s : selectedStudent.getSelectedSubjectsy4s1()) {
+                        total += s.getPrice();
+                    }
 
-                labelY4S1Total.setText(Integer.toString(total)+".00");
+                    labelY4S1Total.setText(Integer.toString(total) + ".00");
+                }
                 break;
             case CourseImpl.Y4S2:
                 total=0;
-                for(Subject s:selectedStudent.getCourse().getYear4sem2())
-                {
-                    total+=s.getPrice();
-                }
-                for(Subject s:selectedStudent.getSelectedSubjectsy4s2())
-                {
-                    total+=s.getPrice();
-                }
+                if (selectedStudent.getSelectedSubjectsy4s2() != null && selectedStudent.getCourse().getYear4sem2() != null) {
+                    for (Subject s : selectedStudent.getCourse().getYear4sem2()) {
+                        total += s.getPrice();
+                    }
+                    for (Subject s : selectedStudent.getSelectedSubjectsy4s2()) {
+                        total += s.getPrice();
+                    }
 
-                labelY4S2Total.setText(Integer.toString(total)+".00");
+                    labelY4S2Total.setText(Integer.toString(total) + ".00");
+                }
                 break;
         }
     }
