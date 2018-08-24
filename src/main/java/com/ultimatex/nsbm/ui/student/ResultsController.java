@@ -225,6 +225,8 @@ public class ResultsController implements Initializable {
         Result r = selectedStudent.getResults();
         if (r != null)
             initTab(r, r.getYear2sem1(), selectedCourse.getYear2sem1(), selectedStudent.getSelectedSubjectsy2s1(), listViewResy2s1, resultViewItemControllersy2s1, r.getYear2sem2(), selectedCourse.getYear2sem2(), selectedStudent.getSelectedSubjectsy2s2(), listViewResy2s2, resultViewItemControllersy2s2);
+        else
+            initTab(null, null, selectedCourse.getYear2sem1(), selectedStudent.getSelectedSubjectsy2s1(), listViewResy2s1, resultViewItemControllersy2s1, null, selectedCourse.getYear2sem2(), selectedStudent.getSelectedSubjectsy2s2(), listViewResy2s2, resultViewItemControllersy2s2);
 
 
     }
@@ -234,6 +236,8 @@ public class ResultsController implements Initializable {
         Result r = selectedStudent.getResults();
         if (r != null)
             initTab(r, r.getYear3sem1(), selectedCourse.getYear3sem1(), selectedStudent.getSelectedSubjectsy3s1(), listViewResy3s1, resultViewItemControllersy3s1, r.getYear3sem2(), selectedCourse.getYear3sem2(), selectedStudent.getSelectedSubjectsy3s2(), listViewResy3s2, resultViewItemControllersy3s2);
+        else
+            initTab(null, null, selectedCourse.getYear3sem1(), selectedStudent.getSelectedSubjectsy3s1(), listViewResy3s1, resultViewItemControllersy3s1, null, selectedCourse.getYear3sem2(), selectedStudent.getSelectedSubjectsy3s2(), listViewResy3s2, resultViewItemControllersy3s2);
     }
 
     private void initTab4() {
@@ -241,6 +245,8 @@ public class ResultsController implements Initializable {
         Result r = selectedStudent.getResults();
         if (r != null)
             initTab(r, r.getYear4sem1(), selectedCourse.getYear4sem1(), selectedStudent.getSelectedSubjectsy4s1(), listViewResy4s1, resultViewItemControllersy4s1, r.getYear4sem2(), selectedCourse.getYear4sem2(), selectedStudent.getSelectedSubjectsy4s2(), listViewResy4s2, resultViewItemControllersy4s2);
+        else
+            initTab(null, null, selectedCourse.getYear4sem1(), selectedStudent.getSelectedSubjectsy4s1(), listViewResy4s1, resultViewItemControllersy4s1, null, selectedCourse.getYear4sem2(), selectedStudent.getSelectedSubjectsy4s2(), listViewResy4s2, resultViewItemControllersy4s2);
 
     }
 
