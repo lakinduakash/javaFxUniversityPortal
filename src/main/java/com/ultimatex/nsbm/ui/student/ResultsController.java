@@ -201,8 +201,21 @@ public class ResultsController implements Initializable {
 
     private void initTab1() {
 
+
         Result r = selectedStudent.getResults();
-        initTab(r, r.getYear1sem1(), selectedCourse.getYear1sem1(), selectedStudent.getSelectedSubjectsy1s1(), listViewResy1s1, resultViewItemControllersy1s1, r.getYear1sem2(), selectedCourse.getYear1sem2(), selectedStudent.getSelectedSubjectsy1s2(), listViewResy1s2, resultViewItemControllersy1s2);
+        if (r != null) {
+            ArrayList<SingleResult> ry1s1 = r.getYear1sem1();
+            ArrayList<Subject> subjectsy1s1 = selectedCourse.getYear1sem1();
+            ArrayList<Subject> subjectsy1s1o = selectedStudent.getSelectedSubjectsy1s1();
+
+            initTab(r, ry1s1, subjectsy1s1, subjectsy1s1o, listViewResy1s1, resultViewItemControllersy1s1, r.getYear1sem2(), selectedCourse.getYear1sem2(), selectedStudent.getSelectedSubjectsy1s2(), listViewResy1s2, resultViewItemControllersy1s2);
+        } else {
+
+            ArrayList<Subject> subjectsy1s1 = selectedCourse.getYear1sem1();
+            ArrayList<Subject> subjectsy1s1o = selectedStudent.getSelectedSubjectsy1s1();
+
+            initTab(null, null, subjectsy1s1, subjectsy1s1o, listViewResy1s1, resultViewItemControllersy1s1, null, selectedCourse.getYear1sem2(), selectedStudent.getSelectedSubjectsy1s2(), listViewResy1s2, resultViewItemControllersy1s2);
+        }
 
 
     }
@@ -210,7 +223,8 @@ public class ResultsController implements Initializable {
     private void initTab2() {
 
         Result r = selectedStudent.getResults();
-        initTab(r, r.getYear2sem1(), selectedCourse.getYear2sem1(), selectedStudent.getSelectedSubjectsy2s1(), listViewResy2s1, resultViewItemControllersy2s1, r.getYear2sem2(), selectedCourse.getYear2sem2(), selectedStudent.getSelectedSubjectsy2s2(), listViewResy2s2, resultViewItemControllersy2s2);
+        if (r != null)
+            initTab(r, r.getYear2sem1(), selectedCourse.getYear2sem1(), selectedStudent.getSelectedSubjectsy2s1(), listViewResy2s1, resultViewItemControllersy2s1, r.getYear2sem2(), selectedCourse.getYear2sem2(), selectedStudent.getSelectedSubjectsy2s2(), listViewResy2s2, resultViewItemControllersy2s2);
 
 
     }
@@ -218,13 +232,15 @@ public class ResultsController implements Initializable {
     private void initTab3() {
 
         Result r = selectedStudent.getResults();
-        initTab(r, r.getYear3sem1(), selectedCourse.getYear3sem1(), selectedStudent.getSelectedSubjectsy3s1(), listViewResy3s1, resultViewItemControllersy3s1, r.getYear3sem2(), selectedCourse.getYear3sem2(), selectedStudent.getSelectedSubjectsy3s2(), listViewResy3s2, resultViewItemControllersy3s2);
+        if (r != null)
+            initTab(r, r.getYear3sem1(), selectedCourse.getYear3sem1(), selectedStudent.getSelectedSubjectsy3s1(), listViewResy3s1, resultViewItemControllersy3s1, r.getYear3sem2(), selectedCourse.getYear3sem2(), selectedStudent.getSelectedSubjectsy3s2(), listViewResy3s2, resultViewItemControllersy3s2);
     }
 
     private void initTab4() {
 
         Result r = selectedStudent.getResults();
-        initTab(r, r.getYear4sem1(), selectedCourse.getYear4sem1(), selectedStudent.getSelectedSubjectsy4s1(), listViewResy4s1, resultViewItemControllersy4s1, r.getYear4sem2(), selectedCourse.getYear4sem2(), selectedStudent.getSelectedSubjectsy4s2(), listViewResy4s2, resultViewItemControllersy4s2);
+        if (r != null)
+            initTab(r, r.getYear4sem1(), selectedCourse.getYear4sem1(), selectedStudent.getSelectedSubjectsy4s1(), listViewResy4s1, resultViewItemControllersy4s1, r.getYear4sem2(), selectedCourse.getYear4sem2(), selectedStudent.getSelectedSubjectsy4s2(), listViewResy4s2, resultViewItemControllersy4s2);
 
     }
 

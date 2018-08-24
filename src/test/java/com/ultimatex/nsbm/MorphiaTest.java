@@ -5,7 +5,6 @@ import com.ultimatex.nsbm.model.Course;
 import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.model.Subject;
 import com.ultimatex.nsbm.model.crud.CourseImpl;
-import com.ultimatex.nsbm.model.crud.StudentImpl;
 import com.ultimatex.nsbm.model.crud.SubjectImpl;
 import com.ultimatex.nsbm.util.GenerateIndex;
 import org.junit.Test;
@@ -54,9 +53,10 @@ public class MorphiaTest {
 
         Course course = new Course();
         course.setMaxYears(2);
-        course.setCode("SEM");
-        course.setName("Software Engineering (MSc)");
-            d.save(course);
+        course.setCode("BSMA");
+        course.setType(Course.TYPE_MA);
+        course.setName("Business Studies (MSc) programming");
+        d.save(course);
 
 
     }
@@ -64,26 +64,8 @@ public class MorphiaTest {
     @Test
     public void createStudent() {
 
-        StudentImpl imp = new StudentImpl();
 
-        Student student = new Student();
-        student.setFullName("Lakindu Akash");
 
-        Course c1 = new Course();
-        c1.setCode("CS");
-        c1.setName("Computer Science");
-        new CourseImpl().insertCourse(c1);
-
-        Course course = new CourseImpl().getCourseByCode("CS");
-
-        GenerateIndex g = new GenerateIndex();
-
-        student.setCourse(course);
-        student.setIndexNumber(course.getCode() + g.genNewIndex());
-
-        boolean inserted = imp.insert(student);
-        g.saveIndex();
-        assertThat(true, is(inserted));
 
     }
 
