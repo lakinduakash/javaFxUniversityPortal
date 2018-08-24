@@ -119,6 +119,15 @@
                                         <Insets bottom="10.0"/>
                                     </HBox.margin>
                                 </JFXButton>
+                                <JFXCheckBox fx:id="checkBox4thYear" onAction="#onCheckBoxSelected" prefHeight="30.0"
+                                             prefWidth="131.0" text="4th Year">
+                                    <HBox.margin>
+                                        <Insets bottom="50.0" left="20.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="19.0"/>
+                                    </font>
+                                </JFXCheckBox>
                             </children>
                         </HBox>
                     </children>

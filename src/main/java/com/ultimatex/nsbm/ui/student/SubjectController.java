@@ -297,6 +297,10 @@ public class SubjectController implements Initializable {
             tabYear3.setDisable(true);
             tabYear4.setDisable(true);
         }
+
+        if (!selectedStudent.isFourthYear()) {
+            tabYear4.setDisable(true);
+        }
     }
 
 
