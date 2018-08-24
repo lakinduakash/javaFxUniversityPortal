@@ -95,6 +95,7 @@ public class LecturerManagementController implements Initializable {
         comboBoxSelectNewType.getItems().add(new Label(Lecture.TYPE_LEC));
 
         initSelectCourseComboBox();
+        initEditLecComboBox();
 
 
     }
@@ -109,6 +110,17 @@ public class LecturerManagementController implements Initializable {
             javafx.scene.control.Label l=new javafx.scene.control.Label(c.getName());
             l.setUserData(c);
             comboBoxNewDept.getItems().add(l);
+        }
+    }
+
+    private void initEditLecComboBox() {
+        comboBoxSelectLec.getItems().clear();
+        ArrayList<Lecture> ac = new LecturerImpl().find("", null);
+
+        for (Lecture c : ac) {
+            javafx.scene.control.Label l = new javafx.scene.control.Label(c.getName());
+            l.setUserData(c);
+            comboBoxSelectLec.getItems().add(l);
         }
     }
 }
