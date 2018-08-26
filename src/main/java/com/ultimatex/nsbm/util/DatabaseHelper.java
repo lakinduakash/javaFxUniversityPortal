@@ -10,6 +10,9 @@ public class DatabaseHelper {
     private MongoClient mongoClient;
     private MongoDatabase database;
 
+    /**
+     * Initialise the database connection. Constructor is private
+     */
     private DatabaseHelper() {
         try {
             mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
@@ -22,6 +25,11 @@ public class DatabaseHelper {
 
     }
 
+    /**
+     * return one instance with singleton patern
+     *
+     * @return instance of DatabaseHelper
+     */
     public static DatabaseHelper getInstance() {
         if (ourInstance == null)
             return new DatabaseHelper();
