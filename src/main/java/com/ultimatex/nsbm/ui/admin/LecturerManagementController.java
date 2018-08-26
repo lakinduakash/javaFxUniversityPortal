@@ -1,6 +1,3 @@
-/**
- * Sample Skeleton for 'lecturer_management.fxml' Controller Class
- */
 
 package com.ultimatex.nsbm.ui.admin;
 
