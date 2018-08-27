@@ -1,5 +1,6 @@
 # javaFxUniversityPortal
 [![Build Status](https://travis-ci.org/lakinduakash/javaFxUniversityPortal.svg?branch=master)](https://travis-ci.org/lakinduakash/javaFxUniversityPortal)
+[![DeepScan grade](https://deepscan.io/api/projects/3073/branches/24593/badge/grade.svg)](https://deepscan.io/dashboard#view=project&pid=3073&bid=24593)
 ## Student,Course and Staff management system example for university with javaFx and MongoDb
 
 To run this project you need `gradle 4.4` or higher and mongodb.
