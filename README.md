@@ -8,7 +8,7 @@ To run this project you need `gradle 4.4` or higher and mongodb.
 
 To change database connection to your configurations edit these line in `com.ultimatex.nsbm.util.MorphiaHelper.java`
 ```java
-datastore = morphia.createDatastore(new MongoClient(), "morphia_test"); /change database name if you want
+datastore = morphia.createDatastore(new MongoClient(), "morphia_test"); //change database name if you want
 
 //To have different mongoClient other than default use 
 // new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
