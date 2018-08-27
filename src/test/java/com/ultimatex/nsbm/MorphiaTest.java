@@ -1,10 +1,8 @@
 package com.ultimatex.nsbm;
 
 import com.mongodb.MongoClient;
-import com.ultimatex.nsbm.model.Course;
 import com.ultimatex.nsbm.model.Student;
 import com.ultimatex.nsbm.model.Subject;
-import com.ultimatex.nsbm.model.crud.CourseImpl;
 import com.ultimatex.nsbm.model.crud.SubjectImpl;
 import com.ultimatex.nsbm.util.GenerateIndex;
 import org.junit.Test;
@@ -51,12 +49,6 @@ public class MorphiaTest {
         Datastore d = init();
 
 
-        Course course = new Course();
-        course.setMaxYears(2);
-        course.setCode("BSMA");
-        course.setType(Course.TYPE_MA);
-        course.setName("Business Studies (MSc) programming");
-        d.save(course);
 
 
     }
@@ -116,25 +108,12 @@ public class MorphiaTest {
 
     @Test
     public void addSubjectToCourse() {
-        CourseImpl ci = new CourseImpl();
-        SubjectImpl si = new SubjectImpl();
-        ArrayList<Subject> a = new ArrayList<>();
-        a.add(si.find("code", "1003").get(0));
-        a.add(si.find("code", "1004").get(0));
-        a.add(si.find("code", "1005").get(0));
-        a.add(si.find("code", "1006").get(0));
 
-        ci.addOptionalSubject(ci.getCourseByCode("SEM"), a, false, CourseImpl.Y1S2O);
-        ci.addCompulsorySubject(ci.getCourseByCode("SEM"), a, false, CourseImpl.Y1S2);
     }
 
     @Test
     public void updateAsWholeObject() {
-        SubjectImpl si = new SubjectImpl();
-        Subject s = si.find("code", "1103").get(0);
-        s.setCode("1003");
-        s.setPrice(4000);
-        init().save(s);
+
     }
 
 }
