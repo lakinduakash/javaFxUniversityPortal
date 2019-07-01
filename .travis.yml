@@ -6,6 +6,7 @@ jdk:
 
 script:
   - ./gradlew build --scan -s
+  - ./gradlew sonarqube -Dsonar.projectKey=lakinduakash_javaFxUniversityPortal -Dsonar.organization=lakinduakash-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=45ee25003975bd7455ca3894b9349dca46c2d908
   
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
