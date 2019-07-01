@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="listPane" prefHeight="40.0" prefWidth="300.0"
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.ultimatex.nsbm.ui.ListItemViewController">
+    <children>
+        <JFXCheckBox fx:id="checkBox" layoutX="48.0" layoutY="11.0" prefHeight="40.0" prefWidth="310.0"
+                     AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                     AnchorPane.topAnchor="0.0"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="sideNav" prefHeight="445.0" prefWidth="154.0" styleClass="root"
+      stylesheets="@../../css/global.css" xmlns="http://javafx.com/javafx/8.0"
+      fx:controller="com.ultimatex.nsbm.ui.student.SideNavController">
+    <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#onProfileClick" prefHeight="400.0"
+               prefWidth="160.0" styleClass="side-nave-button" text="Profile" textAlignment="CENTER">
+        <graphic>
+            <FontAwesomeIconView glyphName="USER" size="25" text=""/>
+        </graphic>
+    </JFXButton>
+    <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="81.0" mnemonicParsing="false" onAction="#onSubjectsClick"
+               prefHeight="400.0" prefWidth="160.0" styleClass="side-nave-button" text="Subjects"
+               textAlignment="CENTER">
+        <graphic>
+            <FontAwesomeIconView glyphName="BOOK" size="25"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onScheduleClick"
+               prefHeight="400.0" prefWidth="160.0" styleClass="side-nave-button" text="Schedule"
+               textAlignment="CENTER">
+        <graphic>
+            <FontAwesomeIconView glyphName="TABLE" size="25"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#onResultsClick" prefHeight="400.0"
+               prefWidth="160.0" styleClass="side-nave-button" text="Results" textAlignment="CENTER">
+        <graphic>
+            <FontAwesomeIconView glyphName="GRADUATION_CAP" size="25" textAlignment="CENTER"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onPaymentClick"
+               prefHeight="400.0" prefWidth="160.0" styleClass="side-nave-button" text="Payment" textAlignment="CENTER">
+        <graphic>
+            <FontAwesomeIconView glyphName="MONEY" size="25" text=""/>
+        </graphic>
+    </JFXButton>
+    <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="223.0" mnemonicParsing="false" onAction="#onSettingsClick"
+               prefHeight="400.0" prefWidth="160.0" styleClass="side-nave-button" text="Settings"
+               textAlignment="CENTER">
+        <graphic>
+            <FontAwesomeIconView glyphName="COG" size="25"/>
+        </graphic>
+    </JFXButton>
+</VBox>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ultimatex.nsbm.StudentHelperTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-07-01T09:44:41" hostname="ultimatex" time="0.099">
+  <properties/>
+  <testcase name="testNativeOp" classname="com.ultimatex.nsbm.StudentHelperTest" time="0.058"/>
+  <testcase name="addStudent" classname="com.ultimatex.nsbm.StudentHelperTest" time="0.041"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
