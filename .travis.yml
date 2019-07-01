@@ -3,7 +3,13 @@ install: true
 
 jdk:
   - oraclejdk8
-
+  
+before_script:
+  - sleep 8
+  - mongo nsbm --eval 'db.student.insertOne({name:{first:"Lakindu"}});'
+  - mongo nsbm --eval 'db.user.insertOne({email:"email@email.com",password:"password"});'
+  - mongo nsbm --eval 'db.user.insertOne({email:"admin",password:"admin"});'
+  
 script:
   - ./gradlew build --scan -s
   - ./gradlew sonarqube -Dsonar.projectKey=lakinduakash_javaFxUniversityPortal -Dsonar.organization=lakinduakash-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=45ee25003975bd7455ca3894b9349dca46c2d908
@@ -20,8 +26,4 @@ cache:
 services:
   - mongodb
 
-before_script:
-  - sleep 8
-  - mongo nsbm --eval 'db.student.insertOne({name:{first:"Lakindu"}});'
-  - mongo nsbm --eval 'db.user.insertOne({email:"email@email.com",password:"password"});'
-  - mongo nsbm --eval 'db.user.insertOne({email:"admin",password:"admin"});'
+
