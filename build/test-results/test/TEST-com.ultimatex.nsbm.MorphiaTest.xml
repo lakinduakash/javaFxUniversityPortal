@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ultimatex.nsbm.MorphiaTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2019-07-01T09:44:41" hostname="ultimatex" time="0.565">
+  <properties/>
+  <testcase name="clearAllStudent" classname="com.ultimatex.nsbm.MorphiaTest" time="0.248"/>
+  <testcase name="addSubjectToCourse" classname="com.ultimatex.nsbm.MorphiaTest" time="0.0"/>
+  <testcase name="createStudent" classname="com.ultimatex.nsbm.MorphiaTest" time="0.001"/>
+  <testcase name="createSubject" classname="com.ultimatex.nsbm.MorphiaTest" time="0.058"/>
+  <testcase name="removeAllSubject" classname="com.ultimatex.nsbm.MorphiaTest" time="0.015"/>
+  <testcase name="updateAsWholeObject" classname="com.ultimatex.nsbm.MorphiaTest" time="0.0"/>
+  <testcase name="createCourse" classname="com.ultimatex.nsbm.MorphiaTest" time="0.007"/>
+  <testcase name="genIndex" classname="com.ultimatex.nsbm.MorphiaTest" time="0.173"/>
+  <testcase name="insertSubject" classname="com.ultimatex.nsbm.MorphiaTest" time="0.057"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jul 01, 2019 3:14:41 PM org.mongodb.morphia.logging.MorphiaLoggerFactory chooseLoggerFactory
+INFO: LoggerImplFactory set to org.mongodb.morphia.logging.jdk.JDKLoggerFactory
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:12, serverValue:45}] to 127.0.0.1:27017
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=981192}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:13, serverValue:46}] to 127.0.0.1:27017
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:14, serverValue:47}] to 127.0.0.1:27017
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=540000}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:15, serverValue:48}] to 127.0.0.1:27017
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:16, serverValue:49}] to 127.0.0.1:27017
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=479202}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:17, serverValue:50}] to 127.0.0.1:27017
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:18, serverValue:51}] to 127.0.0.1:27017
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=568037}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:19, serverValue:52}] to 127.0.0.1:27017
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1671573}
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster description not yet available. Waiting for 30000 ms before timing out
+Jul 01, 2019 3:14:41 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:20, serverValue:53}] to 127.0.0.1:27017
+]]></system-err>
+</testsuite>

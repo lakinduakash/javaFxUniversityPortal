@@ -1,0 +1,57 @@
+* {
+    -fx-primary : #c7cfff;
+    -fx-secondary : #47471d;
+    -fx-primarytext : #282828;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-green:#2E7D32;
+    -fx-pink: #ff0070;
+}
+
+.root{
+    -fx-background-color: -fx-primary;
+}
+
+.test {
+    -fx-background-color: -fx-pink;
+}
+
+.login-cancel, .login-button{
+    -fx-text-fill: -fx-blue;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-style:solid;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 15pt;
+    -fx-font-family:"Comic Sans MS";
+}
+
+.login-forgot-password-text {
+
+    -fx-font-size: 10pt;
+
+}
+
+.login-forgot-password-text:hover {
+
+    -fx-font-size: 11pt;
+    -fx-text-fill: -fx-blue;
+
+}
+
+.login-signup-text {
+    -fx-font-size: 10pt;
+}
+
+.login-signup-text:hover {
+    -fx-font-size: 11pt;
+    -fx-text-fill: -fx-blue;
+}
+
+.side-nave-button {
+}
+
+.jfx-button {
+    -fx-background-color: #fff;
+}

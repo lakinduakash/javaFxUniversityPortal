@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:id="resultViewItem" maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="376.0"
+      xmlns="http://javafx.com/javafx/8.0.121" fx:controller="com.ultimatex.nsbm.ui.ResultViewItemController">
+
+    <Label fx:id="labelSubjectName" prefHeight="48.0" prefWidth="312.0" text="Label">
+            <HBox.margin>
+                <Insets left="5.0"/>
+            </HBox.margin>
+        </Label>
+        <JFXComboBox fx:id="comboBoxGradeSelector" prefHeight="39.0" prefWidth="112.0">
+            <HBox.margin>
+                <Insets right="5.0"/>
+            </HBox.margin>
+        </JFXComboBox>
+</HBox>

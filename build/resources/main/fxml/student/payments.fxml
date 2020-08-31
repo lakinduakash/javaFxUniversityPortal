@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane fx:id="paymentPane" prefHeight="459.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ultimatex.nsbm.ui.student.PaymentController">
+    <Tab text="1st Year">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="14.0" prefHeight="150.0" prefWidth="742.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="214.0" text="Total cost(Rs)-Semsester 1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelY1S1Total" layoutX="20.0" layoutY="70.0" prefHeight="31.0" prefWidth="106.0" text="0.00">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkBoxY1s1" prefHeight="29.0" prefWidth="110.0" text="Paid">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label fx:id="labelY1s1PaidStatus" prefHeight="28.0" prefWidth="213.0" text="Not paid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutY="160.0" prefHeight="150.0" prefWidth="742.0">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="214.0" text="Total cost(Rs)-Semsester 2">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelY1S2Total" layoutX="20.0" layoutY="70.0" prefHeight="31.0" prefWidth="106.0" text="0.00">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkBoxY1s2" prefHeight="29.0" prefWidth="110.0" text="Paid">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label fx:id="labelY1s2PaidStatus" prefHeight="28.0" prefWidth="213.0" text="Not paid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </Tab>
+    <Tab text="2nd Year">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="14.0" prefHeight="150.0" prefWidth="742.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="214.0" text="Total cost(Rs)-Semsester 1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelY2S1Total" layoutX="20.0" layoutY="70.0" prefHeight="31.0" prefWidth="106.0" text="0.00">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkBoxY2s1" prefHeight="29.0" prefWidth="110.0" text="Paid">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label fx:id="labelY2s1PaidStatus" prefHeight="28.0" prefWidth="213.0" text="Not paid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutY="160.0" prefHeight="150.0" prefWidth="742.0">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="214.0" text="Total cost(Rs)-Semsester 2">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelY2S2Total" layoutX="20.0" layoutY="70.0" prefHeight="31.0" prefWidth="106.0" text="0.00">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkBoxY2s2" prefHeight="29.0" prefWidth="110.0" text="Paid">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label fx:id="labelY2s2PaidStatus" prefHeight="28.0" prefWidth="213.0" text="Not paid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </Tab>
+    <Tab text="3rd Year">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="14.0" prefHeight="150.0" prefWidth="742.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="214.0" text="Total cost(Rs)-Semsester 1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelY3S1Total" layoutX="20.0" layoutY="70.0" prefHeight="31.0" prefWidth="106.0" text="0.00">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkBoxY3s1" prefHeight="29.0" prefWidth="110.0" text="Paid">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label fx:id="labelY3s1PaidStatus" prefHeight="28.0" prefWidth="213.0" text="Not paid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutY="160.0" prefHeight="150.0" prefWidth="742.0">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="214.0" text="Total cost(Rs)-Semsester 2">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelY3S2Total" layoutX="20.0" layoutY="70.0" prefHeight="31.0" prefWidth="106.0" text="0.00">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkBoxY3s2" prefHeight="29.0" prefWidth="110.0" text="Paid">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label fx:id="labelY3s2PaidStatus" prefHeight="28.0" prefWidth="213.0" text="Not paid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </Tab>
+    <Tab text="4th Year">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="14.0" prefHeight="150.0" prefWidth="742.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="214.0" text="Total cost(Rs)-Semsester 1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelY4S1Total" layoutX="20.0" layoutY="70.0" prefHeight="31.0" prefWidth="106.0" text="0.00">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkBoxY4s1" prefHeight="29.0" prefWidth="110.0" text="Paid">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label fx:id="labelY4s1PaidStatus" prefHeight="28.0" prefWidth="213.0" text="Not paid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutY="160.0" prefHeight="150.0" prefWidth="742.0">
+                    <children>
+                        <Label prefHeight="31.0" prefWidth="214.0" text="Total cost(Rs)-Semsester 2">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="labelY4S2Total" layoutX="20.0" layoutY="70.0" prefHeight="31.0" prefWidth="106.0" text="0.00">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkBoxY4s2" prefHeight="29.0" prefWidth="110.0" text="Paid">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label fx:id="labelY4s2PaidStatus" prefHeight="28.0" prefWidth="213.0" text="Not paid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </Tab>
+</JFXTabPane>

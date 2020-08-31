@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6259fae9-0a7a-4896-bf83-901cc6014831" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source_code.zip" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/app/.gradle/" />
+    <ignored path="$PROJECT_DIR$/app/build/" />
+    <ignored path="$PROJECT_DIR$/apps/.gradle/" />
+    <ignored path="$PROJECT_DIR$/apps/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/apps">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Nsbm" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Nsbm" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Nsbm" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/BaseImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/LecturerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="858">
+              <caret line="50" column="82" selection-start-line="50" selection-start-column="82" selection-end-line="50" selection-end-column="82" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/MorphiaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/SessionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="88">
+                <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/AddressTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="CSS File" />
+        <option value="Enum" />
+        <option value="Singleton" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>object</find>
+      <find>stage.</find>
+      <find>gson</find>
+      <find>student</find>
+      <find>set</find>
+      <find>AnchorPanel</find>
+      <find>;</find>
+      <find>:</find>
+      <find>,</find>
+      <find>?</find>
+      <find>equals</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>side-nave-button</replace>
+      <replace>getObject</replace>
+      <replace>getObject()</replace>
+      <replace>selectedStudent</replace>
+      <replace>get</replace>
+      <replace>,</replace>
+      <replace>O:</replace>
+      <replace>O,</replace>
+      <replace>AnchorPane</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/listViewItem.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/ListItemViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/student/schedule.fxml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/GlobalState.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/student/main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/student/subjects.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/student/results.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/resultListitem.fxml" />
+        <option value="$USER_HOME$/.gtkrc-2.0" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/resultListItem.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/ResultViewItemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/util/UserNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SignUpController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Subject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/css/global.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/lecturere_management.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/course_managment.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/ViewAllController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/view_all_students.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/ResultImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/admin/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/ProfileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/admin/ViewAllController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/admin/course_management.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/SubjectImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/admin/CourseController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/student/payments.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Lecture.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/CourseImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/StudentImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/BaseImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Course.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/SingleResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/util/StudentHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/StudentHelperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/NsbmMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/util/Session.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/PaymentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/ResultsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SubjectController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/LecturerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/admin/LecturerManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/util/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/MorphiaTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/SessionTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="29" />
+    <option name="width" value="1024" />
+    <option name="height" value="739" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Nsbm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nsbm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nsbm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nsbm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nsbm" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ultimatex" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ultimatex" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="nsbm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="~/IdeaProjects/Nsbm" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="~/IdeaProjects/Nsbm" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="build" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="~/IdeaProjects/Nsbm" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="gradle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="~/IdeaProjects/Nsbm" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="gradle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="wrapper" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="~/IdeaProjects/Nsbm" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Nsbm" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Nsbm" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="~/IdeaProjects/Nsbm" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="production" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="10" />
+    <property name="jdk.selected.PYTHON_MODULE" value="Python 3.5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/libs" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/fxml/student" />
+      <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ultimatex.nsbm.ui" />
+      <recent name="com.ultimatex.nsbm.ui.student" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ultimatex.nsbm.ui.admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/build/libs" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.Nsbm [jar]">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nsbm [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Nsbm [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Run" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="/home/lakinduakash/IdeaProjects/Nsbm" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MorphiaTest.createCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Nsbm.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ultimatex.nsbm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ultimatex.nsbm" />
+      <option name="MAIN_CLASS_NAME" value="com.ultimatex.nsbm.MorphiaTest" />
+      <option name="METHOD_NAME" value="createCourse" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.ultimatex.nsbm in Nsbm.test" type="JUnit" factoryName="JUnit">
+      <module name="Nsbm.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ultimatex.nsbm.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ultimatex.nsbm" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.Run" />
+      <item itemvalue="JUnit.com.ultimatex.nsbm in Nsbm.test" />
+      <item itemvalue="JUnit.MorphiaTest.createCourse" />
+      <item itemvalue="Gradle./home/lakinduakash/IdeaProjects/Nsbm" />
+      <item itemvalue="Gradle.Nsbm [build]" />
+      <item itemvalue="Gradle.Nsbm [jar]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Run" />
+        <item itemvalue="Gradle.Nsbm [build]" />
+        <item itemvalue="Gradle.Nsbm [jar]" />
+        <item itemvalue="Gradle./home/lakinduakash/IdeaProjects/Nsbm" />
+        <item itemvalue="JUnit.MorphiaTest.createCourse" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6259fae9-0a7a-4896-bf83-901cc6014831" name="Default" comment="" />
+      <created>1526537853853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526537853853</updated>
+      <workItem from="1526537858617" duration="18642000" />
+      <workItem from="1526562632502" duration="1752000" />
+      <workItem from="1526577311966" duration="1033000" />
+      <workItem from="1526579219677" duration="14845000" />
+      <workItem from="1526639190195" duration="5856000" />
+      <workItem from="1526646325195" duration="9845000" />
+      <workItem from="1526660641876" duration="13600000" />
+      <workItem from="1526727047171" duration="64715000" />
+      <workItem from="1527003654345" duration="29661000" />
+      <workItem from="1527127817581" duration="1171000" />
+      <workItem from="1527129110903" duration="83940000" />
+      <workItem from="1527424721438" duration="10415000" />
+      <workItem from="1527568149382" duration="1227000" />
+      <workItem from="1527670432453" duration="1049000" />
+      <workItem from="1528093766052" duration="1202000" />
+      <workItem from="1528095085863" duration="4913000" />
+      <workItem from="1528408252306" duration="711000" />
+      <workItem from="1528449915147" duration="676000" />
+      <workItem from="1528565622107" duration="4518000" />
+      <workItem from="1528606997013" duration="3407000" />
+      <workItem from="1528615968185" duration="19000" />
+      <workItem from="1528628995005" duration="1157000" />
+      <workItem from="1528725788564" duration="1476000" />
+      <workItem from="1528896633564" duration="3458000" />
+      <workItem from="1528985748654" duration="5926000" />
+      <workItem from="1529062442687" duration="905000" />
+      <workItem from="1529063524151" duration="30284000" />
+      <workItem from="1529130110893" duration="34208000" />
+      <workItem from="1529234652123" duration="4006000" />
+      <workItem from="1529300306860" duration="538000" />
+      <workItem from="1529303475022" duration="506000" />
+      <workItem from="1529307603614" duration="1113000" />
+      <workItem from="1529311740306" duration="560000" />
+      <workItem from="1529322875790" duration="1644000" />
+      <workItem from="1529335661601" duration="81056000" />
+      <workItem from="1530040864403" duration="322000" />
+      <workItem from="1533456547808" duration="604000" />
+      <workItem from="1533560947731" duration="24869000" />
+      <workItem from="1533986698603" duration="867000" />
+      <workItem from="1534275405802" duration="3952000" />
+      <workItem from="1534341999874" duration="2780000" />
+      <workItem from="1534761603810" duration="6175000" />
+      <workItem from="1534875896401" duration="12006000" />
+      <workItem from="1534927751683" duration="52559000" />
+      <workItem from="1535090009486" duration="6310000" />
+      <workItem from="1535102995631" duration="876000" />
+      <workItem from="1535318703572" duration="812000" />
+      <workItem from="1535393602131" duration="3457000" />
+      <workItem from="1535478853216" duration="55000" />
+      <workItem from="1553237473686" duration="442000" />
+      <workItem from="1561963132855" duration="7571000" />
+    </task>
+    <task id="LOCAL-00194" summary="fix double parse exception undergraduate">
+      <created>1534937164571</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1534937164571</updated>
+    </task>
+    <task id="LOCAL-00195" summary="remove duplicate codes">
+      <created>1534937192968</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1534937192968</updated>
+    </task>
+    <task id="LOCAL-00196" summary="enforce text field to numeric">
+      <created>1534941093593</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1534941093593</updated>
+    </task>
+    <task id="LOCAL-00197" summary="handle error">
+      <created>1534941381735</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1534941381735</updated>
+    </task>
+    <task id="LOCAL-00198" summary="edit function to get all students as list">
+      <created>1534941416788</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1534941416788</updated>
+    </task>
+    <task id="LOCAL-00199" summary="change duplicate attributes call">
+      <created>1534941519132</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1534941519133</updated>
+    </task>
+    <task id="LOCAL-00200" summary="edit function to get all subjects">
+      <created>1534941898952</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1534941898952</updated>
+    </task>
+    <task id="LOCAL-00201" summary="update implentation of update method">
+      <created>1534950646027</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1534950646027</updated>
+    </task>
+    <task id="LOCAL-00202" summary="edit findById function">
+      <created>1534953698814</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1534953698814</updated>
+    </task>
+    <task id="LOCAL-00203" summary="implements event handlers">
+      <created>1534953725337</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1534953725337</updated>
+    </task>
+    <task id="LOCAL-00204" summary="update tests">
+      <created>1534953741132</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1534953741132</updated>
+    </task>
+    <task id="LOCAL-00205" summary="ui tweaks">
+      <created>1534953777388</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1534953777388</updated>
+    </task>
+    <task id="LOCAL-00206" summary="ui tweaks">
+      <created>1534953800841</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1534953800841</updated>
+    </task>
+    <task id="LOCAL-00207" summary="implement edit course section">
+      <created>1534965584459</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1534965584460</updated>
+    </task>
+    <task id="LOCAL-00208" summary="add new static method">
+      <created>1534965601498</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1534965601498</updated>
+    </task>
+    <task id="LOCAL-00209" summary="add new static method">
+      <created>1534965619892</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1534965619892</updated>
+    </task>
+    <task id="LOCAL-00210" summary="fix ui in subject view students">
+      <created>1534965906602</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1534965906602</updated>
+    </task>
+    <task id="LOCAL-00211" summary="add controller class to payment fxml">
+      <created>1534968817288</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1534968817288</updated>
+    </task>
+    <task id="LOCAL-00212" summary="fix TODO in subject controller">
+      <created>1534968848380</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1534968848380</updated>
+    </task>
+    <task id="LOCAL-00213" summary="add FXML attributes">
+      <created>1534968867084</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1534968867084</updated>
+    </task>
+    <task id="LOCAL-00214" summary="update Payment class">
+      <created>1534970887565</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1534970887565</updated>
+    </task>
+    <task id="LOCAL-00215" summary="add insert lec">
+      <created>1534971142166</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1534971142166</updated>
+    </task>
+    <task id="LOCAL-00216" summary="add insert lec">
+      <created>1534972434506</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1534972434506</updated>
+    </task>
+    <task id="LOCAL-00217" summary="add doc">
+      <created>1534972589566</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1534972589566</updated>
+    </task>
+    <task id="LOCAL-00218" summary="add doc">
+      <created>1534972892649</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1534972892649</updated>
+    </task>
+    <task id="LOCAL-00219" summary="add doc">
+      <created>1534972932086</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1534972932086</updated>
+    </task>
+    <task id="LOCAL-00220" summary="add doc">
+      <created>1534972953571</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1534972953571</updated>
+    </task>
+    <task id="LOCAL-00221" summary="add doc">
+      <created>1534973089134</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1534973089134</updated>
+    </task>
+    <task id="LOCAL-00222" summary="add doc">
+      <created>1534973403890</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1534973403890</updated>
+    </task>
+    <task id="LOCAL-00223" summary="add doc">
+      <created>1534973487567</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1534973487567</updated>
+    </task>
+    <task id="LOCAL-00224" summary="add doc">
+      <created>1534974346003</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1534974346004</updated>
+    </task>
+    <task id="LOCAL-00225" summary="remove unwanted class files">
+      <created>1534974365921</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1534974365921</updated>
+    </task>
+    <task id="LOCAL-00226" summary="remove unwanted files">
+      <created>1534974586238</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1534974586238</updated>
+    </task>
+    <task id="LOCAL-00227" summary="fix null pointer">
+      <created>1535091655894</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1535091655897</updated>
+    </task>
+    <task id="LOCAL-00228" summary="fix null pointer">
+      <created>1535092886894</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1535092886894</updated>
+    </task>
+    <task id="LOCAL-00229" summary="fix null pointer">
+      <created>1535093616112</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1535093616113</updated>
+    </task>
+    <task id="LOCAL-00230" summary="add all tabs commented previously">
+      <created>1535093662025</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1535093662026</updated>
+    </task>
+    <task id="LOCAL-00231" summary="add comments">
+      <created>1535093693263</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1535093693263</updated>
+    </task>
+    <task id="LOCAL-00232" summary="add comments">
+      <created>1535093707840</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1535093707840</updated>
+    </task>
+    <task id="LOCAL-00233" summary="add 4th year selection">
+      <created>1535095338806</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1535095338808</updated>
+    </task>
+    <task id="LOCAL-00234" summary="disable 4th year tab unless 4th year">
+      <created>1535095498897</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1535095498897</updated>
+    </task>
+    <task id="LOCAL-00235" summary="implement find method in LectureImpl">
+      <created>1535096011945</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1535096011946</updated>
+    </task>
+    <task id="LOCAL-00236" summary="initialise Lecturer list comboBox">
+      <created>1535096152162</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1535096152162</updated>
+    </task>
+    <task id="LOCAL-00237" summary="remove comments">
+      <created>1535318843858</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1535318843860</updated>
+    </task>
+    <task id="LOCAL-00238" summary="check 4th year in permission initialisation">
+      <created>1535318890129</created>
+      <option name="number" value="00238" />
+      <option name="presentableId" value="LOCAL-00238" />
+      <option name="project" value="LOCAL" />
+      <updated>1535318890129</updated>
+    </task>
+    <task id="LOCAL-00239" summary="add comments">
+      <created>1535318909318</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1535318909318</updated>
+    </task>
+    <task id="LOCAL-00240" summary="update tests">
+      <created>1535395449500</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1535395449501</updated>
+    </task>
+    <task id="LOCAL-00241" summary="update tests">
+      <created>1535395461096</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1535395461096</updated>
+    </task>
+    <task id="LOCAL-00242" summary="update README.md">
+      <created>1535397168480</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1535397168480</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MorphiaTest_createCourse - 2018.08.23 at 03h 34m 50s.xml">
+      <configuration name="MorphiaTest.createCourse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MorphiaTest_createCourse - 2018.08.23 at 03h 36m 15s.xml">
+      <configuration name="MorphiaTest.createCourse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MorphiaTest_createCourse - 2018.08.23 at 03h 36m 34s.xml">
+      <configuration name="MorphiaTest.createCourse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MorphiaTest_createCourse - 2018.08.23 at 03h 37m 17s.xml">
+      <configuration name="MorphiaTest.createCourse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MorphiaTest_createCourse - 2018.08.23 at 03h 37m 37s.xml">
+      <configuration name="MorphiaTest.createCourse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MorphiaTest_createCourse - 2018.08.23 at 03h 38m 18s.xml">
+      <configuration name="MorphiaTest.createCourse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MorphiaTest_createCourse - 2018.08.23 at 03h 38m 35s.xml">
+      <configuration name="MorphiaTest.createCourse" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_ultimatex_nsbm_in_Nsbm_test - 2018.08.28 at 00h 05m 04s.xml">
+      <configuration name="com.ultimatex.nsbm in Nsbm.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_ultimatex_nsbm_in_Nsbm_test - 2018.08.28 at 00h 13m 18s.xml">
+      <configuration name="com.ultimatex.nsbm in Nsbm.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_ultimatex_nsbm_in_Nsbm_test - 2019.07.01 at 12h 55m 07s.xml">
+      <configuration name="com.ultimatex.nsbm in Nsbm.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="563691000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="29" width="1024" height="739" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="UI Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.34662578" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Build" order="0" sideWeight="0.49946582" weight="0.25974026" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.29411766" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.19772728" />
+      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="4" weight="0.3300866" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.24318182" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005348" side_tool="true" weight="0.28863636" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.71871656" weight="0.1748366" />
+      <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49946523" weight="0.4034091" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32954547" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Flutter Performance" order="14" side_tool="true" />
+      <window_info anchor="right" id="Flutter Outline" order="0" />
+      <window_info anchor="right" id="Maven Projects" order="1" weight="0.32959402" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.31083843" />
+      <window_info anchor="right" id="Database" order="4" weight="0.1110515" />
+      <window_info anchor="right" id="Flutter Inspector" order="5" weight="0.07433155" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Palette" order="9" />
+      <window_info anchor="right" id="Commander" order="10" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="11" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="12" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="13" />
+      <window_info anchor="right" id="make" order="14" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="edit findById function" />
+    <MESSAGE value="implements event handlers" />
+    <MESSAGE value="ui tweaks" />
+    <MESSAGE value="implement edit course section" />
+    <MESSAGE value="add new static method" />
+    <MESSAGE value="fix ui in subject view students" />
+    <MESSAGE value="add controller class to payment fxml" />
+    <MESSAGE value="fix TODO in subject controller" />
+    <MESSAGE value="add FXML attributes" />
+    <MESSAGE value="update Payment class" />
+    <MESSAGE value="add insert lec" />
+    <MESSAGE value="add doc" />
+    <MESSAGE value="remove unwanted class files" />
+    <MESSAGE value="remove unwanted files" />
+    <MESSAGE value="fix null pointer" />
+    <MESSAGE value="add all tabs commented previously" />
+    <MESSAGE value="add 4th year selection" />
+    <MESSAGE value="disable 4th year tab unless 4th year" />
+    <MESSAGE value="implement find method in LectureImpl" />
+    <MESSAGE value="initialise Lecturer list comboBox" />
+    <MESSAGE value="remove comments" />
+    <MESSAGE value="check 4th year in permission initialisation" />
+    <MESSAGE value="add comments" />
+    <MESSAGE value="update tests" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SubjectController.java</url>
+          <line>257</line>
+          <properties />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SubjectController.java</url>
+          <line>258</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SubjectController.java</url>
+          <line>259</line>
+          <properties />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SubjectController.java</url>
+          <line>260</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SubjectController.java</url>
+          <line>262</line>
+          <properties />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SubjectController.java</url>
+          <line>255</line>
+          <properties class="com.ultimatex.nsbm.ui.student.SubjectController" method="addOptionalSubjectsToList">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/admin/ViewAllController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/jdk1.8.0_171/javafx-src.zip!/javafx/scene/Node.java" />
+    <entry file="jar://$USER_HOME$/jdk1.8.0_171/javafx-src.zip!/javafx/collections/FXCollections.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/admin/course_management.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="100" column="90" lean-forward="true" selection-start-line="100" selection-start-column="90" selection-end-line="100" selection-end-column="90" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/student/payments.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2926">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/admin/lecturer_management.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Lecture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/SingleResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/Subject.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/SimpleResult.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/Result.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/Course.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/NsbmTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="252" column="6" selection-start-line="252" selection-start-column="6" selection-end-line="252" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-783">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/util/StudentHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="256" column="33" selection-start-line="256" selection-start-column="33" selection-end-line="256" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/StudentHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/admin/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/admin/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="276" selection-start-line="276" selection-end-line="276" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/jdk1.8.0_171/javafx-src.zip!/com/sun/glass/ui/gtk/GtkApplication.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/NsbmMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-325">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/util/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7920">
+          <caret line="381" selection-start-line="381" selection-end-line="381" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="79" selection-start-line="6" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/SubjectImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/ResultViewItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-242">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/admin/main.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/ResultsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4422">
+          <caret line="218" column="16" selection-start-line="218" selection-start-column="16" selection-end-line="218" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/CourseImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3740">
+          <caret line="188" column="77" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/ResultImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/StudentImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="56" column="95" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/admin/LecturerManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/student/results.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2662">
+          <caret line="121" column="67" selection-start-line="121" selection-start-column="52" selection-end-line="121" selection-end-column="67" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/SubjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6138">
+          <caret line="297" column="38" selection-start-line="297" selection-start-column="38" selection-end-line="297" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/util/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/ui/student/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="113" column="40" selection-start-line="113" selection-start-column="40" selection-end-line="113" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/BaseImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ultimatex/nsbm/model/crud/LecturerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="50" column="82" selection-start-line="50" selection-start-column="82" selection-end-line="50" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/MorphiaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/SessionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ultimatex/nsbm/AddressTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="88">
+            <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="gradleExecuteTaskHistory">
+    <option value="$PROJECT_DIR$" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <last-edited>a</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.5 interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>test|Nsbm</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: org.hamcrest:hamcrest-core:1.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
